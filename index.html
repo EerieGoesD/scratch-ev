@@ -2173,8 +2173,7 @@ function checkConsent() {
     if (banner) banner.classList.add('show');
   }
 }
-if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', checkConsent); }
-else { setTimeout(checkConsent, 0); }
+// checkConsent() called after banner HTML, see below
 
 // ─── Privacy / Cookie Policy modal ───
 const POLICY = {
@@ -2342,6 +2341,7 @@ updatePolicyTexts();
   <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Aceitar</button>
   <button class="cookie-btn cookie-reject" onclick="rejectCookies()">Recusar</button>
 </div>
+<script>checkConsent();</script>
 
 <!-- Privacy/Cookie policy modal -->
 <div class="privacy-overlay" id="privacyOverlay" onclick="if(event.target===this)closePrivacy()">
