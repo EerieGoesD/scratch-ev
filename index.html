@@ -389,13 +389,6 @@
   ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
 
   /* ── Cookie banner ── */
-  #cookieBanner {
-    position: fixed; bottom: 0; left: 0; right: 0; z-index: 300;
-    background: var(--surface); border-top: 1px solid var(--border);
-    padding: 14px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 16px;
-    font-family: var(--mono); font-size: 11px; color: var(--muted);
-  }
-  #cookieBanner a { color: var(--accent); text-decoration: none; }
   .cookie-btn {
     font-family: var(--mono); font-size: 11px; padding: 6px 16px; border-radius: 5px;
     cursor: pointer; transition: all 0.15s; border: 1px solid var(--border);
@@ -434,7 +427,6 @@
     .sb-game { flex: 1 1 auto; }
     .form-grid { grid-template-columns: 1fr 1fr; }
     .tax-row .field { flex: 1 1 100px; }
-    #cookieBanner { flex-direction: column; text-align: center; gap: 10px; padding: 16px; }
   }
 </style>
 </head>
@@ -2326,33 +2318,13 @@ updatePolicyTexts();
 </script>
 
 <!-- Cookie banner -->
-<div class="cookie-banner" id="cookieBanner" style="display:flex !important">
-<script>
-(function(){
-  var b = document.currentScript.parentElement;
-  var orig = Object.getOwnPropertyDescriptor(CSSStyleDeclaration.prototype, 'display');
-  Object.defineProperty(b.style, 'display', {
-    set: function(v) { if (v === 'none') { console.trace('BANNER HIDDEN BY:'); } orig.set.call(this, v); },
-    get: function() { return orig.get.call(this); }
-  });
-})();
-</script>
+<div id="cookieBanner" style="position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#111118;border-top:1px solid #2a2a3a;padding:14px 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:16px;font-family:'JetBrains Mono',monospace;font-size:11px;color:#6b6b88;">
   <span class="cb-text">Usamos cookies para análise de tráfego.</span>
-  <a href="#" class="cb-more" onclick="event.preventDefault();openPrivacy('cookies')">Saber mais</a>
-  <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Aceitar</button>
-  <button class="cookie-btn cookie-reject" onclick="rejectCookies()">Recusar</button>
+  <a href="#" class="cb-more" onclick="event.preventDefault();openPrivacy('cookies')" style="color:#ff6b2b;text-decoration:none;">Saber mais</a>
+  <button onclick="acceptCookies()" style="font-family:'JetBrains Mono',monospace;font-size:11px;padding:6px 16px;border-radius:5px;cursor:pointer;border:1px solid #ff6b2b;background:#ff6b2b;color:#fff;">Aceitar</button>
+  <button onclick="rejectCookies()" style="font-family:'JetBrains Mono',monospace;font-size:11px;padding:6px 16px;border-radius:5px;cursor:pointer;border:1px solid #2a2a3a;background:transparent;color:#6b6b88;">Recusar</button>
 </div>
-<script>
-(function(){
-  try {
-    var c = localStorage.getItem('cookie-consent');
-    if (c === 'accepted' || c === 'rejected') {
-      document.getElementById('cookieBanner').style.display = 'none';
-      if (c === 'accepted') initGtag();
-    }
-  } catch(e) {}
-})();
-</script>
+<script>document.getElementById('cookieBanner').style.display='none';</script>
 
 <!-- Privacy/Cookie policy modal -->
 <div class="privacy-overlay" id="privacyOverlay" onclick="if(event.target===this)closePrivacy()">
