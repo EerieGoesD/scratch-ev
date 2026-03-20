@@ -129,6 +129,14 @@
         "@type": "Answer",
         "text": "Todos os dados das raspadinhas vêm diretamente dos planos de prémios oficiais dos Jogos Santa Casa. As probabilidades das lotarias vêm dos regulamentos oficiais do EuroMilhões e EuroDreams."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Como posso adicionar os jogos do meu país?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Envia os planos de prémios oficiais e regras fiscais do teu país para eeriegoesd@gmail.com. Nós adicionamos."
+      }
     }
   ]
 }
@@ -564,7 +572,9 @@
     <span style="color:var(--border)">&middot;</span>
     <a href="#" onclick="event.preventDefault();openPrivacy('cookies')" style="color:var(--muted);text-decoration:none;" data-i18n-attr="cookies">Cookie Policy</a>
     <span style="color:var(--border)">&middot;</span>
-    <a href="mailto:eeriegoesd@gmail.com" style="color:var(--muted);text-decoration:none;" data-i18n="addCountry">Add your country's games</a>
+    <a href="#faqAddCountry" onclick="event.preventDefault();var el=document.getElementById('faqAddCountry');el.open=true;el.scrollIntoView({behavior:'smooth',block:'center'});" style="color:var(--muted);text-decoration:none;" data-i18n="addCountry">+ Add country</a>
+    <span style="color:var(--border)">&middot;</span>
+    <a href="https://github.com/EerieGoesD/scratch-ev/discussions" target="_blank" rel="noreferrer" style="color:var(--muted);text-decoration:none;" data-i18n="feedback">Feedback</a>
   </div>
   <div class="divider"></div>
   <h2 class="faq-title" data-i18n="faqTitle">FAQ</h2>
@@ -599,6 +609,10 @@
   <details>
     <summary data-i18n="faq8q">Where does the data come from?</summary>
     <p data-i18n="faq8a">All scratch ticket data comes directly from the official Jogos Santa Casa prize tables (plano de pr&eacute;mios). Lottery odds are from the official EuroMilh&otilde;es and EuroDreams regulations. Every game is verified to match the stated total prize pool.</p>
+  </details>
+  <details id="faqAddCountry">
+    <summary data-i18n="faq9q">Como posso adicionar os jogos do meu pa&iacute;s?</summary>
+    <p data-i18n="faq9a">Envia os planos de pr&eacute;mios oficiais e regras fiscais do teu pa&iacute;s para <a href="mailto:eeriegoesd@gmail.com" style="color:var(--accent)">eeriegoesd@gmail.com</a>. N&oacute;s adicionamos.</p>
   </details>
 
 </div><!-- main-col -->
@@ -665,7 +679,7 @@ const T = {
     colRetPre: 'Return % Pre', colRetPost: 'Return % Post',
     colTotalPre: 'Total Prizes Pre', colTotalPost: 'Total Prizes Post',
     colOdds: 'Odds (any win)', col1st: '% 1st Prize',
-    madeBy: 'Made by', addCountry: "Add your country's games",
+    madeBy: 'Made by', addCountry: '+ Add country', feedback: 'Feedback',
     sbPopular: 'Scratch Tickets', sbSaved: 'Saved Games', sbSaveBtn: 'Save current game', sbCalcScratch: 'Full Table (Scratch Tickets)', sbCalcLottery: 'Full Table (Lottery)', exportCSV: 'Export CSV',
     faqTitle: 'FAQ',
     faq1q: 'What is Expected Value (EV)?',
@@ -684,6 +698,8 @@ const T = {
     faq7a: 'All scratch tickets return ~70% pre-tax, but post-tax returns differ because games with larger top prizes lose more to the 20% tax on prizes above \u20AC5,000. Games with smaller prizes (e.g. Slapshot, Roda das Cores) keep the full 70% since no prize exceeds the threshold.',
     faq8q: 'Where does the data come from?',
     faq8a: 'All scratch ticket data comes directly from the official Jogos Santa Casa prize tables (plano de pr\u00E9mios). Lottery odds are from the official EuroMilh\u00F5es and EuroDreams regulations. Every game is verified to match the stated total prize pool.',
+    faq9q: "How can I add my country's games?",
+    faq9a: 'Email <a href="mailto:eeriegoesd@gmail.com" style="color:var(--accent)">eeriegoesd@gmail.com</a> with your country\'s official prize tables and tax rules. We\'ll add them.',
     errName: 'Enter a name.', errCost: 'Enter a valid ticket cost.',
     errTotal: 'Enter total tickets issued.', errTier: 'Fill at least one prize tier.',
     errQty: 'Row {n}: invalid quantity.', errPrize: 'Row {n}: invalid prize.',
@@ -713,7 +729,7 @@ const T = {
     colRetPre: 'Retorno % Pr\u00E9', colRetPost: 'Retorno % P\u00F3s',
     colTotalPre: 'Total Pr\u00E9mios Pr\u00E9', colTotalPost: 'Total Pr\u00E9mios P\u00F3s',
     colOdds: 'Prob. (qualquer)', col1st: '% 1\u00BA Pr\u00E9mio',
-    madeBy: 'Feito por', addCountry: 'Adicionar jogos do teu país',
+    madeBy: 'Feito por', addCountry: '+ Adicionar país', feedback: 'Feedback',
     sbPopular: 'Raspadinhas', sbSaved: 'Jogos Guardados', sbSaveBtn: 'Guardar jogo atual', sbCalcScratch: 'Tabela Completa (Raspadinhas)', sbCalcLottery: 'Tabela Completa (Lotaria)', exportCSV: 'Exportar Tabela',
     faqTitle: 'Perguntas Frequentes',
     faq1q: 'O que \u00E9 o Valor Esperado (EV)?',
@@ -732,6 +748,8 @@ const T = {
     faq7a: 'Todas as raspadinhas devolvem ~70% antes de impostos, mas o retorno l\u00EDquido difere porque jogos com pr\u00E9mios maiores perdem mais com o imposto de 20% acima de \u20AC5.000. Jogos com pr\u00E9mios pequenos (ex: Slapshot, Roda das Cores) mant\u00EAm os 70% intactos.',
     faq8q: 'De onde v\u00EAm os dados?',
     faq8a: 'Todos os dados das raspadinhas v\u00EAm diretamente dos planos de pr\u00E9mios oficiais dos Jogos Santa Casa. As probabilidades das lotarias s\u00E3o dos regulamentos oficiais do EuroMilh\u00F5es e EuroDreams. Cada jogo \u00E9 verificado para corresponder ao total de pr\u00E9mios declarado.',
+    faq9q: 'Como posso adicionar os jogos do meu pa\u00EDs?',
+    faq9a: 'Envia os planos de pr\u00E9mios oficiais e regras fiscais do teu pa\u00EDs para <a href="mailto:eeriegoesd@gmail.com" style="color:var(--accent)">eeriegoesd@gmail.com</a>. N\u00F3s adicionamos.',
     errName: 'Introduza um nome.', errCost: 'Introduza um custo v\u00E1lido.',
     errTotal: 'Introduza o total de bilhetes.', errTier: 'Preencha pelo menos um n\u00EDvel.',
     errQty: 'Linha {n}: quantidade inv\u00E1lida.', errPrize: 'Linha {n}: pr\u00E9mio inv\u00E1lido.',

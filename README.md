@@ -1,6 +1,6 @@
 # Scratch Ticket & Lottery EV Calculator
 
-Free browser-based Expected Value (EV) calculator for scratch tickets and lottery games worldwide. Compare return before and after taxes, find the best odds per euro spent, and make informed decisions.
+Calculate the Expected Value of scratch tickets and lottery games. Compare pre/post-tax return for every game.
 
 **[Live Demo →](https://scratch-ev.eeriegoesd.com)**
 
@@ -8,51 +8,33 @@ Free browser-based Expected Value (EV) calculator for scratch tickets and lotter
 
 ## Features
 
-- **Multi-country support** — currently 74 Portuguese scratch tickets, with more countries coming soon
-- **Lottery support** — EuroDreams, Lotaria Clássica, Lotaria Popular
-- **Pre & post-tax EV** — configurable tax rate and threshold for any country
-- **Full comparison table** — sortable columns, target prize filter, CSV export
-- **Custom games** — input any scratch ticket or lottery from anywhere in the world
-- **Save & load** — persist custom games in localStorage
-- **Import/Export** — share games as JSON files
-- **Bilingual** — Portuguese and English (auto-detected)
-- **Zero dependencies** — single HTML file, no build tools, no frameworks
-- **GDPR compliant** — cookie consent banner, Google Analytics 4 with Consent Mode v2
-- **SEO optimized** — Open Graph, Twitter Cards, JSON-LD structured data (FAQ + WebApplication)
-
-## How It Works
-
-Each scratch ticket has a fixed number of tickets and a known prize table. The calculator computes:
-
-- **Expected Value (EV)** — average return per ticket
-- **Net EV** — EV minus ticket cost
-- **Return %** — percentage of bet returned on average
-- **Odds** — probability of winning any prize
-- **Post-tax EV** — adjusted for your country's tax rules
-
-For lottery games, EV is estimated using the official payout rate (50–52% of revenue).
+- 74 Portuguese scratch tickets + lottery games (EuroDreams, Lotaria Clássica, Lotaria Popular)
+- Pre & post-tax EV with configurable tax rules
+- Full comparison table with sorting, target prize filter, CSV export
+- Custom game input, save/load, JSON import/export
+- Bilingual PT/EN (auto-detected)
+- Single HTML file, zero dependencies
+- GDPR compliant (cookie consent + GA4 Consent Mode v2)
 
 ## Project Structure
 
 ```
-├── index.html          # Entire application (HTML + CSS + JS)
+├── index.html              # Entire app
 ├── games/
-│   ├── index.json      # Game registry
-│   ├── scratch-tickets/
-│   │   └── PT/         # 74 Portuguese scratch ticket JSONs
-│   └── lottery/
-│       └── PT/         # Portuguese lottery games
-├── og-image.png        # Social media preview image
-├── robots.txt          # Crawler directives
-├── sitemap.xml         # Search engine sitemap
-└── favicon-*.png       # Favicons at multiple sizes
+│   ├── index.json          # Game registry
+│   ├── scratch-tickets/PT/ # 74 scratch ticket JSONs
+│   └── lottery/PT/         # Lottery games
+├── og-image.png
+├── robots.txt
+├── sitemap.xml
+└── favicon-*.png
 ```
 
-## Usage
+## Adding Games
 
-Just open `index.html` in a browser. No server required.
+Open `index.html` in a browser. No server needed.
 
-To add a new game, create a JSON file in `games/scratch-tickets/<COUNTRY_CODE>/` following this format:
+New game JSON format (`games/scratch-tickets/<COUNTRY_CODE>/`):
 
 ```json
 {
@@ -68,15 +50,15 @@ To add a new game, create a JSON file in `games/scratch-tickets/<COUNTRY_CODE>/`
 }
 ```
 
-Then add the file path to `games/index.json`.
-
-## Data Sources
-
-- **Portugal** — Scratch ticket prize tables from [Jogos Santa Casa](https://www.jogossantacasa.pt) (planos de prémios oficiais). Lottery odds from official EuroMilhões and EuroDreams regulations.
+Then add the path to `games/index.json`.
 
 ## Add Your Country
 
-We're expanding to include scratch tickets and lottery games from every country. If you'd like to contribute data from your country, open an issue or email [eeriegoesd@gmail.com](mailto:eeriegoesd@gmail.com).
+Send official prize tables and tax rules to [eeriegoesd@gmail.com](mailto:eeriegoesd@gmail.com).
+
+## Data Sources
+
+**Portugal** — [Jogos Santa Casa](https://www.jogossantacasa.pt) official prize tables. EuroMilhões/EuroDreams official regulations.
 
 ## License
 
