@@ -2154,14 +2154,15 @@ gtag('consent', 'default', {
   wait_for_update: 500
 });
 
+function hideBanner() { document.getElementById('cookieBanner').style.display = 'none'; }
 function acceptCookies() {
   localStorage.setItem('cookie-consent', 'accepted');
-  document.getElementById('cookieBanner').classList.add('hidden');
+  hideBanner();
   initGtag();
 }
 function rejectCookies() {
   localStorage.setItem('cookie-consent', 'rejected');
-  document.getElementById('cookieBanner').classList.add('hidden');
+  hideBanner();
 }
 
 // Consent check runs inline after banner HTML, see below
@@ -2326,7 +2327,7 @@ updatePolicyTexts();
 </script>
 
 <!-- Cookie banner -->
-<div class="cookie-banner" id="cookieBanner">
+<div class="cookie-banner" id="cookieBanner" style="display:flex !important">
   <span class="cb-text">Usamos cookies para análise de tráfego.</span>
   <a href="#" class="cb-more" onclick="event.preventDefault();openPrivacy('cookies')">Saber mais</a>
   <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Aceitar</button>
@@ -2337,7 +2338,7 @@ updatePolicyTexts();
   try {
     var c = localStorage.getItem('cookie-consent');
     if (c === 'accepted' || c === 'rejected') {
-      document.getElementById('cookieBanner').classList.add('hidden');
+      document.getElementById('cookieBanner').style.display = 'none';
       if (c === 'accepted') initGtag();
     }
   } catch(e) {}
