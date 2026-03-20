@@ -8,6 +8,5 @@ Calculate the Expected Value of scratch tickets and lottery games. Compare pre/p
 
 Send official prize tables and tax rules to [eeriegoesd@gmail.com](mailto:eeriegoesd@gmail.com).
 
-## License
-
-MIT — **EERIE** · [eeriegoesd.com](https://eeriegoesd.com) · [Buy Me a Coffee](https://buymeacoffee.com/eeriegoesd)
+## Feedback
+[eeriegoesd.com](https://eeriegoesd.com) · [Buy Me a Coffee](https://buymeacoffee.com/eeriegoesd)
