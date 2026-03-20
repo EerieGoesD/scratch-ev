@@ -562,19 +562,24 @@
   </div>
 
   <div class="divider"></div>
-  <div style="display:flex;align-items:center;justify-content:center;gap:10px;font-family:var(--mono);font-size:11px;color:var(--muted);">
-    <span data-i18n="madeBy">Made by</span>
-    <a href="https://eeriegoesd.com" target="_blank" rel="noreferrer" style="color:var(--accent);text-decoration:none;font-weight:700;">EERIE</a>
-    <span style="color:var(--border)">&middot;</span>
-    <a href="https://buymeacoffee.com/eeriegoesd" target="_blank" rel="noreferrer" style="color:var(--accent);text-decoration:none;">Buy Me a Coffee</a>
-    <span style="color:var(--border)">&middot;</span>
-    <a href="#" onclick="event.preventDefault();openPrivacy('privacy')" style="color:var(--muted);text-decoration:none;" data-i18n-attr="privacy">Privacy Policy</a>
-    <span style="color:var(--border)">&middot;</span>
-    <a href="#" onclick="event.preventDefault();openPrivacy('cookies')" style="color:var(--muted);text-decoration:none;" data-i18n-attr="cookies">Cookie Policy</a>
-    <span style="color:var(--border)">&middot;</span>
-    <a href="#faqAddCountry" onclick="event.preventDefault();var el=document.getElementById('faqAddCountry');el.open=true;el.scrollIntoView({behavior:'smooth',block:'center'});" style="color:var(--muted);text-decoration:none;" data-i18n="addCountry">+ Add country</a>
-    <span style="color:var(--border)">&middot;</span>
-    <a href="https://github.com/EerieGoesD/scratch-ev/discussions" target="_blank" rel="noreferrer" style="color:var(--muted);text-decoration:none;" data-i18n="feedback">Feedback</a>
+  <div style="display:flex;flex-direction:column;align-items:center;gap:6px;font-family:var(--mono);font-size:11px;color:var(--muted);">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <span data-i18n="madeBy">Made by</span>
+      <a href="https://eeriegoesd.com" target="_blank" rel="noreferrer" style="color:var(--accent);text-decoration:none;font-weight:700;">EERIE</a>
+      <span style="color:var(--border)">|</span>
+      <a href="https://buymeacoffee.com/eeriegoesd" target="_blank" rel="noreferrer" style="color:var(--accent);text-decoration:none;">Buy Me a Coffee</a>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <a href="#" onclick="event.preventDefault();openPrivacy('privacy')" style="color:var(--muted);text-decoration:none;" data-i18n-attr="privacy">Privacy Policy</a>
+      <span style="color:var(--border)">|</span>
+      <a href="#" onclick="event.preventDefault();openPrivacy('cookies')" style="color:var(--muted);text-decoration:none;" data-i18n-attr="cookies">Cookie Policy</a>
+      <span style="color:var(--border)">|</span>
+      <a href="#faqAddCountry" onclick="event.preventDefault();var el=document.getElementById('faqAddCountry');el.open=true;el.scrollIntoView({behavior:'smooth',block:'center'});" style="color:var(--muted);text-decoration:none;" data-i18n="addCountry">+ Add country</a>
+      <span style="color:var(--border)">|</span>
+      <a href="https://github.com/EerieGoesD/scratch-ev/discussions" target="_blank" rel="noreferrer" style="color:var(--muted);text-decoration:none;" data-i18n="feedback">Feedback</a>
+      <span style="color:var(--border)">|</span>
+      <a href="https://github.com/EerieGoesD/scratch-ev/issues" target="_blank" rel="noreferrer" style="color:var(--muted);text-decoration:none;" data-i18n="reportBug">Report bug</a>
+    </div>
   </div>
   <div class="divider"></div>
   <h2 class="faq-title" data-i18n="faqTitle">FAQ</h2>
@@ -679,7 +684,7 @@ const T = {
     colRetPre: 'Return % Pre', colRetPost: 'Return % Post',
     colTotalPre: 'Total Prizes Pre', colTotalPost: 'Total Prizes Post',
     colOdds: 'Odds (any win)', col1st: '% 1st Prize',
-    madeBy: 'Made by', addCountry: '+ Add country', feedback: 'Feedback',
+    madeBy: 'Made by', addCountry: '+ Add country', feedback: 'Feedback', reportBug: 'Report bug',
     sbPopular: 'Scratch Tickets', sbSaved: 'Saved Games', sbSaveBtn: 'Save current game', sbCalcScratch: 'Full Table (Scratch Tickets)', sbCalcLottery: 'Full Table (Lottery)', exportCSV: 'Export CSV',
     faqTitle: 'FAQ',
     faq1q: 'What is Expected Value (EV)?',
@@ -729,7 +734,7 @@ const T = {
     colRetPre: 'Retorno % Pr\u00E9', colRetPost: 'Retorno % P\u00F3s',
     colTotalPre: 'Total Pr\u00E9mios Pr\u00E9', colTotalPost: 'Total Pr\u00E9mios P\u00F3s',
     colOdds: 'Prob. (qualquer)', col1st: '% 1\u00BA Pr\u00E9mio',
-    madeBy: 'Feito por', addCountry: '+ Adicionar país', feedback: 'Feedback',
+    madeBy: 'Feito por', addCountry: '+ Adicionar país', feedback: 'Feedback', reportBug: 'Reportar erro',
     sbPopular: 'Raspadinhas', sbSaved: 'Jogos Guardados', sbSaveBtn: 'Guardar jogo atual', sbCalcScratch: 'Tabela Completa (Raspadinhas)', sbCalcLottery: 'Tabela Completa (Lotaria)', exportCSV: 'Exportar Tabela',
     faqTitle: 'Perguntas Frequentes',
     faq1q: 'O que \u00E9 o Valor Esperado (EV)?',
