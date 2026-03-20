@@ -2164,19 +2164,7 @@ function rejectCookies() {
   document.getElementById('cookieBanner').classList.add('hidden');
 }
 
-// Check existing consent (deferred until DOM is ready)
-function checkConsent() {
-  try {
-    const consent = localStorage.getItem('cookie-consent');
-    if (consent === 'accepted') {
-      document.getElementById('cookieBanner').classList.add('hidden');
-      initGtag();
-    } else if (consent === 'rejected') {
-      document.getElementById('cookieBanner').classList.add('hidden');
-    }
-  } catch(e) { /* localStorage unavailable (e.g. Safari incognito) — show banner */ }
-}
-// checkConsent() called after banner HTML, see below
+// Consent check runs inline after banner HTML, see below
 
 // ─── Privacy / Cookie Policy modal ───
 const POLICY = {
@@ -2344,7 +2332,17 @@ updatePolicyTexts();
   <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Aceitar</button>
   <button class="cookie-btn cookie-reject" onclick="rejectCookies()">Recusar</button>
 </div>
-<script>checkConsent();</script>
+<script>
+(function(){
+  try {
+    var c = localStorage.getItem('cookie-consent');
+    if (c === 'accepted' || c === 'rejected') {
+      document.getElementById('cookieBanner').classList.add('hidden');
+      if (c === 'accepted') initGtag();
+    }
+  } catch(e) {}
+})();
+</script>
 
 <!-- Privacy/Cookie policy modal -->
 <div class="privacy-overlay" id="privacyOverlay" onclick="if(event.target===this)closePrivacy()">
