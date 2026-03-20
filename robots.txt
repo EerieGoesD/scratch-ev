@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://scratch-ev.eeriegoesd.com/sitemap.xml
+Sitemap: https://eeriegoesd.com/scratch-ev/sitemap.xml
