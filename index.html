@@ -2327,6 +2327,16 @@ updatePolicyTexts();
 
 <!-- Cookie banner -->
 <div class="cookie-banner" id="cookieBanner" style="display:flex !important">
+<script>
+(function(){
+  var b = document.currentScript.parentElement;
+  var orig = Object.getOwnPropertyDescriptor(CSSStyleDeclaration.prototype, 'display');
+  Object.defineProperty(b.style, 'display', {
+    set: function(v) { if (v === 'none') { console.trace('BANNER HIDDEN BY:'); } orig.set.call(this, v); },
+    get: function() { return orig.get.call(this); }
+  });
+})();
+</script>
   <span class="cb-text">Usamos cookies para análise de tráfego.</span>
   <a href="#" class="cb-more" onclick="event.preventDefault();openPrivacy('cookies')">Saber mais</a>
   <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Aceitar</button>
