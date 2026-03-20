@@ -1,0 +1,55 @@
+{
+  "name": "Ilha Dourada",
+  "mode": "scratch",
+  "cost": 1,
+  "totalTickets": 500000,
+  "emission": "2ª Emissão",
+  "launchDate": "2015-09-29",
+  "totalPrizePool": 350000,
+  "tiers": [
+    {
+      "qty": 91400,
+      "prize": 1
+    },
+    {
+      "qty": 37000,
+      "prize": 2
+    },
+    {
+      "qty": 20000,
+      "prize": 4
+    },
+    {
+      "qty": 7000,
+      "prize": 5
+    },
+    {
+      "qty": 4000,
+      "prize": 10
+    },
+    {
+      "qty": 500,
+      "prize": 20
+    },
+    {
+      "qty": 100,
+      "prize": 50
+    },
+    {
+      "qty": 20,
+      "prize": 100
+    },
+    {
+      "qty": 3,
+      "prize": 200
+    },
+    {
+      "qty": 2,
+      "prize": 1000
+    },
+    {
+      "qty": 1,
+      "prize": 10000
+    }
+  ]
+}

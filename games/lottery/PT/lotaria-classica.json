@@ -1,0 +1,32 @@
+{
+  "name": "Lotaria Clássica",
+  "mode": "raffle",
+  "cost": 5,
+  "totalTickets": 350000,
+  "emission": "2 séries × 70.000 bilhetes",
+  "fractions": 5,
+  "fullTicketPrice": 25,
+  "totalPrizePool": 1225000,
+  "payoutRate": 0.70,
+  "tiers": [
+    {"qty": 5, "prize": 60000},
+    {"qty": 5, "prize": 6000},
+    {"qty": 5, "prize": 3000},
+    {"qty": 10, "prize": 400},
+    {"qty": 10, "prize": 280},
+    {"qty": 10, "prize": 100},
+    {"qty": 345, "prize": 200},
+    {"qty": 345, "prize": 50},
+    {"qty": 345, "prize": 25},
+    {"qty": 700, "prize": 25},
+    {"qty": 1750, "prize": 15},
+    {"qty": 3150, "prize": 40},
+    {"qty": 3150, "prize": 10},
+    {"qty": 3150, "prize": 10},
+    {"qty": 495, "prize": 25},
+    {"qty": 495, "prize": 25},
+    {"qty": 495, "prize": 25},
+    {"qty": 31500, "prize": 5},
+    {"qty": 69990, "prize": 5}
+  ]
+}

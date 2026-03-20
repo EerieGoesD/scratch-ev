@@ -1,0 +1,25 @@
+{
+  "name": "M1lhão",
+  "mode": "lottery",
+  "cost": 0.3,
+  "linkedTo": "EuroMilhões",
+  "launchDate": "2016-08-16",
+  "drawSchedule": "Last Fri of month 20:00",
+  "drawLocation": "Lisboa (DJSCML)",
+  "payoutRate": 0.50,
+  "numbers": {
+    "main": { "pool": 0, "pick": 0, "name": "Código alfanumérico (3 letras + 5 números)" },
+    "bonus": { "pool": 0, "pick": 0 }
+  },
+  "notes": "Automatically generated with each EuroMilhões simple bet. Code is assigned randomly — cannot be chosen. Odds depend on number of EuroMilhões bets per monthly cycle. Prize is guaranteed €1,000,000 per draw.",
+  "tiers": [
+    {
+      "match": "Código",
+      "description": "Código sorteado",
+      "odds": 0,
+      "prize": "fixed",
+      "totalPrize": 1000000,
+      "oddsNote": "Variable — depends on total EuroMilhões bets per month"
+    }
+  ]
+}

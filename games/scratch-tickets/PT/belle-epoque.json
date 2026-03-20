@@ -1,0 +1,21 @@
+{
+  "name": "Belle Époque",
+  "mode": "scratch",
+  "cost": 2,
+  "totalTickets": 1000000,
+  "emission": "1ª Emissão",
+  "launchDate": "2018-11-19",
+  "totalPrizePool": 1400000,
+  "tiers": [
+    { "qty": 155000, "prize": 2 },
+    { "qty": 64500, "prize": 4 },
+    { "qty": 30000, "prize": 6 },
+    { "qty": 16000, "prize": 8 },
+    { "qty": 12000, "prize": 10 },
+    { "qty": 10000, "prize": 20 },
+    { "qty": 1550, "prize": 40 },
+    { "qty": 350, "prize": 120 },
+    { "qty": 200, "prize": 400 },
+    { "qty": 1, "prize": 20000 }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "10X",
+  "mode": "scratch",
+  "cost": 1,
+  "totalTickets": 3000000,
+  "emission": "2ª Emissão",
+  "launchDate": "2024-12-17",
+  "totalPrizePool": 2100000,
+  "tiers": [
+    { "qty": 450000, "prize": 1 },
+    { "qty": 300000, "prize": 2 },
+    { "qty": 120000, "prize": 4 },
+    { "qty": 48000, "prize": 5 },
+    { "qty": 18000, "prize": 10 },
+    { "qty": 3000, "prize": 20 },
+    { "qty": 1200, "prize": 40 },
+    { "qty": 120, "prize": 100 },
+    { "qty": 3, "prize": 10000 }
+  ]
+}

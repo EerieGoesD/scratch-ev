@@ -1,0 +1,51 @@
+{
+  "name": "Grande Sorte",
+  "mode": "scratch",
+  "cost": 2,
+  "totalTickets": 1000000,
+  "emission": "2ª Emissão",
+  "launchDate": "2023-05-20",
+  "totalPrizePool": 1400000,
+  "tiers": [
+    {
+      "qty": 140000,
+      "prize": 2
+    },
+    {
+      "qty": 100000,
+      "prize": 4
+    },
+    {
+      "qty": 28000,
+      "prize": 10
+    },
+    {
+      "qty": 6150,
+      "prize": 20
+    },
+    {
+      "qty": 2500,
+      "prize": 50
+    },
+    {
+      "qty": 960,
+      "prize": 100
+    },
+    {
+      "qty": 80,
+      "prize": 500
+    },
+    {
+      "qty": 26,
+      "prize": 1000
+    },
+    {
+      "qty": 2,
+      "prize": 5000
+    },
+    {
+      "qty": 1,
+      "prize": 20000
+    }
+  ]
+}

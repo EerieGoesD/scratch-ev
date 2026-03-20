@@ -1,0 +1,23 @@
+{
+  "name": "Totoloto",
+  "mode": "lottery",
+  "cost": 1,
+  "drawSchedule": "Wed, Sat 20:00",
+  "numbers": {
+    "main": 49,
+    "pick": 5,
+    "bonus": 13,
+    "bonusPick": 1,
+    "bonusName": "Número da Sorte"
+  },
+  "minimumJackpot": 1000000,
+  "maxJackpot": null,
+  "tiers": [
+    { "match": "5+1", "odds": 24789492, "type": "jackpot", "minimumPrize": 1000000, "description": "5 Números + Nº da Sorte" },
+    { "match": "5+0", "odds": 1906884, "type": "variable", "description": "5 Números" },
+    { "match": "4+0", "odds": 8668, "type": "variable", "description": "4 Números" },
+    { "match": "3+0", "odds": 202, "type": "variable", "description": "3 Números" },
+    { "match": "2+0", "odds": 14, "type": "variable", "description": "2 Números" },
+    { "match": "0+1", "odds": 13, "type": "fixed", "totalPrize": 1, "description": "Nº da Sorte (devolução)" }
+  ]
+}

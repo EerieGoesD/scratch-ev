@@ -1,0 +1,67 @@
+{
+  "name": "Mina de Ouro",
+  "mode": "scratch",
+  "cost": 3,
+  "totalTickets": 1000000,
+  "emission": "2ª Emissão",
+  "launchDate": "2025-01-20",
+  "totalPrizePool": 2100000,
+  "tiers": [
+    {
+      "qty": 163000,
+      "prize": 3
+    },
+    {
+      "qty": 84500,
+      "prize": 6
+    },
+    {
+      "qty": 45000,
+      "prize": 9
+    },
+    {
+      "qty": 15000,
+      "prize": 15
+    },
+    {
+      "qty": 4000,
+      "prize": 30
+    },
+    {
+      "qty": 1500,
+      "prize": 60
+    },
+    {
+      "qty": 750,
+      "prize": 120
+    },
+    {
+      "qty": 445,
+      "prize": 150
+    },
+    {
+      "qty": 100,
+      "prize": 300
+    },
+    {
+      "qty": 20,
+      "prize": 600
+    },
+    {
+      "qty": 15,
+      "prize": 750
+    },
+    {
+      "qty": 4,
+      "prize": 3000
+    },
+    {
+      "qty": 2,
+      "prize": 6000
+    },
+    {
+      "qty": 1,
+      "prize": 30000
+    }
+  ]
+}

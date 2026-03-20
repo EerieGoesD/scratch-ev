@@ -1,0 +1,24 @@
+{
+  "name": "Viagem Cósmica",
+  "mode": "scratch",
+  "cost": 3,
+  "totalTickets": 1000000,
+  "emission": "1ª Emissão",
+  "launchDate": "2016-07-07",
+  "totalPrizePool": 2100000,
+  "tiers": [
+    { "qty": 170000, "prize": 3 },
+    { "qty": 80000, "prize": 6 },
+    { "qty": 20000, "prize": 15 },
+    { "qty": 10000, "prize": 30 },
+    { "qty": 1000, "prize": 45 },
+    { "qty": 4450, "prize": 60 },
+    { "qty": 500, "prize": 75 },
+    { "qty": 300, "prize": 150 },
+    { "qty": 200, "prize": 300 },
+    { "qty": 15, "prize": 600 },
+    { "qty": 5, "prize": 1500 },
+    { "qty": 3, "prize": 3000 },
+    { "qty": 1, "prize": 30000 }
+  ]
+}

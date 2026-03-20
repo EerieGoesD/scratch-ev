@@ -1,0 +1,59 @@
+{
+  "name": "Pé-de-Meia",
+  "mode": "scratch",
+  "cost": 3,
+  "totalTickets": 1000000,
+  "emission": "2ª Emissão",
+  "launchDate": "2021-04-01",
+  "totalPrizePool": 2100000,
+  "tiers": [
+    {
+      "qty": 193700,
+      "prize": 3
+    },
+    {
+      "qty": 90000,
+      "prize": 6
+    },
+    {
+      "qty": 24000,
+      "prize": 9
+    },
+    {
+      "qty": 5000,
+      "prize": 12
+    },
+    {
+      "qty": 1500,
+      "prize": 15
+    },
+    {
+      "qty": 300,
+      "prize": 30
+    },
+    {
+      "qty": 100,
+      "prize": 60
+    },
+    {
+      "qty": 30,
+      "prize": 180
+    },
+    {
+      "qty": 10,
+      "prize": 1200
+    },
+    {
+      "qty": 5,
+      "prize": 14400
+    },
+    {
+      "qty": 3,
+      "prize": 72000
+    },
+    {
+      "qty": 2,
+      "prize": 180000
+    }
+  ]
+}

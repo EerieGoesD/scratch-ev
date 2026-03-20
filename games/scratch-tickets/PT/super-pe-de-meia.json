@@ -1,0 +1,23 @@
+{
+  "name": "Super Pé-de-Meia",
+  "mode": "scratch",
+  "cost": 5,
+  "totalTickets": 3000000,
+  "emission": "2ª Emissão",
+  "launchDate": "2025-07-15",
+  "totalPrizePool": 10499500,
+  "tiers": [
+    { "qty": 499500, "prize": 5 },
+    { "qty": 255000, "prize": 10 },
+    { "qty": 65000, "prize": 15 },
+    { "qty": 55000, "prize": 20 },
+    { "qty": 16000, "prize": 25 },
+    { "qty": 10000, "prize": 50 },
+    { "qty": 6000, "prize": 100 },
+    { "qty": 1000, "prize": 300 },
+    { "qty": 200, "prize": 1000 },
+    { "qty": 7, "prize": 27000 },
+    { "qty": 3, "prize": 108000 },
+    { "qty": 3, "prize": 288000 }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "name": "Mineiro Sortudo",
+  "mode": "scratch",
+  "cost": 1,
+  "totalTickets": 3000000,
+  "emission": "2ª Emissão",
+  "launchDate": "2025-08-25",
+  "totalPrizePool": 2100000,
+  "tiers": [
+    {
+      "qty": 339990,
+      "prize": 1
+    },
+    {
+      "qty": 226700,
+      "prize": 2
+    },
+    {
+      "qty": 23820,
+      "prize": 4
+    },
+    {
+      "qty": 45300,
+      "prize": 5
+    },
+    {
+      "qty": 43103,
+      "prize": 10
+    },
+    {
+      "qty": 4990,
+      "prize": 20
+    },
+    {
+      "qty": 4540,
+      "prize": 50
+    },
+    {
+      "qty": 1490,
+      "prize": 100
+    },
+    {
+      "qty": 95,
+      "prize": 200
+    },
+    {
+      "qty": 19,
+      "prize": 1000
+    },
+    {
+      "qty": 4,
+      "prize": 10000
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "name": "Ricos Euros",
+  "mode": "scratch",
+  "cost": 1,
+  "totalTickets": 1000000,
+  "emission": "3ª Emissão",
+  "launchDate": "2023-01-04",
+  "totalPrizePool": 700000,
+  "tiers": [
+    {
+      "qty": 150000,
+      "prize": 1
+    },
+    {
+      "qty": 80000,
+      "prize": 2
+    },
+    {
+      "qty": 29700,
+      "prize": 3
+    },
+    {
+      "qty": 14000,
+      "prize": 4
+    },
+    {
+      "qty": 8000,
+      "prize": 5
+    },
+    {
+      "qty": 2000,
+      "prize": 10
+    },
+    {
+      "qty": 1500,
+      "prize": 15
+    },
+    {
+      "qty": 1230,
+      "prize": 20
+    },
+    {
+      "qty": 558,
+      "prize": 25
+    },
+    {
+      "qty": 735,
+      "prize": 30
+    },
+    {
+      "qty": 300,
+      "prize": 50
+    },
+    {
+      "qty": 100,
+      "prize": 100
+    },
+    {
+      "qty": 80,
+      "prize": 200
+    },
+    {
+      "qty": 60,
+      "prize": 300
+    },
+    {
+      "qty": 32,
+      "prize": 400
+    },
+    {
+      "qty": 20,
+      "prize": 500
+    },
+    {
+      "qty": 10,
+      "prize": 1000
+    },
+    {
+      "qty": 1,
+      "prize": 10000
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "name": "Joaninha da Fortuna",
+  "mode": "scratch",
+  "cost": 1,
+  "totalTickets": 1000000,
+  "emission": "4ª Emissão",
+  "launchDate": "2024-11-16",
+  "totalPrizePool": 700000,
+  "tiers": [
+    {
+      "qty": 162000,
+      "prize": 1
+    },
+    {
+      "qty": 70000,
+      "prize": 2
+    },
+    {
+      "qty": 15000,
+      "prize": 4
+    },
+    {
+      "qty": 10000,
+      "prize": 5
+    },
+    {
+      "qty": 20000,
+      "prize": 10
+    },
+    {
+      "qty": 1000,
+      "prize": 20
+    },
+    {
+      "qty": 500,
+      "prize": 50
+    },
+    {
+      "qty": 50,
+      "prize": 100
+    },
+    {
+      "qty": 30,
+      "prize": 200
+    },
+    {
+      "qty": 12,
+      "prize": 1000
+    },
+    {
+      "qty": 2,
+      "prize": 10000
+    }
+  ]
+}

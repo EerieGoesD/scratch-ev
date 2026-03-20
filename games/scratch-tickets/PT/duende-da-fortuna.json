@@ -1,0 +1,115 @@
+{
+  "name": "Duende da Fortuna",
+  "mode": "scratch",
+  "cost": 4,
+  "totalTickets": 3000000,
+  "emission": "1ª Emissão",
+  "launchDate": "2022-05-30",
+  "totalPrizePool": 8400000,
+  "tiers": [
+    {
+      "qty": 206628,
+      "prize": 4
+    },
+    {
+      "qty": 120693,
+      "prize": 6
+    },
+    {
+      "qty": 48276,
+      "prize": 8
+    },
+    {
+      "qty": 36003,
+      "prize": 10
+    },
+    {
+      "qty": 26112,
+      "prize": 12
+    },
+    {
+      "qty": 24069,
+      "prize": 14
+    },
+    {
+      "qty": 24108,
+      "prize": 16
+    },
+    {
+      "qty": 22929,
+      "prize": 18
+    },
+    {
+      "qty": 20754,
+      "prize": 20
+    },
+    {
+      "qty": 20520,
+      "prize": 22
+    },
+    {
+      "qty": 19314,
+      "prize": 24
+    },
+    {
+      "qty": 18105,
+      "prize": 26
+    },
+    {
+      "qty": 16899,
+      "prize": 28
+    },
+    {
+      "qty": 14487,
+      "prize": 30
+    },
+    {
+      "qty": 11118,
+      "prize": 32
+    },
+    {
+      "qty": 9660,
+      "prize": 34
+    },
+    {
+      "qty": 4830,
+      "prize": 36
+    },
+    {
+      "qty": 3624,
+      "prize": 38
+    },
+    {
+      "qty": 2898,
+      "prize": 40
+    },
+    {
+      "qty": 1812,
+      "prize": 48
+    },
+    {
+      "qty": 1692,
+      "prize": 80
+    },
+    {
+      "qty": 1209,
+      "prize": 100
+    },
+    {
+      "qty": 846,
+      "prize": 200
+    },
+    {
+      "qty": 372,
+      "prize": 300
+    },
+    {
+      "qty": 225,
+      "prize": 400
+    },
+    {
+      "qty": 3,
+      "prize": 40000
+    }
+  ]
+}

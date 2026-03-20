@@ -1,0 +1,22 @@
+{
+  "name": "Tesouros a Vapor",
+  "mode": "scratch",
+  "cost": 5,
+  "totalTickets": 3000000,
+  "emission": "1ª Emissão",
+  "launchDate": "2021-06-14",
+  "totalPrizePool": 10500000,
+  "tiers": [
+    { "qty": 340000, "prize": 5 },
+    { "qty": 226000, "prize": 10 },
+    { "qty": 24000, "prize": 20 },
+    { "qty": 45000, "prize": 25 },
+    { "qty": 43000, "prize": 50 },
+    { "qty": 5000, "prize": 100 },
+    { "qty": 4600, "prize": 250 },
+    { "qty": 1500, "prize": 500 },
+    { "qty": 100, "prize": 1000 },
+    { "qty": 17, "prize": 5000 },
+    { "qty": 4, "prize": 50000 }
+  ]
+}

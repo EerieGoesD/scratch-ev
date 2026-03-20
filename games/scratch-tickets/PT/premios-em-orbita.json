@@ -1,0 +1,55 @@
+{
+  "name": "Prémios em Órbita",
+  "mode": "scratch",
+  "cost": 1,
+  "totalTickets": 3000000,
+  "emission": "1ª Emissão",
+  "launchDate": "2025-11-06",
+  "totalPrizePool": 2100000,
+  "tiers": [
+    {
+      "qty": 219000,
+      "prize": 1
+    },
+    {
+      "qty": 240000,
+      "prize": 2
+    },
+    {
+      "qty": 150000,
+      "prize": 3
+    },
+    {
+      "qty": 22500,
+      "prize": 4
+    },
+    {
+      "qty": 60000,
+      "prize": 5
+    },
+    {
+      "qty": 15000,
+      "prize": 6
+    },
+    {
+      "qty": 18000,
+      "prize": 10
+    },
+    {
+      "qty": 4800,
+      "prize": 20
+    },
+    {
+      "qty": 2700,
+      "prize": 50
+    },
+    {
+      "qty": 300,
+      "prize": 100
+    },
+    {
+      "qty": 3,
+      "prize": 10000
+    }
+  ]
+}

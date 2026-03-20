@@ -1,0 +1,55 @@
+{
+  "name": "Mini Pé-de-Meia",
+  "mode": "scratch",
+  "cost": 1,
+  "totalTickets": 1000000,
+  "emission": "12ª Emissão",
+  "launchDate": "2025-02-18",
+  "totalPrizePool": 700000,
+  "tiers": [
+    {
+      "qty": 190000,
+      "prize": 1
+    },
+    {
+      "qty": 70000,
+      "prize": 2
+    },
+    {
+      "qty": 30000,
+      "prize": 5
+    },
+    {
+      "qty": 8300,
+      "prize": 10
+    },
+    {
+      "qty": 1500,
+      "prize": 20
+    },
+    {
+      "qty": 400,
+      "prize": 50
+    },
+    {
+      "qty": 150,
+      "prize": 100
+    },
+    {
+      "qty": 40,
+      "prize": 150
+    },
+    {
+      "qty": 10,
+      "prize": 1800
+    },
+    {
+      "qty": 3,
+      "prize": 6000
+    },
+    {
+      "qty": 1,
+      "prize": 30000
+    }
+  ]
+}

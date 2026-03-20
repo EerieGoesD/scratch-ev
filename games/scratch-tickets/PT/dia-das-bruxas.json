@@ -1,0 +1,83 @@
+{
+  "name": "Dia das Bruxas",
+  "mode": "scratch",
+  "cost": 2,
+  "totalTickets": 3000000,
+  "emission": "1ª Emissão",
+  "launchDate": "2020-10-09",
+  "totalPrizePool": 4200000,
+  "tiers": [
+    {
+      "qty": 250000,
+      "prize": 2
+    },
+    {
+      "qty": 185000,
+      "prize": 4
+    },
+    {
+      "qty": 72000,
+      "prize": 6
+    },
+    {
+      "qty": 16000,
+      "prize": 8
+    },
+    {
+      "qty": 28000,
+      "prize": 10
+    },
+    {
+      "qty": 48000,
+      "prize": 20
+    },
+    {
+      "qty": 7500,
+      "prize": 30
+    },
+    {
+      "qty": 3200,
+      "prize": 40
+    },
+    {
+      "qty": 2500,
+      "prize": 50
+    },
+    {
+      "qty": 1000,
+      "prize": 60
+    },
+    {
+      "qty": 1500,
+      "prize": 80
+    },
+    {
+      "qty": 2800,
+      "prize": 100
+    },
+    {
+      "qty": 400,
+      "prize": 200
+    },
+    {
+      "qty": 80,
+      "prize": 400
+    },
+    {
+      "qty": 40,
+      "prize": 500
+    },
+    {
+      "qty": 20,
+      "prize": 1000
+    },
+    {
+      "qty": 5,
+      "prize": 2000
+    },
+    {
+      "qty": 2,
+      "prize": 30000
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "name": "Joaninha da Fortuna 2",
+  "mode": "scratch",
+  "cost": 0.3,
+  "totalTickets": 9000000,
+  "emission": "1ª Emissão",
+  "launchDate": "2020-07-24",
+  "totalPrizePool": 1890000,
+  "tiers": [
+    {
+      "qty": 120000,
+      "prize": 0.3
+    },
+    {
+      "qty": 113250,
+      "prize": 0.6
+    },
+    {
+      "qty": 99000,
+      "prize": 1.2
+    },
+    {
+      "qty": 102000,
+      "prize": 1.5
+    },
+    {
+      "qty": 85500,
+      "prize": 3
+    },
+    {
+      "qty": 82500,
+      "prize": 6
+    },
+    {
+      "qty": 32250,
+      "prize": 15
+    },
+    {
+      "qty": 8100,
+      "prize": 30
+    },
+    {
+      "qty": 165,
+      "prize": 60
+    },
+    {
+      "qty": 12,
+      "prize": 300
+    },
+    {
+      "qty": 3,
+      "prize": 7500
+    }
+  ]
+}

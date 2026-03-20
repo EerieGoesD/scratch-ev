@@ -1,0 +1,80 @@
+{
+  "name": "EuroDreams",
+  "mode": "lottery",
+  "cost": 2.5,
+  "launchDate": "2023-11-06",
+  "drawSchedule": "Mon, Thu 20:00",
+  "drawLocation": "Paris (electronic)",
+  "countries": ["PT", "ES", "FR", "IE", "BE", "CH", "AT", "LU"],
+  "payoutRate": 0.52,
+  "numbers": {
+    "main": { "pool": 40, "pick": 6 },
+    "bonus": { "pool": 5, "pick": 1, "name": "Número de Sonho" }
+  },
+  "prizeDistribution": {
+    "reserveFund": 0.4521,
+    "variablePool": 0.5479,
+    "variableBreakdown": {
+      "3rd": 0.1032,
+      "4th": 0.2893,
+      "5th": 0.6075
+    },
+    "notes": "6th category (€2.50) is paid first from the variable pool. Remainder is split among 3rd-5th per percentages. If a lower category prize exceeds the one above, both categories merge and split evenly."
+  },
+  "specialRules": {
+    "1stPrizeMaxWinners": 3,
+    "1stPrizeMaxPool": 21600000,
+    "1stPrizeSplitNote": "If >3 winners, €21.6M is split equally and paid as lump sum",
+    "2ndPrizeMaxWinners": 12,
+    "2ndPrizeMaxPool": 1440000,
+    "2ndPrizeSplitNote": "If >12 winners, €1.44M is split equally and paid as lump sum"
+  },
+  "tiers": [
+    {
+      "match": "6+1",
+      "description": "6 Números + 1 Nº Sonho",
+      "odds": 19191900,
+      "prize": "fixed",
+      "monthlyPrize": 20000,
+      "months": 360,
+      "totalPrize": 7200000
+    },
+    {
+      "match": "6+0",
+      "description": "6 Números",
+      "odds": 4797975,
+      "prize": "fixed",
+      "monthlyPrize": 2000,
+      "months": 60,
+      "totalPrize": 120000
+    },
+    {
+      "match": "5",
+      "description": "5 Números",
+      "odds": 18815.59,
+      "prize": "variable",
+      "poolShare": 0.1032
+    },
+    {
+      "match": "4",
+      "description": "4 Números",
+      "odds": 456.14,
+      "prize": "variable",
+      "poolShare": 0.2893
+    },
+    {
+      "match": "3",
+      "description": "3 Números",
+      "odds": 32.07,
+      "prize": "variable",
+      "poolShare": 0.6075
+    },
+    {
+      "match": "2",
+      "description": "2 Números",
+      "odds": 5.52,
+      "prize": "fixed",
+      "totalPrize": 2.5
+    }
+  ]
+}

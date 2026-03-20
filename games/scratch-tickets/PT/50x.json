@@ -1,0 +1,27 @@
+{
+  "name": "50X",
+  "mode": "scratch",
+  "cost": 5,
+  "totalTickets": 1000000,
+  "emission": "3ª Emissão",
+  "launchDate": "2024-09-28",
+  "totalPrizePool": 3500000,
+  "tiers": [
+    { "qty": 214000, "prize": 5 },
+    { "qty": 50000, "prize": 10 },
+    { "qty": 18000, "prize": 15 },
+    { "qty": 11000, "prize": 20 },
+    { "qty": 7500, "prize": 25 },
+    { "qty": 6000, "prize": 30 },
+    { "qty": 4000, "prize": 50 },
+    { "qty": 1350, "prize": 100 },
+    { "qty": 400, "prize": 250 },
+    { "qty": 270, "prize": 500 },
+    { "qty": 180, "prize": 1000 },
+    { "qty": 100, "prize": 1250 },
+    { "qty": 20, "prize": 2000 },
+    { "qty": 15, "prize": 2500 },
+    { "qty": 4, "prize": 5000 },
+    { "qty": 1, "prize": 100000 }
+  ]
+}

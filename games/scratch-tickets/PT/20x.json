@@ -1,0 +1,26 @@
+{
+  "name": "20X",
+  "mode": "scratch",
+  "cost": 2,
+  "totalTickets": 1000000,
+  "emission": "7ª Emissão",
+  "launchDate": "2024-09-12",
+  "totalPrizePool": 1400000,
+  "tiers": [
+    { "qty": 180850, "prize": 2 },
+    { "qty": 62100, "prize": 4 },
+    { "qty": 17000, "prize": 6 },
+    { "qty": 15000, "prize": 8 },
+    { "qty": 8000, "prize": 10 },
+    { "qty": 5100, "prize": 20 },
+    { "qty": 3000, "prize": 30 },
+    { "qty": 1350, "prize": 40 },
+    { "qty": 650, "prize": 50 },
+    { "qty": 650, "prize": 80 },
+    { "qty": 400, "prize": 100 },
+    { "qty": 270, "prize": 120 },
+    { "qty": 100, "prize": 500 },
+    { "qty": 15, "prize": 1000 },
+    { "qty": 1, "prize": 20000 }
+  ]
+}

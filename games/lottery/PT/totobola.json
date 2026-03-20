@@ -1,0 +1,19 @@
+{
+  "name": "Totobola",
+  "mode": "lottery",
+  "subtype": "football",
+  "cost": 0.5,
+  "minBets": 2,
+  "drawSchedule": "Sun (weekly)",
+  "payoutRate": 0.65,
+  "numbers": {
+    "main": { "pool": 3, "pick": 13, "description": "13 jogos base (1/X/2)" },
+    "bonus": { "pool": 3, "pick": 1, "name": "Super 14" }
+  },
+  "tiers": [
+    { "match": "13+S14", "odds": 4782969, "type": "variable", "description": "13 acertos + Super 14" },
+    { "match": "13", "odds": 1594323, "type": "variable", "description": "13 acertos" },
+    { "match": "12", "odds": 531441, "type": "variable", "description": "12 acertos" },
+    { "match": "11", "odds": 177147, "type": "variable", "description": "11 acertos" }
+  ]
+}

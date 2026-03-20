@@ -1,0 +1,22 @@
+{
+  "name": "Super Recompensa",
+  "mode": "scratch",
+  "cost": 5,
+  "totalTickets": 3000000,
+  "emission": "1ª Emissão",
+  "launchDate": "2021-08-23",
+  "totalPrizePool": 10500000,
+  "tiers": [
+    { "qty": 430000, "prize": 5 },
+    { "qty": 180000, "prize": 10 },
+    { "qty": 135000, "prize": 15 },
+    { "qty": 35700, "prize": 25 },
+    { "qty": 27000, "prize": 50 },
+    { "qty": 9000, "prize": 100 },
+    { "qty": 3000, "prize": 150 },
+    { "qty": 450, "prize": 750 },
+    { "qty": 180, "prize": 1500 },
+    { "qty": 15, "prize": 5000 },
+    { "qty": 5, "prize": 50000 }
+  ]
+}

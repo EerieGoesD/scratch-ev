@@ -1,0 +1,19 @@
+{
+  "name": "Aranha da Sorte",
+  "mode": "scratch",
+  "cost": 1,
+  "totalTickets": 1000000,
+  "emission": "3ª Emissão",
+  "launchDate": "2022-12-15",
+  "totalPrizePool": 700000,
+  "tiers": [
+    { "qty": 209500, "prize": 1 },
+    { "qty": 43000, "prize": 2 },
+    { "qty": 28000, "prize": 4 },
+    { "qty": 13000, "prize": 10 },
+    { "qty": 3500, "prize": 20 },
+    { "qty": 650, "prize": 50 },
+    { "qty": 500, "prize": 100 },
+    { "qty": 1, "prize": 10000 }
+  ]
+}

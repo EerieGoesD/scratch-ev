@@ -1,0 +1,91 @@
+{
+  "name": "Fogo e Gelo",
+  "mode": "scratch",
+  "cost": 0.2,
+  "totalTickets": 9000000,
+  "emission": "1ª Emissão",
+  "launchDate": "2024-12-26",
+  "totalPrizePool": 1260000,
+  "tiers": [
+    {
+      "qty": 40575,
+      "prize": 1
+    },
+    {
+      "qty": 26250,
+      "prize": 2
+    },
+    {
+      "qty": 18750,
+      "prize": 3
+    },
+    {
+      "qty": 10125,
+      "prize": 4
+    },
+    {
+      "qty": 7500,
+      "prize": 6
+    },
+    {
+      "qty": 5625,
+      "prize": 8
+    },
+    {
+      "qty": 3045,
+      "prize": 10
+    },
+    {
+      "qty": 1497,
+      "prize": 15
+    },
+    {
+      "qty": 1566,
+      "prize": 20
+    },
+    {
+      "qty": 375,
+      "prize": 30
+    },
+    {
+      "qty": 1725,
+      "prize": 40
+    },
+    {
+      "qty": 525,
+      "prize": 60
+    },
+    {
+      "qty": 825,
+      "prize": 80
+    },
+    {
+      "qty": 1770,
+      "prize": 100
+    },
+    {
+      "qty": 2379,
+      "prize": 200
+    },
+    {
+      "qty": 75,
+      "prize": 400
+    },
+    {
+      "qty": 3,
+      "prize": 800
+    },
+    {
+      "qty": 3,
+      "prize": 1000
+    },
+    {
+      "qty": 6,
+      "prize": 2000
+    },
+    {
+      "qty": 3,
+      "prize": 6000
+    }
+  ]
+}

@@ -1,0 +1,427 @@
+{
+  "name": "Road Trip",
+  "mode": "scratch",
+  "cost": 0.5,
+  "totalTickets": 3000000,
+  "emission": "1ª Emissão",
+  "launchDate": "2024-10-14",
+  "totalPrizePool": 1050000,
+  "tiers": [
+    {
+      "qty": 25000,
+      "prize": 1.5
+    },
+    {
+      "qty": 29288,
+      "prize": 2.5
+    },
+    {
+      "qty": 5143,
+      "prize": 3.5
+    },
+    {
+      "qty": 7467,
+      "prize": 5
+    },
+    {
+      "qty": 107,
+      "prize": 6.5
+    },
+    {
+      "qty": 11644,
+      "prize": 7.5
+    },
+    {
+      "qty": 75,
+      "prize": 9
+    },
+    {
+      "qty": 3108,
+      "prize": 10
+    },
+    {
+      "qty": 1821,
+      "prize": 12.5
+    },
+    {
+      "qty": 43,
+      "prize": 14
+    },
+    {
+      "qty": 2122,
+      "prize": 15
+    },
+    {
+      "qty": 43,
+      "prize": 15.5
+    },
+    {
+      "qty": 86,
+      "prize": 16.5
+    },
+    {
+      "qty": 86,
+      "prize": 17.5
+    },
+    {
+      "qty": 921,
+      "prize": 20
+    },
+    {
+      "qty": 489,
+      "prize": 25
+    },
+    {
+      "qty": 75,
+      "prize": 26
+    },
+    {
+      "qty": 64,
+      "prize": 28.5
+    },
+    {
+      "qty": 293,
+      "prize": 37.5
+    },
+    {
+      "qty": 51,
+      "prize": 41
+    },
+    {
+      "qty": 54,
+      "prize": 42
+    },
+    {
+      "qty": 75,
+      "prize": 42.5
+    },
+    {
+      "qty": 86,
+      "prize": 45
+    },
+    {
+      "qty": 92,
+      "prize": 47.5
+    },
+    {
+      "qty": 193,
+      "prize": 50
+    },
+    {
+      "qty": 79,
+      "prize": 57.5
+    },
+    {
+      "qty": 62,
+      "prize": 58
+    },
+    {
+      "qty": 64,
+      "prize": 62.5
+    },
+    {
+      "qty": 64,
+      "prize": 63
+    },
+    {
+      "qty": 54,
+      "prize": 66
+    },
+    {
+      "qty": 43,
+      "prize": 68.5
+    },
+    {
+      "qty": 77,
+      "prize": 70
+    },
+    {
+      "qty": 41,
+      "prize": 72.5
+    },
+    {
+      "qty": 157,
+      "prize": 75
+    },
+    {
+      "qty": 39,
+      "prize": 76.5
+    },
+    {
+      "qty": 86,
+      "prize": 90
+    },
+    {
+      "qty": 39,
+      "prize": 91.5
+    },
+    {
+      "qty": 64,
+      "prize": 95
+    },
+    {
+      "qty": 200,
+      "prize": 100
+    },
+    {
+      "qty": 53,
+      "prize": 110
+    },
+    {
+      "qty": 182,
+      "prize": 125
+    },
+    {
+      "qty": 11,
+      "prize": 135
+    },
+    {
+      "qty": 11,
+      "prize": 140
+    },
+    {
+      "qty": 168,
+      "prize": 150
+    },
+    {
+      "qty": 21,
+      "prize": 165
+    },
+    {
+      "qty": 21,
+      "prize": 170
+    },
+    {
+      "qty": 43,
+      "prize": 175
+    },
+    {
+      "qty": 86,
+      "prize": 190
+    },
+    {
+      "qty": 214,
+      "prize": 200
+    },
+    {
+      "qty": 86,
+      "prize": 210
+    },
+    {
+      "qty": 86,
+      "prize": 225
+    },
+    {
+      "qty": 86,
+      "prize": 230
+    },
+    {
+      "qty": 86,
+      "prize": 240
+    },
+    {
+      "qty": 147,
+      "prize": 250
+    },
+    {
+      "qty": 86,
+      "prize": 252.5
+    },
+    {
+      "qty": 86,
+      "prize": 253
+    },
+    {
+      "qty": 86,
+      "prize": 255
+    },
+    {
+      "qty": 86,
+      "prize": 260
+    },
+    {
+      "qty": 86,
+      "prize": 261.5
+    },
+    {
+      "qty": 93,
+      "prize": 262.5
+    },
+    {
+      "qty": 118,
+      "prize": 275
+    },
+    {
+      "qty": 118,
+      "prize": 280
+    },
+    {
+      "qty": 32,
+      "prize": 282.5
+    },
+    {
+      "qty": 42,
+      "prize": 285
+    },
+    {
+      "qty": 11,
+      "prize": 295
+    },
+    {
+      "qty": 3,
+      "prize": 296.5
+    },
+    {
+      "qty": 17,
+      "prize": 300
+    },
+    {
+      "qty": 11,
+      "prize": 310
+    },
+    {
+      "qty": 6,
+      "prize": 315
+    },
+    {
+      "qty": 3,
+      "prize": 315.5
+    },
+    {
+      "qty": 2,
+      "prize": 316
+    },
+    {
+      "qty": 4,
+      "prize": 325
+    },
+    {
+      "qty": 4,
+      "prize": 330
+    },
+    {
+      "qty": 6,
+      "prize": 332
+    },
+    {
+      "qty": 3,
+      "prize": 341
+    },
+    {
+      "qty": 4,
+      "prize": 350
+    },
+    {
+      "qty": 20,
+      "prize": 375
+    },
+    {
+      "qty": 1,
+      "prize": 385
+    },
+    {
+      "qty": 1,
+      "prize": 390
+    },
+    {
+      "qty": 1,
+      "prize": 400
+    },
+    {
+      "qty": 1,
+      "prize": 410
+    },
+    {
+      "qty": 1,
+      "prize": 415
+    },
+    {
+      "qty": 1,
+      "prize": 420
+    },
+    {
+      "qty": 1,
+      "prize": 425
+    },
+    {
+      "qty": 1,
+      "prize": 450
+    },
+    {
+      "qty": 1,
+      "prize": 465
+    },
+    {
+      "qty": 1,
+      "prize": 475
+    },
+    {
+      "qty": 2,
+      "prize": 500
+    },
+    {
+      "qty": 2,
+      "prize": 516
+    },
+    {
+      "qty": 1,
+      "prize": 517.5
+    },
+    {
+      "qty": 1,
+      "prize": 518.5
+    },
+    {
+      "qty": 1,
+      "prize": 521
+    },
+    {
+      "qty": 4,
+      "prize": 522.5
+    },
+    {
+      "qty": 1,
+      "prize": 531.5
+    },
+    {
+      "qty": 2,
+      "prize": 533.5
+    },
+    {
+      "qty": 1,
+      "prize": 535
+    },
+    {
+      "qty": 1,
+      "prize": 535.5
+    },
+    {
+      "qty": 1,
+      "prize": 537.5
+    },
+    {
+      "qty": 1,
+      "prize": 538.5
+    },
+    {
+      "qty": 1,
+      "prize": 540
+    },
+    {
+      "qty": 1,
+      "prize": 1250
+    },
+    {
+      "qty": 6,
+      "prize": 1500
+    },
+    {
+      "qty": 1,
+      "prize": 5000
+    },
+    {
+      "qty": 1,
+      "prize": 25000
+    }
+  ]
+}

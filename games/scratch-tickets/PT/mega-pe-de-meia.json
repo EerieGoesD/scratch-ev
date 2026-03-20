@@ -1,0 +1,55 @@
+{
+  "name": "Mega Pé-de-Meia",
+  "mode": "scratch",
+  "cost": 10,
+  "totalTickets": 1000000,
+  "emission": "1ª Emissão",
+  "launchDate": "2025-03-07",
+  "totalPrizePool": 7000000,
+  "tiers": [
+    {
+      "qty": 163000,
+      "prize": 10
+    },
+    {
+      "qty": 101350,
+      "prize": 20
+    },
+    {
+      "qty": 26000,
+      "prize": 30
+    },
+    {
+      "qty": 13000,
+      "prize": 50
+    },
+    {
+      "qty": 4000,
+      "prize": 100
+    },
+    {
+      "qty": 1325,
+      "prize": 200
+    },
+    {
+      "qty": 200,
+      "prize": 500
+    },
+    {
+      "qty": 200,
+      "prize": 1000
+    },
+    {
+      "qty": 3,
+      "prize": 36000
+    },
+    {
+      "qty": 2,
+      "prize": 168000
+    },
+    {
+      "qty": 1,
+      "prize": 504000
+    }
+  ]
+}

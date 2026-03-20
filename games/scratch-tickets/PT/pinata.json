@@ -1,0 +1,235 @@
+{
+  "name": "Piñata",
+  "mode": "scratch",
+  "cost": 0.5,
+  "totalTickets": 3000000,
+  "emission": "3ª Emissão",
+  "launchDate": "2025-06-07",
+  "totalPrizePool": 1050000,
+  "tiers": [
+    {
+      "qty": 15000,
+      "prize": 0.5
+    },
+    {
+      "qty": 15000,
+      "prize": 1
+    },
+    {
+      "qty": 15000,
+      "prize": 1.5
+    },
+    {
+      "qty": 27000,
+      "prize": 2
+    },
+    {
+      "qty": 15600,
+      "prize": 2.5
+    },
+    {
+      "qty": 4500,
+      "prize": 3
+    },
+    {
+      "qty": 3000,
+      "prize": 4
+    },
+    {
+      "qty": 10200,
+      "prize": 5
+    },
+    {
+      "qty": 5175,
+      "prize": 7.5
+    },
+    {
+      "qty": 6600,
+      "prize": 10
+    },
+    {
+      "qty": 600,
+      "prize": 12.5
+    },
+    {
+      "qty": 3900,
+      "prize": 15
+    },
+    {
+      "qty": 600,
+      "prize": 17.5
+    },
+    {
+      "qty": 1725,
+      "prize": 20
+    },
+    {
+      "qty": 675,
+      "prize": 25
+    },
+    {
+      "qty": 300,
+      "prize": 30
+    },
+    {
+      "qty": 435,
+      "prize": 40
+    },
+    {
+      "qty": 550,
+      "prize": 47.5
+    },
+    {
+      "qty": 495,
+      "prize": 50
+    },
+    {
+      "qty": 270,
+      "prize": 60
+    },
+    {
+      "qty": 550,
+      "prize": 65
+    },
+    {
+      "qty": 540,
+      "prize": 70
+    },
+    {
+      "qty": 500,
+      "prize": 72.5
+    },
+    {
+      "qty": 250,
+      "prize": 75
+    },
+    {
+      "qty": 300,
+      "prize": 97.5
+    },
+    {
+      "qty": 330,
+      "prize": 100
+    },
+    {
+      "qty": 300,
+      "prize": 102.5
+    },
+    {
+      "qty": 300,
+      "prize": 105
+    },
+    {
+      "qty": 200,
+      "prize": 107.5
+    },
+    {
+      "qty": 200,
+      "prize": 110
+    },
+    {
+      "qty": 200,
+      "prize": 112.5
+    },
+    {
+      "qty": 200,
+      "prize": 115
+    },
+    {
+      "qty": 100,
+      "prize": 117.5
+    },
+    {
+      "qty": 104,
+      "prize": 120
+    },
+    {
+      "qty": 100,
+      "prize": 122.5
+    },
+    {
+      "qty": 300,
+      "prize": 125
+    },
+    {
+      "qty": 50,
+      "prize": 132.5
+    },
+    {
+      "qty": 50,
+      "prize": 135
+    },
+    {
+      "qty": 50,
+      "prize": 137.5
+    },
+    {
+      "qty": 50,
+      "prize": 140
+    },
+    {
+      "qty": 30,
+      "prize": 145
+    },
+    {
+      "qty": 130,
+      "prize": 150
+    },
+    {
+      "qty": 10,
+      "prize": 152.5
+    },
+    {
+      "qty": 3,
+      "prize": 165
+    },
+    {
+      "qty": 13,
+      "prize": 175
+    },
+    {
+      "qty": 3,
+      "prize": 177.5
+    },
+    {
+      "qty": 3,
+      "prize": 182.5
+    },
+    {
+      "qty": 3,
+      "prize": 187.5
+    },
+    {
+      "qty": 3,
+      "prize": 190
+    },
+    {
+      "qty": 95,
+      "prize": 200
+    },
+    {
+      "qty": 12,
+      "prize": 250
+    },
+    {
+      "qty": 1,
+      "prize": 300
+    },
+    {
+      "qty": 11,
+      "prize": 400
+    },
+    {
+      "qty": 3,
+      "prize": 500
+    },
+    {
+      "qty": 1,
+      "prize": 2500
+    },
+    {
+      "qty": 1,
+      "prize": 5000
+    }
+  ]
+}

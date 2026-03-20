@@ -1,0 +1,29 @@
+{
+  "name": "Lotaria Popular",
+  "mode": "raffle",
+  "cost": 3,
+  "totalTickets": 600000,
+  "fractions": 6,
+  "fullTicketPrice": 18,
+  "emission": "1 série × 100.000 bilhetes",
+  "totalPrizePool": 1260000,
+  "payoutRate": 0.70,
+  "tiers": [
+    {"qty": 1, "prize": 75000},
+    {"qty": 6, "prize": 7500},
+    {"qty": 1, "prize": 3000},
+    {"qty": 5, "prize": 2500},
+    {"qty": 6, "prize": 2000},
+    {"qty": 5, "prize": 1070},
+    {"qty": 54, "prize": 250},
+    {"qty": 540, "prize": 200},
+    {"qty": 54, "prize": 100},
+    {"qty": 54, "prize": 75},
+    {"qty": 5454, "prize": 50},
+    {"qty": 540, "prize": 30},
+    {"qty": 540, "prize": 25},
+    {"qty": 540, "prize": 20},
+    {"qty": 28200, "prize": 5},
+    {"qty": 174000, "prize": 3}
+  ]
+}

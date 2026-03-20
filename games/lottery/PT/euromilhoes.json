@@ -1,0 +1,101 @@
+{
+  "name": "EuroMilhões",
+  "mode": "lottery",
+  "cost": 2.5,
+  "baseCost": 2.2,
+  "milhaoSurcharge": 0.3,
+  "launchDate": "2004-10-01",
+  "drawSchedule": "Tue, Fri 20:00",
+  "drawLocation": "Paris (electronic)",
+  "payoutRate": 0.50,
+  "numbers": {
+    "main": { "pool": 50, "pick": 5 },
+    "bonus": { "pool": 12, "pick": 2, "name": "Estrelas" }
+  },
+  "jackpot": {
+    "minimum": 17000000,
+    "maximum": 250000000,
+    "rollover": true
+  },
+  "tiers": [
+    {
+      "match": "5+2",
+      "description": "5 Números + 2 Estrelas",
+      "odds": 139838160,
+      "prize": "jackpot",
+      "minimumPrize": 17000000
+    },
+    {
+      "match": "5+1",
+      "description": "5 Números + 1 Estrela",
+      "odds": 6991908,
+      "prize": "variable"
+    },
+    {
+      "match": "5+0",
+      "description": "5 Números",
+      "odds": 3107515,
+      "prize": "variable"
+    },
+    {
+      "match": "4+2",
+      "description": "4 Números + 2 Estrelas",
+      "odds": 621503,
+      "prize": "variable"
+    },
+    {
+      "match": "4+1",
+      "description": "4 Números + 1 Estrela",
+      "odds": 31075,
+      "prize": "variable"
+    },
+    {
+      "match": "3+2",
+      "description": "3 Números + 2 Estrelas",
+      "odds": 14125,
+      "prize": "variable"
+    },
+    {
+      "match": "4+0",
+      "description": "4 Números",
+      "odds": 13811,
+      "prize": "variable"
+    },
+    {
+      "match": "2+2",
+      "description": "2 Números + 2 Estrelas",
+      "odds": 985,
+      "prize": "variable"
+    },
+    {
+      "match": "3+1",
+      "description": "3 Números + 1 Estrela",
+      "odds": 706,
+      "prize": "variable"
+    },
+    {
+      "match": "3+0",
+      "description": "3 Números",
+      "odds": 314,
+      "prize": "variable"
+    },
+    {
+      "match": "1+2",
+      "description": "1 Número + 2 Estrelas",
+      "odds": 188,
+      "prize": "variable"
+    },
+    {
+      "match": "2+1",
+      "description": "2 Números + 1 Estrela",
+      "odds": 49,
+      "prize": "variable"
+    },
+    {
+      "match": "2+0",
+      "description": "2 Números",
+      "odds": 22,
+      "prize": "variable"
+    }
+  ]
+}

@@ -1,0 +1,479 @@
+{
+  "name": "Tutti Frutti",
+  "mode": "scratch",
+  "cost": 0.2,
+  "totalTickets": 9000000,
+  "emission": "3ª Emissão",
+  "launchDate": "2025-06-20",
+  "totalPrizePool": 1259999.6,
+  "tiers": [
+    {
+      "qty": 14500,
+      "prize": 0.6
+    },
+    {
+      "qty": 15000,
+      "prize": 0.8
+    },
+    {
+      "qty": 19000,
+      "prize": 1
+    },
+    {
+      "qty": 20000,
+      "prize": 1.6
+    },
+    {
+      "qty": 21076,
+      "prize": 2
+    },
+    {
+      "qty": 18000,
+      "prize": 3
+    },
+    {
+      "qty": 800,
+      "prize": 3.6
+    },
+    {
+      "qty": 31000,
+      "prize": 4
+    },
+    {
+      "qty": 300,
+      "prize": 5.6
+    },
+    {
+      "qty": 12600,
+      "prize": 6
+    },
+    {
+      "qty": 300,
+      "prize": 7.6
+    },
+    {
+      "qty": 2400,
+      "prize": 8
+    },
+    {
+      "qty": 300,
+      "prize": 9.6
+    },
+    {
+      "qty": 5600,
+      "prize": 10
+    },
+    {
+      "qty": 300,
+      "prize": 11.2
+    },
+    {
+      "qty": 1350,
+      "prize": 12
+    },
+    {
+      "qty": 250,
+      "prize": 13.2
+    },
+    {
+      "qty": 250,
+      "prize": 14.4
+    },
+    {
+      "qty": 3800,
+      "prize": 15
+    },
+    {
+      "qty": 250,
+      "prize": 15.6
+    },
+    {
+      "qty": 7000,
+      "prize": 16
+    },
+    {
+      "qty": 250,
+      "prize": 17
+    },
+    {
+      "qty": 250,
+      "prize": 18
+    },
+    {
+      "qty": 400,
+      "prize": 19
+    },
+    {
+      "qty": 250,
+      "prize": 19.6
+    },
+    {
+      "qty": 3110,
+      "prize": 20
+    },
+    {
+      "qty": 150,
+      "prize": 21
+    },
+    {
+      "qty": 250,
+      "prize": 21.2
+    },
+    {
+      "qty": 250,
+      "prize": 21.6
+    },
+    {
+      "qty": 400,
+      "prize": 22
+    },
+    {
+      "qty": 150,
+      "prize": 23.2
+    },
+    {
+      "qty": 150,
+      "prize": 24
+    },
+    {
+      "qty": 150,
+      "prize": 25
+    },
+    {
+      "qty": 150,
+      "prize": 25.6
+    },
+    {
+      "qty": 150,
+      "prize": 26.8
+    },
+    {
+      "qty": 150,
+      "prize": 27.6
+    },
+    {
+      "qty": 150,
+      "prize": 29.6
+    },
+    {
+      "qty": 150,
+      "prize": 30
+    },
+    {
+      "qty": 150,
+      "prize": 31
+    },
+    {
+      "qty": 150,
+      "prize": 31.6
+    },
+    {
+      "qty": 300,
+      "prize": 32
+    },
+    {
+      "qty": 300,
+      "prize": 33
+    },
+    {
+      "qty": 150,
+      "prize": 34
+    },
+    {
+      "qty": 160,
+      "prize": 35
+    },
+    {
+      "qty": 150,
+      "prize": 35.2
+    },
+    {
+      "qty": 150,
+      "prize": 36
+    },
+    {
+      "qty": 310,
+      "prize": 38
+    },
+    {
+      "qty": 860,
+      "prize": 40
+    },
+    {
+      "qty": 150,
+      "prize": 42.8
+    },
+    {
+      "qty": 120,
+      "prize": 43
+    },
+    {
+      "qty": 150,
+      "prize": 45.6
+    },
+    {
+      "qty": 120,
+      "prize": 47
+    },
+    {
+      "qty": 150,
+      "prize": 48.4
+    },
+    {
+      "qty": 120,
+      "prize": 49
+    },
+    {
+      "qty": 120,
+      "prize": 51
+    },
+    {
+      "qty": 150,
+      "prize": 51.6
+    },
+    {
+      "qty": 150,
+      "prize": 53
+    },
+    {
+      "qty": 160,
+      "prize": 54
+    },
+    {
+      "qty": 40,
+      "prize": 55.6
+    },
+    {
+      "qty": 160,
+      "prize": 56
+    },
+    {
+      "qty": 40,
+      "prize": 57.2
+    },
+    {
+      "qty": 40,
+      "prize": 58
+    },
+    {
+      "qty": 40,
+      "prize": 59
+    },
+    {
+      "qty": 120,
+      "prize": 60
+    },
+    {
+      "qty": 40,
+      "prize": 62.8
+    },
+    {
+      "qty": 120,
+      "prize": 65
+    },
+    {
+      "qty": 40,
+      "prize": 66.4
+    },
+    {
+      "qty": 40,
+      "prize": 68.6
+    },
+    {
+      "qty": 120,
+      "prize": 70
+    },
+    {
+      "qty": 40,
+      "prize": 71.2
+    },
+    {
+      "qty": 5,
+      "prize": 73.2
+    },
+    {
+      "qty": 120,
+      "prize": 75
+    },
+    {
+      "qty": 5,
+      "prize": 77.6
+    },
+    {
+      "qty": 4,
+      "prize": 79
+    },
+    {
+      "qty": 120,
+      "prize": 80
+    },
+    {
+      "qty": 120,
+      "prize": 85
+    },
+    {
+      "qty": 4,
+      "prize": 85.6
+    },
+    {
+      "qty": 2,
+      "prize": 86.8
+    },
+    {
+      "qty": 120,
+      "prize": 90
+    },
+    {
+      "qty": 2,
+      "prize": 91.6
+    },
+    {
+      "qty": 120,
+      "prize": 92
+    },
+    {
+      "qty": 130,
+      "prize": 93
+    },
+    {
+      "qty": 130,
+      "prize": 95
+    },
+    {
+      "qty": 2,
+      "prize": 95.2
+    },
+    {
+      "qty": 130,
+      "prize": 98
+    },
+    {
+      "qty": 2,
+      "prize": 99
+    },
+    {
+      "qty": 640,
+      "prize": 100
+    },
+    {
+      "qty": 62,
+      "prize": 101
+    },
+    {
+      "qty": 60,
+      "prize": 105
+    },
+    {
+      "qty": 2,
+      "prize": 109
+    },
+    {
+      "qty": 2,
+      "prize": 117
+    },
+    {
+      "qty": 2,
+      "prize": 124
+    },
+    {
+      "qty": 30,
+      "prize": 125
+    },
+    {
+      "qty": 30,
+      "prize": 126
+    },
+    {
+      "qty": 26,
+      "prize": 130
+    },
+    {
+      "qty": 25,
+      "prize": 135
+    },
+    {
+      "qty": 2,
+      "prize": 138
+    },
+    {
+      "qty": 25,
+      "prize": 140
+    },
+    {
+      "qty": 25,
+      "prize": 145
+    },
+    {
+      "qty": 2,
+      "prize": 150
+    },
+    {
+      "qty": 25,
+      "prize": 155
+    },
+    {
+      "qty": 25,
+      "prize": 156
+    },
+    {
+      "qty": 27,
+      "prize": 160
+    },
+    {
+      "qty": 25,
+      "prize": 165
+    },
+    {
+      "qty": 25,
+      "prize": 175
+    },
+    {
+      "qty": 27,
+      "prize": 180
+    },
+    {
+      "qty": 25,
+      "prize": 185
+    },
+    {
+      "qty": 25,
+      "prize": 190
+    },
+    {
+      "qty": 60,
+      "prize": 200
+    },
+    {
+      "qty": 10,
+      "prize": 215
+    },
+    {
+      "qty": 2,
+      "prize": 220
+    },
+    {
+      "qty": 5,
+      "prize": 239
+    },
+    {
+      "qty": 5,
+      "prize": 255
+    },
+    {
+      "qty": 5,
+      "prize": 276
+    },
+    {
+      "qty": 5,
+      "prize": 298
+    },
+    {
+      "qty": 4,
+      "prize": 1000
+    },
+    {
+      "qty": 3,
+      "prize": 2000
+    }
+  ]
+}

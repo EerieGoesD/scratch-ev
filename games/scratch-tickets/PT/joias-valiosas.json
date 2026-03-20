@@ -1,0 +1,203 @@
+{
+  "name": "Joias Valiosas",
+  "mode": "scratch",
+  "cost": 2,
+  "totalTickets": 1000000,
+  "emission": "2ª Emissão",
+  "launchDate": "2022-01-14",
+  "totalPrizePool": 1400000,
+  "tiers": [
+    {
+      "qty": 119320,
+      "prize": 2
+    },
+    {
+      "qty": 62500,
+      "prize": 4
+    },
+    {
+      "qty": 25000,
+      "prize": 6
+    },
+    {
+      "qty": 13656,
+      "prize": 8
+    },
+    {
+      "qty": 13409,
+      "prize": 10
+    },
+    {
+      "qty": 5363,
+      "prize": 12
+    },
+    {
+      "qty": 4022,
+      "prize": 14
+    },
+    {
+      "qty": 2681,
+      "prize": 16
+    },
+    {
+      "qty": 2681,
+      "prize": 18
+    },
+    {
+      "qty": 3000,
+      "prize": 20
+    },
+    {
+      "qty": 1000,
+      "prize": 22
+    },
+    {
+      "qty": 1000,
+      "prize": 24
+    },
+    {
+      "qty": 250,
+      "prize": 26
+    },
+    {
+      "qty": 250,
+      "prize": 28
+    },
+    {
+      "qty": 250,
+      "prize": 30
+    },
+    {
+      "qty": 120,
+      "prize": 32
+    },
+    {
+      "qty": 120,
+      "prize": 34
+    },
+    {
+      "qty": 120,
+      "prize": 36
+    },
+    {
+      "qty": 120,
+      "prize": 38
+    },
+    {
+      "qty": 250,
+      "prize": 40
+    },
+    {
+      "qty": 80,
+      "prize": 42
+    },
+    {
+      "qty": 80,
+      "prize": 44
+    },
+    {
+      "qty": 26,
+      "prize": 46
+    },
+    {
+      "qty": 26,
+      "prize": 48
+    },
+    {
+      "qty": 250,
+      "prize": 50
+    },
+    {
+      "qty": 80,
+      "prize": 60
+    },
+    {
+      "qty": 80,
+      "prize": 70
+    },
+    {
+      "qty": 80,
+      "prize": 100
+    },
+    {
+      "qty": 80,
+      "prize": 102
+    },
+    {
+      "qty": 80,
+      "prize": 104
+    },
+    {
+      "qty": 80,
+      "prize": 110
+    },
+    {
+      "qty": 80,
+      "prize": 120
+    },
+    {
+      "qty": 40,
+      "prize": 150
+    },
+    {
+      "qty": 10,
+      "prize": 200
+    },
+    {
+      "qty": 10,
+      "prize": 202
+    },
+    {
+      "qty": 10,
+      "prize": 204
+    },
+    {
+      "qty": 10,
+      "prize": 206
+    },
+    {
+      "qty": 10,
+      "prize": 220
+    },
+    {
+      "qty": 10,
+      "prize": 250
+    },
+    {
+      "qty": 10,
+      "prize": 300
+    },
+    {
+      "qty": 10,
+      "prize": 400
+    },
+    {
+      "qty": 9,
+      "prize": 1000
+    },
+    {
+      "qty": 1,
+      "prize": 2020
+    },
+    {
+      "qty": 1,
+      "prize": 2030
+    },
+    {
+      "qty": 1,
+      "prize": 2050
+    },
+    {
+      "qty": 1,
+      "prize": 2150
+    },
+    {
+      "qty": 1,
+      "prize": 2230
+    },
+    {
+      "qty": 1,
+      "prize": 32000
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "name": "Euros da Sorte",
+  "mode": "scratch",
+  "cost": 2,
+  "totalTickets": 1000000,
+  "emission": "2ª Emissão",
+  "launchDate": "2023-12-08",
+  "totalPrizePool": 1400000,
+  "tiers": [
+    {
+      "qty": 150100,
+      "prize": 2
+    },
+    {
+      "qty": 90000,
+      "prize": 4
+    },
+    {
+      "qty": 29700,
+      "prize": 6
+    },
+    {
+      "qty": 14000,
+      "prize": 8
+    },
+    {
+      "qty": 8000,
+      "prize": 10
+    },
+    {
+      "qty": 2000,
+      "prize": 20
+    },
+    {
+      "qty": 1000,
+      "prize": 30
+    },
+    {
+      "qty": 800,
+      "prize": 40
+    },
+    {
+      "qty": 600,
+      "prize": 50
+    },
+    {
+      "qty": 400,
+      "prize": 60
+    },
+    {
+      "qty": 200,
+      "prize": 100
+    },
+    {
+      "qty": 100,
+      "prize": 200
+    },
+    {
+      "qty": 80,
+      "prize": 400
+    },
+    {
+      "qty": 60,
+      "prize": 600
+    },
+    {
+      "qty": 32,
+      "prize": 800
+    },
+    {
+      "qty": 20,
+      "prize": 1000
+    },
+    {
+      "qty": 10,
+      "prize": 2000
+    },
+    {
+      "qty": 2,
+      "prize": 20000
+    }
+  ]
+}

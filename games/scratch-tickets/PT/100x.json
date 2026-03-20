@@ -1,0 +1,26 @@
+{
+  "name": "100X",
+  "mode": "scratch",
+  "cost": 10,
+  "totalTickets": 1000000,
+  "emission": "1ª Emissão",
+  "launchDate": "2019-04-15",
+  "totalPrizePool": 7000000,
+  "tiers": [
+    { "qty": 165000, "prize": 10 },
+    { "qty": 85000, "prize": 20 },
+    { "qty": 37000, "prize": 40 },
+    { "qty": 15000, "prize": 50 },
+    { "qty": 3550, "prize": 100 },
+    { "qty": 900, "prize": 200 },
+    { "qty": 500, "prize": 250 },
+    { "qty": 300, "prize": 500 },
+    { "qty": 30, "prize": 1000 },
+    { "qty": 10, "prize": 2000 },
+    { "qty": 6, "prize": 5000 },
+    { "qty": 3, "prize": 10000 },
+    { "qty": 3, "prize": 50000 },
+    { "qty": 1, "prize": 100000 },
+    { "qty": 1, "prize": 250000 }
+  ]
+}

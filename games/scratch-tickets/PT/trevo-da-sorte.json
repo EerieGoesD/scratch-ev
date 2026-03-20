@@ -1,0 +1,21 @@
+{
+  "name": "Trevo da Sorte",
+  "mode": "scratch",
+  "cost": 1,
+  "totalTickets": 1000000,
+  "emission": "2ª Emissão",
+  "launchDate": "2021-04-14",
+  "totalPrizePool": 700000,
+  "tiers": [
+    { "qty": 190000, "prize": 1 },
+    { "qty": 70000, "prize": 2 },
+    { "qty": 30000, "prize": 5 },
+    { "qty": 12500, "prize": 10 },
+    { "qty": 2500, "prize": 20 },
+    { "qty": 400, "prize": 40 },
+    { "qty": 110, "prize": 100 },
+    { "qty": 25, "prize": 200 },
+    { "qty": 3, "prize": 1000 },
+    { "qty": 1, "prize": 10000 }
+  ]
+}

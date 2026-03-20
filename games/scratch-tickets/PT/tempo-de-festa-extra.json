@@ -1,0 +1,195 @@
+{
+  "name": "Tempo de Festa Extra",
+  "mode": "scratch",
+  "cost": 2,
+  "totalTickets": 3000000,
+  "emission": "1ª Emissão",
+  "launchDate": "2020-12-17",
+  "totalPrizePool": 4200000,
+  "tiers": [
+    {
+      "qty": 163737,
+      "prize": 2
+    },
+    {
+      "qty": 72000,
+      "prize": 3
+    },
+    {
+      "qty": 170000,
+      "prize": 4
+    },
+    {
+      "qty": 23600,
+      "prize": 5
+    },
+    {
+      "qty": 38500,
+      "prize": 6
+    },
+    {
+      "qty": 7700,
+      "prize": 7
+    },
+    {
+      "qty": 27300,
+      "prize": 8
+    },
+    {
+      "qty": 16100,
+      "prize": 9
+    },
+    {
+      "qty": 26400,
+      "prize": 10
+    },
+    {
+      "qty": 1200,
+      "prize": 11
+    },
+    {
+      "qty": 1277,
+      "prize": 12
+    },
+    {
+      "qty": 4810,
+      "prize": 13
+    },
+    {
+      "qty": 2240,
+      "prize": 14
+    },
+    {
+      "qty": 7880,
+      "prize": 15
+    },
+    {
+      "qty": 2365,
+      "prize": 16
+    },
+    {
+      "qty": 7200,
+      "prize": 18
+    },
+    {
+      "qty": 25800,
+      "prize": 20
+    },
+    {
+      "qty": 950,
+      "prize": 21
+    },
+    {
+      "qty": 367,
+      "prize": 22
+    },
+    {
+      "qty": 365,
+      "prize": 24
+    },
+    {
+      "qty": 4310,
+      "prize": 26
+    },
+    {
+      "qty": 1090,
+      "prize": 28
+    },
+    {
+      "qty": 7200,
+      "prize": 30
+    },
+    {
+      "qty": 243,
+      "prize": 33
+    },
+    {
+      "qty": 250,
+      "prize": 34
+    },
+    {
+      "qty": 335,
+      "prize": 35
+    },
+    {
+      "qty": 250,
+      "prize": 36
+    },
+    {
+      "qty": 320,
+      "prize": 38
+    },
+    {
+      "qty": 4810,
+      "prize": 40
+    },
+    {
+      "qty": 960,
+      "prize": 42
+    },
+    {
+      "qty": 238,
+      "prize": 43
+    },
+    {
+      "qty": 600,
+      "prize": 45
+    },
+    {
+      "qty": 360,
+      "prize": 46
+    },
+    {
+      "qty": 360,
+      "prize": 47
+    },
+    {
+      "qty": 360,
+      "prize": 48
+    },
+    {
+      "qty": 720,
+      "prize": 50
+    },
+    {
+      "qty": 950,
+      "prize": 60
+    },
+    {
+      "qty": 120,
+      "prize": 62
+    },
+    {
+      "qty": 130,
+      "prize": 63
+    },
+    {
+      "qty": 115,
+      "prize": 64
+    },
+    {
+      "qty": 360,
+      "prize": 80
+    },
+    {
+      "qty": 480,
+      "prize": 100
+    },
+    {
+      "qty": 35,
+      "prize": 200
+    },
+    {
+      "qty": 15,
+      "prize": 400
+    },
+    {
+      "qty": 6,
+      "prize": 1000
+    },
+    {
+      "qty": 3,
+      "prize": 15000
+    }
+  ]
+}
