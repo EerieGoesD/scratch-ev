@@ -2166,13 +2166,15 @@ function rejectCookies() {
 
 // Check existing consent (deferred until DOM is ready)
 function checkConsent() {
-  const consent = localStorage.getItem('cookie-consent');
-  if (consent === 'accepted') {
-    document.getElementById('cookieBanner').classList.add('hidden');
-    initGtag();
-  } else if (consent === 'rejected') {
-    document.getElementById('cookieBanner').classList.add('hidden');
-  }
+  try {
+    const consent = localStorage.getItem('cookie-consent');
+    if (consent === 'accepted') {
+      document.getElementById('cookieBanner').classList.add('hidden');
+      initGtag();
+    } else if (consent === 'rejected') {
+      document.getElementById('cookieBanner').classList.add('hidden');
+    }
+  } catch(e) { /* localStorage unavailable (e.g. Safari incognito) — show banner */ }
 }
 // checkConsent() called after banner HTML, see below
 
