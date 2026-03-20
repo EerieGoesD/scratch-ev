@@ -389,14 +389,13 @@
   ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
 
   /* ── Cookie banner ── */
-  .cookie-banner {
+  #cookieBanner {
     position: fixed; bottom: 0; left: 0; right: 0; z-index: 300;
     background: var(--surface); border-top: 1px solid var(--border);
     padding: 14px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 16px;
     font-family: var(--mono); font-size: 11px; color: var(--muted);
   }
-  .cookie-banner.hidden { display: none; }
-  .cookie-banner a { color: var(--accent); text-decoration: none; }
+  #cookieBanner a { color: var(--accent); text-decoration: none; }
   .cookie-btn {
     font-family: var(--mono); font-size: 11px; padding: 6px 16px; border-radius: 5px;
     cursor: pointer; transition: all 0.15s; border: 1px solid var(--border);
@@ -435,7 +434,7 @@
     .sb-game { flex: 1 1 auto; }
     .form-grid { grid-template-columns: 1fr 1fr; }
     .tax-row .field { flex: 1 1 100px; }
-    .cookie-banner { flex-direction: column; text-align: center; gap: 10px; padding: 16px; }
+    #cookieBanner { flex-direction: column; text-align: center; gap: 10px; padding: 16px; }
   }
 </style>
 </head>
