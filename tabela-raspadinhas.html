@@ -1,638 +1,245 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tabela Completa Raspadinhas | Calculadora EV</title>
-  <meta name="description" content="Tabela completa com o Valor Esperado (EV) de todas as raspadinhas portuguesas. Compare retorno, odds e probabilidades antes e depois de impostos.">
-  <meta name="keywords" content="raspadinhas, valor esperado, EV, tabela, Santa Casa, scratch tickets, Portugal, odds, retorno">
-  <link rel="canonical" href="https://eeriegoesd.com/scratch-ev/tabela-raspadinhas.html">
-  <meta property="og:title" content="Tabela Completa Raspadinhas | Calculadora EV">
-  <meta property="og:description" content="Tabela completa com o Valor Esperado de todas as raspadinhas portuguesas. Compare retorno, odds e probabilidades.">
-  <meta property="og:image" content="https://eeriegoesd.com/scratch-ev/og-image.png">
-  <meta property="og:url" content="https://eeriegoesd.com/scratch-ev/tabela-raspadinhas.html">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="pt_PT">
-  <meta property="og:locale:alternate" content="en_US">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Tabela Completa Raspadinhas | Calculadora EV">
-  <meta name="twitter:description" content="Tabela completa com o Valor Esperado de todas as raspadinhas portuguesas.">
-  <meta name="twitter:image" content="https://eeriegoesd.com/scratch-ev/og-image.png">
-  <meta name="author" content="EERIE">
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Syne:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #0a0a0f;
-      --surface: #111118;
-      --surface2: #1a1a24;
-      --border: #2a2a3a;
-      --accent: #ff6b2b;
-      --accent2: #ff9a5c;
-      --text: #e8e8f0;
-      --muted: #6b6b88;
-      --success: #3de68e;
-      --danger: #ff5555;
-      --mono: 'JetBrains Mono', monospace;
-      --sans: 'Syne', sans-serif;
-    }
-
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: var(--sans);
-      line-height: 1.6;
-      min-height: 100vh;
-    }
-
-    .container {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 2rem 1rem;
-    }
-
-    h1 {
-      font-size: 1.8rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      color: var(--accent);
-    }
-
-    .subtitle {
-      color: var(--muted);
-      margin-bottom: 2rem;
-      font-size: 0.95rem;
-    }
-
-    .controls {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-      align-items: flex-end;
-    }
-
-    .control-group {
-      display: flex;
-      flex-direction: column;
-      gap: 0.3rem;
-    }
-
-    .control-group label {
-      font-size: 0.8rem;
-      color: var(--muted);
-      font-family: var(--mono);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    .control-group input {
-      background: var(--surface2);
-      border: 1px solid var(--border);
-      color: var(--text);
-      font-family: var(--mono);
-      font-size: 0.9rem;
-      padding: 0.5rem 0.75rem;
-      border-radius: 6px;
-      width: 130px;
-      outline: none;
-      transition: border-color 0.2s;
-    }
-
-    .control-group input:focus {
-      border-color: var(--accent);
-    }
-
-    button {
-      background: var(--accent);
-      color: #fff;
-      border: none;
-      font-family: var(--sans);
-      font-size: 0.85rem;
-      font-weight: 600;
-      padding: 0.5rem 1.2rem;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background 0.2s;
-      height: fit-content;
-      align-self: flex-end;
-    }
-
-    button:hover {
-      background: var(--accent2);
-    }
-
-    button.secondary {
-      background: var(--surface2);
-      border: 1px solid var(--border);
-    }
-
-    button.secondary:hover {
-      background: var(--border);
-    }
-
-    .table-wrap {
-      overflow-x: auto;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      background: var(--surface);
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.82rem;
-      font-family: var(--mono);
-      white-space: nowrap;
-    }
-
-    thead {
-      background: var(--surface2);
-      position: sticky;
-      top: 0;
-      z-index: 2;
-    }
-
-    th {
-      padding: 0.7rem 0.6rem;
-      text-align: right;
-      color: var(--muted);
-      font-weight: 600;
-      cursor: pointer;
-      user-select: none;
-      border-bottom: 2px solid var(--border);
-      transition: color 0.2s;
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
-    }
-
-    th:first-child {
-      text-align: left;
-    }
-
-    th:hover {
-      color: var(--accent);
-    }
-
-    th .sort-arrow {
-      font-size: 0.65rem;
-      margin-left: 0.2rem;
-    }
-
-    td {
-      padding: 0.55rem 0.6rem;
-      text-align: right;
-      border-bottom: 1px solid var(--border);
-    }
-
-    td:first-child {
-      text-align: left;
-      color: var(--text);
-      font-weight: 600;
-    }
-
-    tr:hover td {
-      background: var(--surface2);
-    }
-
-    tr.highlight td {
-      background: rgba(255, 107, 43, 0.1);
-      border-bottom-color: var(--accent);
-    }
-
-    tr.highlight td:first-child {
-      color: var(--accent);
-    }
-
-    .positive {
-      color: var(--success);
-    }
-
-    .negative {
-      color: var(--danger);
-    }
-
-    .loading {
-      text-align: center;
-      padding: 4rem 1rem;
-      color: var(--muted);
-      font-family: var(--mono);
-    }
-
-    .loading .spinner {
-      display: inline-block;
-      width: 24px;
-      height: 24px;
-      border: 2px solid var(--border);
-      border-top-color: var(--accent);
-      border-radius: 50%;
-      animation: spin 0.8s linear infinite;
-      margin-bottom: 1rem;
-    }
-
-    @keyframes spin {
-      to { transform: rotate(360deg); }
-    }
-
-    footer {
-      margin-top: 3rem;
-      padding: 1.5rem 0;
-      border-top: 1px solid var(--border);
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      justify-content: center;
-      align-items: center;
-      font-size: 0.85rem;
-    }
-
-    footer a {
-      color: var(--accent);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    footer a:hover {
-      color: var(--accent2);
-    }
-
-    footer .sep {
-      color: var(--border);
-    }
-
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        padding: 1rem 0.5rem;
-      }
-      h1 {
-        font-size: 1.3rem;
-      }
-      .controls {
-        gap: 0.6rem;
-      }
-      .control-group input {
-        width: 100px;
-      }
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1 id="page-title">Tabela Completa de Raspadinhas</h1>
-    <p class="subtitle" id="page-subtitle">Valor esperado e probabilidades de todas as raspadinhas portuguesas</p>
-
-    <div class="controls">
-      <div class="control-group">
-        <label id="lbl-tax-rate">Taxa Imposto (%)</label>
-        <input type="number" id="tax-rate" value="20" min="0" max="100" step="1">
-      </div>
-      <div class="control-group">
-        <label id="lbl-tax-thresh">Limiar Imposto (&euro;)</label>
-        <input type="number" id="tax-thresh" value="5000" min="0" step="100">
-      </div>
-      <div class="control-group">
-        <label id="lbl-target">&gt;= Pr&eacute;mio Alvo (&euro;)</label>
-        <input type="number" id="target-prize" value="0" min="0" step="1">
-      </div>
-      <button id="btn-filter" onclick="recalculate()">Filtrar</button>
-      <button class="secondary" id="btn-csv" onclick="exportCSV()">CSV</button>
-    </div>
-
-    <div id="loading" class="loading">
-      <div class="spinner"></div>
-      <div id="loading-text">A carregar dados dos jogos...</div>
-    </div>
-
-    <div id="table-container" class="table-wrap" style="display:none">
-      <table>
-        <thead>
-          <tr id="thead-row"></tr>
-        </thead>
-        <tbody id="tbody"></tbody>
-      </table>
-    </div>
-
-    <footer>
-      <a id="footer-back" href="./">&larr; Voltar &agrave; Calculadora</a>
-      <span class="sep">|</span>
-      <span>Made by <a href="https://eeriegoesd.com" target="_blank" rel="noopener">EERIE</a></span>
-      <span class="sep">|</span>
-      <a href="https://buymeacoffee.com/eeriegoesd" target="_blank" rel="noopener">Buy Me a Coffee</a>
-    </footer>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Tabela Completa de Jogos</title>
+<link rel="canonical" href="https://eeriegoesd.com/scratch-ev/tabela-raspadinhas.html">
+<meta name="description" content="Tabela completa com o Valor Esperado (EV) de todas as raspadinhas portuguesas. Compare retorno, odds e probabilidades antes e depois de impostos.">
+<meta property="og:title" content="Tabela Completa Raspadinhas | Calculadora EV">
+<meta property="og:description" content="Tabela completa com o Valor Esperado de todas as raspadinhas portuguesas.">
+<meta property="og:image" content="https://eeriegoesd.com/scratch-ev/og-image.png">
+<meta property="og:url" content="https://eeriegoesd.com/scratch-ev/tabela-raspadinhas.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_PT">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tabela Completa Raspadinhas | Calculadora EV">
+<meta name="twitter:image" content="https://eeriegoesd.com/scratch-ev/og-image.png">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0a0f;--surface:#111118;--surface2:#1a1a24;--border:#2a2a3a;--accent:#ff6b2b;--accent2:#ff9a5c;--text:#e8e8f0;--muted:#6b6b88;--success:#3de68e;--danger:#ff5555;--mono:'JetBrains Mono',monospace;--sans:'Syne',sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);padding:32px 24px}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.5;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E")}
+.wrap{max-width:1500px;margin:0 auto;position:relative;z-index:1}
+h1{font-size:24px;font-weight:800;color:#fff;margin-bottom:4px}
+h1 span{color:var(--accent)}
+.sub{font-family:var(--mono);font-size:12px;color:var(--muted);margin-bottom:16px}
+.toolbar{display:flex;gap:8px;align-items:stretch;margin-bottom:16px;flex-wrap:wrap}
+.tool-box{display:flex;align-items:center;gap:6px;background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:6px 12px;position:relative}
+.tool-box label{font-family:var(--mono);font-size:10px;color:var(--muted);white-space:nowrap}
+.tool-box input{background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:5px 8px;color:var(--text);font-family:var(--mono);font-size:12px;width:100px;outline:none}
+.tool-box input:focus{border-color:var(--accent)}
+.btn{font-family:var(--mono);font-size:11px;padding:6px 14px;border:1px solid var(--border);border-radius:6px;background:var(--surface);color:var(--accent);cursor:pointer;transition:all .15s}
+.btn:hover{border-color:var(--accent)}
+.tip{display:inline-block;width:14px;height:14px;border-radius:50%;border:1px solid var(--border);font-family:var(--mono);font-size:9px;color:var(--muted);text-align:center;line-height:13px;cursor:help;position:relative;flex-shrink:0}
+.tip:hover{border-color:var(--accent);color:var(--accent)}
+.tip .tiptext{display:none;position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:8px 10px;font-family:var(--mono);font-size:10px;color:var(--text);white-space:normal;width:240px;line-height:1.5;z-index:10;pointer-events:none}
+.tip:hover .tiptext{display:block}
+table{width:100%;border-collapse:collapse;background:var(--surface);border:1px solid var(--border);border-radius:8px;overflow:hidden}
+th{padding:8px 10px;font-family:var(--mono);font-size:9px;color:var(--accent);letter-spacing:1px;text-transform:uppercase;text-align:left;background:rgba(255,107,43,.04);border-bottom:1px solid var(--border);vertical-align:bottom;cursor:pointer;user-select:none}
+th:hover{color:var(--accent2)}
+th small{display:block;font-size:7px;color:var(--muted);letter-spacing:0;text-transform:none;font-weight:400;margin-top:2px;white-space:normal}
+th .sa{font-size:7px;margin-left:3px;opacity:.5}
+td{padding:6px 10px;font-family:var(--mono);font-size:11px;border-bottom:1px solid var(--border);white-space:nowrap}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:rgba(255,255,255,.02)}
+.p{color:var(--success)}.n{color:var(--danger)}.hl{background:rgba(61,230,142,.06)}
+::-webkit-scrollbar{width:5px;height:5px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+</style></head><body>
+<div class="wrap">
+<h1 id="title"></h1>
+<div class="sub" id="subtitle"></div>
+<div class="toolbar">
+  <div class="tool-box">
+    <button class="btn" onclick="doCSV()" id="csvBtn"></button>
   </div>
+  <div class="tool-box">
+    <label id="targetLabel"></label>
+    <input type="text" id="targetInput" placeholder="" inputmode="decimal" onkeydown="if(event.key==='Enter')recalc()" />
+    <button class="btn" onclick="recalc()" id="targetBtn"></button>
+  </div>
+</div>
+<div style="font-family:var(--mono);font-size:10px;color:var(--muted);margin-bottom:12px;line-height:1.6;" id="helpText"></div>
+<div style="overflow-x:auto">
+<table><thead><tr id="thead"></tr></thead><tbody id="tbody"></tbody></table>
+</div>
+<div style="margin-top:20px;font-family:var(--mono);font-size:10px;color:var(--muted);text-align:center">
+  Made by <a href="https://eeriegoesd.com" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:700">EERIE</a>
+  &middot; <a href="https://buymeacoffee.com/eeriegoesd" target="_blank" style="color:var(--accent);text-decoration:none">Buy Me a Coffee</a>
+  &middot; <a href="./" style="color:var(--accent);text-decoration:none" id="backLink"></a>
+</div>
+</div>
+<script>
+function detectLang() {
+  const navLangs = [navigator.language, ...(navigator.languages || [])].map(l => (l||'').toLowerCase());
+  if (navLangs.some(l => l.startsWith('pt'))) return 'pt';
+  try { if (Intl.DateTimeFormat().resolvedOptions().timeZone === 'Europe/Lisbon') return 'pt'; } catch(e) {}
+  return 'en';
+}
+const isPt = detectLang() === 'pt';
+document.documentElement.lang = isPt ? 'pt' : 'en';
 
-  <script>
-    /* ── Language detection ── */
-    function detectLang() {
-      const navLangs = [navigator.language, ...(navigator.languages || [])].map(l => (l || '').toLowerCase());
-      if (navLangs.some(l => l.startsWith('pt'))) return 'pt';
-      try { if (Intl.DateTimeFormat().resolvedOptions().timeZone === 'Europe/Lisbon') return 'pt'; } catch (e) {}
-      return 'en';
-    }
+const taxRate = 0.2;
+const taxThresh = 5000;
+const tax = p => p > taxThresh ? p * (1 - taxRate) : p;
+const INW = isPt ? 'em' : 'in';
+const cols = isPt ? [
+  ['name','Nome','Nome do jogo'],
+  ['cost','Aposta','Custo do bilhete'],
+  ['topPrize','Pr\u00E9mio M\u00E1x.','Maior pr\u00E9mio dispon\u00EDvel'],
+  ['evPre','EV Pr\u00E9-Imposto','Valor esperado por bilhete antes de impostos'],
+  ['evPost','EV P\u00F3s-Imposto','Valor esperado por bilhete ap\u00F3s impostos'],
+  ['netPost','EV L\u00EDq.','EV menos custo do bilhete, ap\u00F3s impostos'],
+  ['retPost','Retorno %','Percentagem de retorno ap\u00F3s impostos'],
+  ['odds','Prob. (qualquer)','Probabilidade de ganhar qualquer pr\u00E9mio'],
+  ['pct1st','% 1\u00BA Pr\u00E9mio','Probabilidade de ganhar o pr\u00E9mio m\u00E1ximo'],
+  ['pTarget','P(\u2265 Alvo)','Probabilidade de ganhar \u2265 pr\u00E9mio alvo por bilhete'],
+  ['pTargetEur','P(\u2265 Alvo)/\u20AC','Probabilidade por euro gasto'],
+  ['costTarget','Custo Esperado','Custo m\u00E9dio para atingir o pr\u00E9mio alvo'],
+] : [
+  ['name','Name','Name of the game'],
+  ['cost','Bet','Ticket cost'],
+  ['topPrize','Top Prize','Highest prize available'],
+  ['evPre','EV Pre-Tax','Expected value per ticket before taxes'],
+  ['evPost','EV Post-Tax','Expected value per ticket after taxes'],
+  ['netPost','Net EV','EV minus ticket cost, after taxes'],
+  ['retPost','Return %','Return percentage after taxes'],
+  ['odds','Odds (any)','Odds of winning any prize'],
+  ['pct1st','% 1st Prize','Probability of winning top prize'],
+  ['pTarget','P(\u2265 Target)','Probability of winning \u2265 target per ticket'],
+  ['pTargetEur','P(\u2265 Target)/\u20AC','Probability per euro spent'],
+  ['costTarget','Expected Cost','Average cost to reach target prize'],
+];
+const colKeys = cols.map(c => c[0]);
+let games = [];
+let data = [];
+let sortCol = -1, sortAsc = true;
+let targetPrize = 0;
 
-    const lang = detectLang();
+document.getElementById('csvBtn').textContent = isPt ? 'Exportar Tabela' : 'Export Table';
+document.getElementById('targetLabel').textContent = isPt ? 'Pr\u00E9mio Alvo (\u20AC)' : 'Target Prize (\u20AC)';
+document.getElementById('targetInput').placeholder = isPt ? 'ex: 10000' : 'e.g. 10000';
+document.getElementById('targetBtn').textContent = isPt ? 'Filtrar' : 'Filter';
+document.getElementById('helpText').textContent = isPt
+  ? 'Introduza um valor no Pr\u00E9mio Alvo para ver qual o jogo com melhor probabilidade de ganhar pelo menos esse montante por euro gasto. O melhor jogo fica destacado a verde.'
+  : 'Enter a Target Prize to see which game gives you the best probability of winning at least that amount per euro spent. The best game is highlighted in green.';
+document.getElementById('backLink').textContent = isPt ? '\u2190 Voltar \u00E0 Calculadora' : '\u2190 Back to Calculator';
+document.title = isPt ? 'Tabela Completa de Jogos' : 'Full Games Table';
 
-    const t = {
-      pageTitle:    { pt: 'Tabela Completa de Raspadinhas', en: 'Full Scratch Tickets Table' },
-      pageSubtitle: { pt: 'Valor esperado e probabilidades de todas as raspadinhas portuguesas', en: 'Expected value and probabilities for all Portuguese scratch tickets' },
-      taxRate:      { pt: 'Taxa Imposto (%)', en: 'Tax Rate (%)' },
-      taxThresh:    { pt: 'Limiar Imposto (\u20ac)', en: 'Tax Threshold (\u20ac)' },
-      target:       { pt: '>= Pr\u00e9mio Alvo (\u20ac)', en: '>= Target Prize (\u20ac)' },
-      filter:       { pt: 'Filtrar', en: 'Filter' },
-      loading:      { pt: 'A carregar dados dos jogos...', en: 'Loading game data...' },
-      back:         { pt: '\u2190 Voltar \u00e0 Calculadora', en: '\u2190 Back to Calculator' },
-      oddsIn:       { pt: '1 em ', en: '1 in ' },
-      name:         { pt: 'Nome', en: 'Name' },
-      cost:         { pt: 'Custo', en: 'Cost' },
-      topPrize:     { pt: 'Pr\u00e9mio M\u00e1x.', en: 'Top Prize' },
-      evPre:        { pt: 'EV Pr\u00e9-Imposto', en: 'EV Pre-Tax' },
-      evPost:       { pt: 'EV P\u00f3s-Imposto', en: 'EV Post-Tax' },
-      netEV:        { pt: 'EV L\u00edq.', en: 'Net EV' },
-      returnPct:    { pt: 'Retorno %', en: 'Return %' },
-      oddsAny:      { pt: 'Odds (qualquer)', en: 'Odds (any)' },
-      pctFirst:     { pt: '% 1\u00ba Pr\u00e9mio', en: '% 1st Prize' },
-      pTarget:      { pt: 'P(\u2265 Alvo)', en: 'P(\u2265 Target)' },
-      pTargetEur:   { pt: 'P(\u2265 Alvo)/\u20ac', en: 'P(\u2265 Target)/\u20ac' },
-      expCost:      { pt: 'Custo Esperado', en: 'Expected Cost' },
+function calcData() {
+  data = games.map(g => {
+    const tot = g.totalTickets;
+    let evPre=0, evPost=0, probAny=0, pTarget=0;
+    let topPrize=0, topQty=0;
+    g.tiers.forEach(ti => {
+      const prob = ti.qty / tot;
+      evPre += ti.prize * prob;
+      evPost += tax(ti.prize) * prob;
+      probAny += prob;
+      if (ti.prize > topPrize) { topPrize = ti.prize; topQty = ti.qty; }
+      if (targetPrize > 0 && ti.prize >= targetPrize) pTarget += prob;
+    });
+    return {
+      name: g.name, cost: g.cost, topPrize, evPre, evPost,
+      netPost: evPost - g.cost,
+      retPost: (evPost / g.cost) * 100,
+      odds: probAny > 0 ? 1 / probAny : Infinity,
+      odds1st: topQty > 0 ? tot / topQty : Infinity,
+      pct1st: (topQty / tot) * 100,
+      pTarget: pTarget * 100,
+      pTargetEur: (pTarget / g.cost) * 100,
+      costTarget: pTarget > 0 ? g.cost / pTarget : Infinity
     };
+  });
+}
 
-    function tx(key) { return t[key][lang]; }
+function recalc() {
+  const v = document.getElementById('targetInput').value.trim().replace(/\s/g,'').replace(',','.');
+  targetPrize = parseFloat(v) || 0;
+  calcData();
+  if (targetPrize > 0) {
+    sortCol = colKeys.indexOf('pTargetEur');
+    sortAsc = false;
+    data.sort((a, b) => {
+      if (!isFinite(a.pTargetEur) && !isFinite(b.pTargetEur)) return 0;
+      if (!isFinite(a.pTargetEur)) return 1;
+      if (!isFinite(b.pTargetEur)) return -1;
+      return b.pTargetEur - a.pTargetEur;
+    });
+  }
+  render();
+}
 
-    /* ── Apply language ── */
-    function applyLang() {
-      document.documentElement.lang = lang;
-      document.title = lang === 'pt'
-        ? 'Tabela Completa Raspadinhas | Calculadora EV'
-        : 'Full Scratch Tickets Table | EV Calculator';
-      document.querySelector('meta[name="description"]').content = lang === 'pt'
-        ? 'Tabela completa com o Valor Esperado (EV) de todas as raspadinhas portuguesas. Compare retorno, odds e probabilidades antes e depois de impostos.'
-        : 'Full table with Expected Value (EV) for all Portuguese scratch tickets. Compare return, odds and probabilities before and after taxes.';
-      document.getElementById('page-title').textContent = tx('pageTitle');
-      document.getElementById('page-subtitle').textContent = tx('pageSubtitle');
-      document.getElementById('lbl-tax-rate').textContent = tx('taxRate');
-      document.getElementById('lbl-tax-thresh').textContent = tx('taxThresh');
-      document.getElementById('lbl-target').textContent = tx('target');
-      document.getElementById('btn-filter').textContent = tx('filter');
-      document.getElementById('loading-text').textContent = tx('loading');
-      document.getElementById('footer-back').textContent = tx('back');
-    }
+function sortBy(ci) {
+  if (sortCol === ci) sortAsc = !sortAsc;
+  else { sortCol = ci; sortAsc = true; }
+  const key = colKeys[ci];
+  data.sort((a,b) => {
+    let va=a[key], vb=b[key];
+    if (typeof va==='string') return sortAsc ? va.localeCompare(vb) : vb.localeCompare(va);
+    if (!isFinite(va)) va = sortAsc ? 1e18 : -1e18;
+    if (!isFinite(vb)) vb = sortAsc ? 1e18 : -1e18;
+    return sortAsc ? va-vb : vb-va;
+  });
+  render();
+}
 
-    /* ── Columns definition ── */
-    const columns = [
-      { key: 'name',      label: () => tx('name'),      align: 'left',  fmt: v => v },
-      { key: 'cost',      label: () => tx('cost'),      align: 'right', fmt: v => eur(v) },
-      { key: 'topPrize',  label: () => tx('topPrize'),  align: 'right', fmt: v => eur(v) },
-      { key: 'evPre',     label: () => tx('evPre'),     align: 'right', fmt: v => eur(v) },
-      { key: 'evPost',    label: () => tx('evPost'),    align: 'right', fmt: v => eur(v) },
-      { key: 'netEV',     label: () => tx('netEV'),     align: 'right', fmt: v => eur(v), color: true },
-      { key: 'returnPct', label: () => tx('returnPct'), align: 'right', fmt: v => pct(v), color: true, threshold: 100 },
-      { key: 'oddsAny',   label: () => tx('oddsAny'),   align: 'right', fmt: v => odds(v) },
-      { key: 'pctFirst',  label: () => tx('pctFirst'),  align: 'right', fmt: v => pctSmall(v) },
-      { key: 'pTarget',   label: () => tx('pTarget'),   align: 'right', fmt: v => pctSmall(v) },
-      { key: 'pTargetEur',label: () => tx('pTargetEur'),align: 'right', fmt: v => pctSmall(v) },
-      { key: 'expCost',   label: () => tx('expCost'),   align: 'right', fmt: v => v === Infinity ? '\u2014' : eur(v) },
-    ];
+function render() {
+  const f2 = n => isFinite(n) ? n.toLocaleString('pt-PT',{minimumFractionDigits:2,maximumFractionDigits:4})+'\u20AC' : '---';
+  const fOdds = v => isFinite(v) ? '1 '+INW+' '+Math.round(v).toLocaleString('pt-PT') : '---';
+  document.getElementById('thead').innerHTML = cols.map(([k,h,d],i) =>
+    '<th onclick="sortBy('+i+')">'+h+(sortCol===i?'<span class="sa">'+(sortAsc?'\u25B2':'\u25BC')+'</span>':'')+'<small>'+d+'</small></th>'
+  ).join('');
+  let bestPTE = -1;
+  if (targetPrize > 0) data.forEach(r => { if (r.pTargetEur > bestPTE) bestPTE = r.pTargetEur; });
+  document.getElementById('tbody').innerHTML = data.map(r => {
+    const isBest = targetPrize > 0 && r.pTargetEur === bestPTE && bestPTE > 0;
+    return '<tr'+(isBest?' class="hl"':'')+'>' + colKeys.map(k => {
+      let v = r[k];
+      if (k==='name') return '<td style="font-weight:600;color:#fff">'+v+(isBest?' \u2B50':'')+'</td>';
+      if (k==='topPrize') return '<td>'+f2(v)+'</td>';
+      if (k==='netPost') return '<td class="'+(v>=0?'p':'n')+'">'+f2(v)+'</td>';
+      if (k==='retPost') return '<td class="'+(v>=100?'p':'n')+'">'+v.toFixed(2)+'%</td>';
+      if (k==='odds') return '<td>'+fOdds(v)+'</td>';
+      if (k==='odds1st') return '<td>'+fOdds(v)+'</td>';
+      if (k==='pct1st') return '<td>'+(v>0?v.toFixed(6)+'%':'\u2014')+'</td>';
+      if (k==='pTarget') return '<td>'+(targetPrize>0?(v>0?v.toFixed(6)+'%':'\u2014'):'\u2014')+'</td>';
+      if (k==='pTargetEur') return '<td>'+(targetPrize>0?(v>0?v.toFixed(6)+'%':'\u2014'):'\u2014')+'</td>';
+      if (k==='costTarget') return '<td>'+(targetPrize>0?(isFinite(v)&&v>0?f2(v):'\u2014'):'\u2014')+'</td>';
+      return '<td>'+f2(v)+'</td>';
+    }).join('') + '</tr>';
+  }).join('');
+}
 
-    /* ── Formatters ── */
-    function eur(v) {
-      return v.toLocaleString('pt-PT', { style: 'currency', currency: 'EUR', minimumFractionDigits: 2, maximumFractionDigits: 2 });
-    }
+function doCSV() {
+  let csv = cols.map(c=>c[1]).join(',')+'\n';
+  data.forEach(r => {
+    csv += colKeys.map(k => { let v=r[k]; if(typeof v==='number') v=+v.toFixed(6); return '"'+v+'"'; }).join(',')+'\n';
+  });
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));
+  a.download=isPt?'tabela-jogos.csv':'games-table.csv';
+  a.click();
+}
 
-    function pct(v) {
-      return v.toLocaleString('pt-PT', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + '%';
-    }
-
-    function pctSmall(v) {
-      if (v === 0) return '0%';
-      if (v < 0.0001) return v.toExponential(2) + '%';
-      return v.toLocaleString('pt-PT', { minimumFractionDigits: 4, maximumFractionDigits: 6 }) + '%';
-    }
-
-    function odds(v) {
-      if (v === Infinity || v === 0) return '\u2014';
-      const prefix = lang === 'pt' ? '1 em ' : '1 in ';
-      return prefix + v.toLocaleString('pt-PT', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
-    }
-
-    /* ── State ── */
-    let rawGames = [];
-    let computed = [];
-    let sortCol = 'netEV';
-    let sortDir = -1; // -1 desc, 1 asc
-
-    /* ── Data fetching ── */
-    async function loadGames() {
-      const indexRes = await fetch('games/index.json');
-      const index = await indexRes.json();
-      const country = index.countries.find(c => c.code === 'PT');
-      if (!country) return [];
-
-      const files = country.scratchTickets || [];
-      const promises = files.map(f =>
-        fetch('games/' + f).then(r => r.json()).catch(() => null)
-      );
-      const results = await Promise.all(promises);
-      return results.filter(Boolean);
-    }
-
-    /* ── Calculation ── */
-    function calculate(games) {
-      const taxRate = parseFloat(document.getElementById('tax-rate').value) / 100 || 0;
-      const taxThresh = parseFloat(document.getElementById('tax-thresh').value) || 0;
-      const targetPrize = parseFloat(document.getElementById('target-prize').value) || 0;
-
-      const tax = p => p > taxThresh ? p - ((p - taxThresh) * taxRate) : p;
-
-      return games.map(g => {
-        let evPre = 0, evPost = 0, probAny = 0, pTarget = 0, topPrize = 0, topQty = 0;
-
-        g.tiers.forEach(ti => {
-          const prob = ti.qty / g.totalTickets;
-          evPre += ti.prize * prob;
-          evPost += tax(ti.prize) * prob;
-          probAny += prob;
-          if (ti.prize > topPrize) { topPrize = ti.prize; topQty = ti.qty; }
-          if (targetPrize > 0 && ti.prize >= targetPrize) pTarget += prob;
-        });
-
-        const netEV = evPost - g.cost;
-        const returnPct = (evPost / g.cost) * 100;
-        const oddsAny = probAny > 0 ? 1 / probAny : Infinity;
-        const pctFirst = topQty > 0 ? (topQty / g.totalTickets) * 100 : 0;
-        const pTargetPct = pTarget * 100;
-        const pTargetEur = g.cost > 0 ? (pTarget / g.cost) * 100 : 0;
-        const expCost = pTarget > 0 ? g.cost / pTarget : Infinity;
-
-        return {
-          name: g.name,
-          cost: g.cost,
-          topPrize,
-          evPre,
-          evPost,
-          netEV,
-          returnPct,
-          oddsAny,
-          pctFirst,
-          pTarget: pTargetPct,
-          pTargetEur,
-          expCost,
-        };
-      });
-    }
-
-    /* ── Sort ── */
-    function sortData(data) {
-      return [...data].sort((a, b) => {
-        let va = a[sortCol], vb = b[sortCol];
-        if (typeof va === 'string') {
-          return sortDir * va.localeCompare(vb, 'pt');
-        }
-        if (va === Infinity) va = 1e18;
-        if (vb === Infinity) vb = 1e18;
-        return sortDir * (va - vb);
-      });
-    }
-
-    /* ── Render ── */
-    function buildHeader() {
-      const row = document.getElementById('thead-row');
-      row.innerHTML = '';
-      columns.forEach(col => {
-        const th = document.createElement('th');
-        th.style.textAlign = col.align;
-        let arrow = '';
-        if (sortCol === col.key) {
-          arrow = '<span class="sort-arrow">' + (sortDir === 1 ? '\u25B2' : '\u25BC') + '</span>';
-        }
-        th.innerHTML = col.label() + arrow;
-        th.addEventListener('click', () => {
-          if (sortCol === col.key) {
-            sortDir *= -1;
-          } else {
-            sortCol = col.key;
-            sortDir = col.key === 'name' ? 1 : -1;
-          }
-          renderTable();
-        });
-        row.appendChild(th);
-      });
-    }
-
-    function renderTable() {
-      const targetPrize = parseFloat(document.getElementById('target-prize').value) || 0;
-      const sorted = sortData(computed);
-
-      // Find best game for target
-      let bestIdx = -1;
-      if (targetPrize > 0) {
-        let bestVal = -1;
-        sorted.forEach((r, i) => {
-          if (r.pTargetEur > bestVal) { bestVal = r.pTargetEur; bestIdx = i; }
-        });
-      }
-
-      buildHeader();
-
-      const tbody = document.getElementById('tbody');
-      tbody.innerHTML = '';
-
-      sorted.forEach((row, i) => {
-        const tr = document.createElement('tr');
-        if (i === bestIdx) tr.classList.add('highlight');
-
-        columns.forEach(col => {
-          const td = document.createElement('td');
-          td.style.textAlign = col.align;
-          const val = row[col.key];
-          td.textContent = col.fmt(val);
-
-          if (col.color) {
-            const thresh = col.threshold || 0;
-            if (val > thresh) td.classList.add('positive');
-            else if (val < thresh) td.classList.add('negative');
-          }
-
-          tr.appendChild(td);
-        });
-
-        tbody.appendChild(tr);
-      });
-    }
-
-    /* ── Recalculate ── */
-    function recalculate() {
-      computed = calculate(rawGames);
-      renderTable();
-    }
-
-    /* ── CSV Export ── */
-    function exportCSV() {
-      const targetPrize = parseFloat(document.getElementById('target-prize').value) || 0;
-      const sorted = sortData(computed);
-      const headers = columns.map(c => c.label());
-      const rows = sorted.map(row =>
-        columns.map(col => {
-          const v = row[col.key];
-          if (typeof v === 'string') return '"' + v.replace(/"/g, '""') + '"';
-          if (v === Infinity) return '';
-          return v.toFixed(6);
-        })
-      );
-
-      let csv = headers.join(';') + '\n';
-      rows.forEach(r => { csv += r.join(';') + '\n'; });
-
-      const blob = new Blob(['\uFEFF' + csv], { type: 'text/csv;charset=utf-8;' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'raspadinhas-ev.csv';
-      a.click();
-      URL.revokeObjectURL(url);
-    }
-
-    /* ── Init ── */
-    async function init() {
-      applyLang();
-
-      try {
-        rawGames = await loadGames();
-        computed = calculate(rawGames);
-        document.getElementById('loading').style.display = 'none';
-        document.getElementById('table-container').style.display = '';
-        renderTable();
-      } catch (e) {
-        document.getElementById('loading-text').textContent =
-          lang === 'pt' ? 'Erro ao carregar dados.' : 'Error loading data.';
-        console.error(e);
-      }
-
-      // Live recalculation on input change
-      ['tax-rate', 'tax-thresh', 'target-prize'].forEach(id => {
-        document.getElementById(id).addEventListener('change', recalculate);
-      });
-    }
-
-    init();
-  </script>
-</body>
-</html>
+// Load data from JSON files
+fetch('games/index.json')
+  .then(r => r.json())
+  .then(index => {
+    const country = index.countries[0];
+    const files = country.scratchTickets || [];
+    return Promise.all(files.map(f => fetch('games/' + f).then(r => r.json())));
+  })
+  .then(loaded => {
+    games = loaded;
+    const title = isPt ? 'Tabela Completa de Jogos' : 'Full Games Table';
+    const subtitle = loaded.length + (isPt
+      ? ' jogos \u00B7 Imposto: 20% acima de \u20AC5.000 \u00B7 Clique nos cabe\u00E7alhos para ordenar'
+      : ' games \u00B7 Tax: 20% above \u20AC5,000 \u00B7 Click column headers to sort');
+    document.getElementById('title').innerHTML = title.replace('Jogos','<span>Jogos</span>').replace('Games','<span>Games</span>');
+    document.getElementById('subtitle').textContent = subtitle;
+    calcData();
+    render();
+  });
+</script></body></html>
