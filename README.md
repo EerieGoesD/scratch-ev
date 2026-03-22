@@ -2,7 +2,7 @@
 
 Calculate the Expected Value of scratch tickets and lottery games. Compare pre/post-tax return.
 
-**[Here](https://scratch-ev.eeriegoesd.com)**
+**[Here](https://eeriegoesd.com/scratch-ev/)**
 
 ## Add Your Country
 
