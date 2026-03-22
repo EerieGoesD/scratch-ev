@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Tabela Completa de Jogos</title>
+<link rel="canonical" href="https://eeriegoesd.com/scratch-ev/tabela-lotaria.html">
+<meta name="description" content="Tabela completa com Valor Esperado (EV) de todos os jogos de lotaria em Portugal. Compare EuroMilh\u00F5es, Totoloto, EuroDreams e mais.">
+<meta property="og:title" content="Tabela Completa Lotaria | Calculadora EV">
+<meta property="og:description" content="Compare o valor esperado de todos os jogos de lotaria em Portugal antes e depois de impostos.">
+<meta property="og:image" content="https://eeriegoesd.com/scratch-ev/og-image.png">
+<meta property="og:url" content="https://eeriegoesd.com/scratch-ev/tabela-lotaria.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_PT">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tabela Completa Lotaria | Calculadora EV">
+<meta name="twitter:image" content="https://eeriegoesd.com/scratch-ev/og-image.png">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0a0f;--surface:#111118;--surface2:#1a1a24;--border:#2a2a3a;--accent:#ff6b2b;--accent2:#ff9a5c;--text:#e8e8f0;--muted:#6b6b88;--success:#3de68e;--danger:#ff5555;--mono:'JetBrains Mono',monospace;--sans:'Syne',sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);padding:32px 24px}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.5;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E")}
+.wrap{max-width:1500px;margin:0 auto;position:relative;z-index:1}
+h1{font-size:24px;font-weight:800;color:#fff;margin-bottom:4px}
+h1 span{color:var(--accent)}
+.sub{font-family:var(--mono);font-size:12px;color:var(--muted);margin-bottom:16px}
+.toolbar{display:flex;gap:8px;align-items:stretch;margin-bottom:16px;flex-wrap:wrap}
+.tool-box{display:flex;align-items:center;gap:6px;background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:6px 12px;position:relative}
+.tool-box label{font-family:var(--mono);font-size:10px;color:var(--muted);white-space:nowrap}
+.tool-box input{background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:5px 8px;color:var(--text);font-family:var(--mono);font-size:12px;width:100px;outline:none}
+.tool-box input:focus{border-color:var(--accent)}
+.btn{font-family:var(--mono);font-size:11px;padding:6px 14px;border:1px solid var(--border);border-radius:6px;background:var(--surface);color:var(--accent);cursor:pointer;transition:all .15s}
+.btn:hover{border-color:var(--accent)}
+.tip{display:inline-block;width:14px;height:14px;border-radius:50%;border:1px solid var(--border);font-family:var(--mono);font-size:9px;color:var(--muted);text-align:center;line-height:13px;cursor:help;position:relative;flex-shrink:0}
+.tip:hover{border-color:var(--accent);color:var(--accent)}
+.tip .tiptext{display:none;position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:8px 10px;font-family:var(--mono);font-size:10px;color:var(--text);white-space:normal;width:240px;line-height:1.5;z-index:10;pointer-events:none}
+.tip:hover .tiptext{display:block}
+table{width:100%;border-collapse:collapse;background:var(--surface);border:1px solid var(--border);border-radius:8px;overflow:hidden}
+th{padding:8px 10px;font-family:var(--mono);font-size:9px;color:var(--accent);letter-spacing:1px;text-transform:uppercase;text-align:left;background:rgba(255,107,43,.04);border-bottom:1px solid var(--border);vertical-align:bottom;cursor:pointer;user-select:none}
+th:hover{color:var(--accent2)}
+th small{display:block;font-size:7px;color:var(--muted);letter-spacing:0;text-transform:none;font-weight:400;margin-top:2px;white-space:normal}
+th .sa{font-size:7px;margin-left:3px;opacity:.5}
+td{padding:6px 10px;font-family:var(--mono);font-size:11px;border-bottom:1px solid var(--border);white-space:nowrap}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:rgba(255,255,255,.02)}
+.p{color:var(--success)}.n{color:var(--danger)}.hl{background:rgba(61,230,142,.06)}
+::-webkit-scrollbar{width:5px;height:5px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+</style></head><body>
+<div class="wrap">
+<h1 id="title"></h1>
+<div class="sub" id="subtitle"></div>
+<div class="toolbar">
+  <div class="tool-box">
+    <button class="btn" onclick="doCSV()" id="csvBtn"></button>
+  </div>
+</div>
+<div style="font-family:var(--mono);font-size:10px;color:var(--muted);margin-bottom:12px;line-height:1.6;" id="helpText"></div>
+<div style="overflow-x:auto">
+<table><thead><tr id="thead"></tr></thead><tbody id="tbody"></tbody></table>
+</div>
+<div style="margin-top:20px;font-family:var(--mono);font-size:10px;color:var(--muted);text-align:center">
+  Made by <a href="https://eeriegoesd.com" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:700">EERIE</a>
+  &middot; <a href="https://buymeacoffee.com/eeriegoesd" target="_blank" style="color:var(--accent);text-decoration:none">Buy Me a Coffee</a>
+  &middot; <a href="./" style="color:var(--accent);text-decoration:none" id="backLink"></a>
+</div>
+</div>
+<script>
+function detectLang() {
+  const navLangs = [navigator.language, ...(navigator.languages || [])].map(l => (l||'').toLowerCase());
+  if (navLangs.some(l => l.startsWith('pt'))) return 'pt';
+  try { if (Intl.DateTimeFormat().resolvedOptions().timeZone === 'Europe/Lisbon') return 'pt'; } catch(e) {}
+  return 'en';
+}
+const isPt = detectLang() === 'pt';
+document.documentElement.lang = isPt ? 'pt' : 'en';
+
+const taxRate = 0.2;
+const taxThresh = 5000;
+const tax = p => p > taxThresh ? p * (1 - taxRate) : p;
+const INW = isPt ? 'em' : 'in';
+const cols = isPt ? [
+  ['name','Nome','Nome do jogo'],
+  ['cost','Aposta','Custo da aposta'],
+  ['topPrize','Pr\u00E9mio M\u00E1x.','Maior pr\u00E9mio (m\u00EDnimo do jackpot ou fixo)'],
+  ['odds1st','Odds 1\u00BA Pr\u00E9mio','Probabilidade de ganhar o pr\u00E9mio m\u00E1ximo'],
+  ['evPre','EV Pr\u00E9-Imposto','Valor esperado por aposta (estimado)'],
+  ['evPost','EV P\u00F3s-Imposto','Valor esperado ap\u00F3s impostos (estimado)'],
+  ['netPost','EV L\u00EDq.','EV menos custo da aposta'],
+  ['retPost','Retorno %','Percentagem de retorno ap\u00F3s impostos'],
+  ['odds','Prob. (qualquer)','Probabilidade de ganhar qualquer pr\u00E9mio'],
+] : [
+  ['name','Name','Name of the game'],
+  ['cost','Bet','Bet cost'],
+  ['topPrize','Top Prize','Highest prize (minimum jackpot or fixed)'],
+  ['odds1st','Odds 1st Prize','Odds of winning the top prize'],
+  ['evPre','EV Pre-Tax','Expected value per bet (estimated)'],
+  ['evPost','EV Post-Tax','Expected value after taxes (estimated)'],
+  ['netPost','Net EV','EV minus bet cost'],
+  ['retPost','Return %','Return percentage after taxes'],
+  ['odds','Odds (any)','Odds of winning any prize'],
+];
+const colKeys = cols.map(c => c[0]);
+let rawGames = [];
+let data = [];
+let sortCol = -1, sortAsc = true;
+
+document.getElementById('csvBtn').textContent = isPt ? 'Exportar Tabela' : 'Export Table';
+document.getElementById('helpText').textContent = isPt
+  ? 'EV estimado com base na taxa de retorno oficial. Pr\u00E9mios vari\u00E1veis dependem do n\u00FAmero de apostas e vencedores por sorteio. Ordenado por odds do 1\u00BA pr\u00E9mio.'
+  : 'EV estimated from official payout rate. Variable prizes depend on ticket sales and winners per draw. Sorted by 1st prize odds.';
+document.getElementById('backLink').textContent = isPt ? '\u2190 Voltar \u00E0 Calculadora' : '\u2190 Back to Calculator';
+document.title = isPt ? 'Tabela Completa de Jogos' : 'Full Games Table';
+
+function calcData() {
+  data = rawGames.map(g => {
+    if (g.mode === 'raffle' && g.totalTickets > 0) {
+      // Raffle mode: calculate like scratch tickets
+      let evPre=0, evPost=0, probAny=0, topPrize=0, topQty=0;
+      g.tiers.forEach(ti => {
+        const prob = ti.qty / g.totalTickets;
+        evPre += ti.prize * prob;
+        evPost += tax(ti.prize) * prob;
+        probAny += prob;
+        if (ti.prize > topPrize) { topPrize = ti.prize; topQty = ti.qty; }
+      });
+      return {
+        name: g.name, cost: g.cost, topPrize, evPre, evPost,
+        netPost: evPost - g.cost,
+        retPost: (evPost / g.cost) * 100,
+        odds: probAny > 0 ? 1 / probAny : Infinity,
+        odds1st: topQty > 0 ? g.totalTickets / topQty : Infinity,
+        pct1st: (topQty / g.totalTickets) * 100
+      };
+    }
+    // Lottery mode: estimate EV using payoutRate
+    const pRate = g.payoutRate || 0.50;
+    const evPre = g.cost * pRate;
+    let taxImpact = 0;
+    g.tiers.forEach(t => {
+      if (t.odds <= 0) return;
+      const prize = t.totalPrize || t.minimumPrize || 0;
+      if (prize > taxThresh) {
+        taxImpact += (prize - taxThresh) * taxRate / t.odds;
+      }
+    });
+    const evPost = evPre - taxImpact;
+    const topPrize = Math.max(...g.tiers.map(t => t.totalPrize || t.minimumPrize || 0));
+    const pAny = g.tiers.reduce((s,t) => t.odds > 0 ? s + 1/t.odds : s, 0);
+    const pTop = g.tiers[0].odds > 0 ? 1 / g.tiers[0].odds : 0;
+    return {
+      name: g.name, cost: g.cost, topPrize, evPre, evPost,
+      netPost: evPost - g.cost,
+      retPost: (evPost / g.cost) * 100,
+      odds: pAny > 0 ? 1 / pAny : Infinity,
+      odds1st: pTop > 0 ? 1 / pTop : Infinity,
+      pct1st: pTop * 100
+    };
+  });
+}
+
+function sortBy(ci) {
+  if (sortCol === ci) sortAsc = !sortAsc;
+  else { sortCol = ci; sortAsc = true; }
+  const key = colKeys[ci];
+  data.sort((a,b) => {
+    let va=a[key], vb=b[key];
+    if (typeof va==='string') return sortAsc ? va.localeCompare(vb) : vb.localeCompare(va);
+    if (!isFinite(va)) va = sortAsc ? 1e18 : -1e18;
+    if (!isFinite(vb)) vb = sortAsc ? 1e18 : -1e18;
+    return sortAsc ? va-vb : vb-va;
+  });
+  render();
+}
+
+function render() {
+  const f2 = n => isFinite(n) ? n.toLocaleString('pt-PT',{minimumFractionDigits:2,maximumFractionDigits:4})+'\u20AC' : '---';
+  const fOdds = v => isFinite(v) ? '1 '+INW+' '+Math.round(v).toLocaleString('pt-PT') : '---';
+  document.getElementById('thead').innerHTML = cols.map(([k,h,d],i) =>
+    '<th onclick="sortBy('+i+')">'+h+(sortCol===i?'<span class="sa">'+(sortAsc?'\u25B2':'\u25BC')+'</span>':'')+'<small>'+d+'</small></th>'
+  ).join('');
+  document.getElementById('tbody').innerHTML = data.map(r => {
+    return '<tr>' + colKeys.map(k => {
+      let v = r[k];
+      if (k==='name') return '<td style="font-weight:600;color:#fff">'+v+'</td>';
+      if (k==='topPrize') return '<td>'+f2(v)+'</td>';
+      if (k==='netPost') return '<td class="'+(v>=0?'p':'n')+'">'+f2(v)+'</td>';
+      if (k==='retPost') return '<td class="'+(v>=100?'p':'n')+'">'+v.toFixed(2)+'%</td>';
+      if (k==='odds') return '<td>'+fOdds(v)+'</td>';
+      if (k==='odds1st') return '<td>'+fOdds(v)+'</td>';
+      if (k==='pct1st') return '<td>'+(v>0?v.toFixed(6)+'%':'\u2014')+'</td>';
+      return '<td>'+f2(v)+'</td>';
+    }).join('') + '</tr>';
+  }).join('');
+}
+
+function doCSV() {
+  let csv = cols.map(c=>c[1]).join(',')+'\n';
+  data.forEach(r => {
+    csv += colKeys.map(k => { let v=r[k]; if(typeof v==='number') v=+v.toFixed(6); return '"'+v+'"'; }).join(',')+'\n';
+  });
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));
+  a.download=isPt?'tabela-jogos.csv':'games-table.csv';
+  a.click();
+}
+
+// Load data from JSON files
+fetch('games/index.json')
+  .then(r => r.json())
+  .then(index => {
+    const country = index.countries[0];
+    const files = country.lottery || [];
+    return Promise.all(files.map(f => fetch('games/' + f).then(r => r.json())));
+  })
+  .then(loaded => {
+    rawGames = loaded;
+    const title = isPt ? 'Tabela Completa de Jogos' : 'Full Games Table';
+    const subtitle = loaded.length + (isPt
+      ? ' jogos \u00B7 Imposto: 20% acima de \u20AC5.000 \u00B7 Clique nos cabe\u00E7alhos para ordenar'
+      : ' games \u00B7 Tax: 20% above \u20AC5,000 \u00B7 Click column headers to sort');
+    document.getElementById('title').innerHTML = title.replace('Jogos','<span>Jogos</span>').replace('Games','<span>Games</span>');
+    document.getElementById('subtitle').textContent = subtitle;
+    calcData();
+    // Default sort by 1st prize odds ascending
+    sortCol = colKeys.indexOf('odds1st'); sortAsc = true;
+    data.sort((a,b) => { if(!isFinite(a.odds1st))return 1; if(!isFinite(b.odds1st))return -1; return a.odds1st-b.odds1st; });
+    render();
+  });
+</script></body></html>
