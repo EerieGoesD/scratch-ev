@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Tabela Completa Lotaria | Calculadora EV</title>
+  <meta name="description" content="Tabela completa com Valor Esperado (EV) de todos os jogos de lotaria em Portugal. Compare EuroMilhões, Totoloto, EuroDreams e mais.">
+  <link rel="canonical" href="https://eeriegoesd.com/scratch-ev/tabela-lotaria.html">
+  <meta property="og:title" content="Tabela Completa Lotaria | Calculadora EV">
+  <meta property="og:description" content="Compare o valor esperado de todos os jogos de lotaria em Portugal antes e depois de impostos.">
+  <meta property="og:image" content="https://eeriegoesd.com/scratch-ev/og-image.png">
+  <meta property="og:url" content="https://eeriegoesd.com/scratch-ev/tabela-lotaria.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_PT">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tabela Completa Lotaria | Calculadora EV">
+  <meta name="twitter:description" content="Compare o valor esperado de todos os jogos de lotaria em Portugal.">
+  <meta name="twitter:image" content="https://eeriegoesd.com/scratch-ev/og-image.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Syne:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0a0f;
+      --surface: #111118;
+      --surface2: #1a1a24;
+      --border: #2a2a3a;
+      --accent: #ff6b2b;
+      --accent2: #ff9a5c;
+      --text: #e8e8f0;
+      --muted: #6b6b88;
+      --success: #3de68e;
+      --danger: #ff5555;
+      --mono: 'JetBrains Mono', monospace;
+      --sans: 'Syne', sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 0.85rem;
+      margin-bottom: 1.5rem;
+      max-width: 700px;
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: flex-end;
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+
+    .control-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .control-group label {
+      font-size: 0.75rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .control-group input {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-family: var(--mono);
+      font-size: 0.9rem;
+      padding: 0.4rem 0.6rem;
+      border-radius: 4px;
+      width: 100px;
+    }
+
+    .control-group input:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+
+    .btn {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 0.85rem;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: border-color 0.2s;
+    }
+
+    .btn:hover {
+      border-color: var(--accent);
+      color: var(--accent2);
+    }
+
+    .loading {
+      text-align: center;
+      padding: 3rem;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 0.9rem;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+    }
+
+    thead {
+      background: var(--surface);
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
+
+    th {
+      padding: 0.7rem 0.6rem;
+      text-align: right;
+      font-weight: 600;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+      cursor: pointer;
+      user-select: none;
+      white-space: nowrap;
+      border-bottom: 2px solid var(--border);
+      transition: color 0.2s;
+    }
+
+    th:first-child { text-align: left; }
+
+    th:hover { color: var(--accent2); }
+
+    th.sorted { color: var(--accent); }
+
+    th .arrow { font-size: 0.65rem; margin-left: 0.2rem; }
+
+    tr { border-bottom: 1px solid var(--border); }
+
+    tr:last-child { border-bottom: none; }
+
+    tr:hover { background: var(--surface2); }
+
+    td {
+      padding: 0.6rem;
+      text-align: right;
+      font-family: var(--mono);
+      font-size: 0.8rem;
+      white-space: nowrap;
+    }
+
+    td:first-child {
+      text-align: left;
+      font-family: var(--sans);
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+
+    td.positive { color: var(--success); }
+    td.negative { color: var(--danger); }
+
+    .mode-tag {
+      display: inline-block;
+      font-size: 0.6rem;
+      font-family: var(--mono);
+      padding: 0.1rem 0.35rem;
+      border-radius: 3px;
+      margin-left: 0.4rem;
+      vertical-align: middle;
+      text-transform: uppercase;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-weight: 400;
+    }
+
+    footer {
+      margin-top: 2rem;
+      padding: 1.5rem 0;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: var(--accent2);
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.85rem;
+    }
+
+    .back-link:hover { color: var(--accent2); }
+
+    .separator { color: var(--border); }
+
+    @media (max-width: 768px) {
+      .container { padding: 1rem; }
+      h1 { font-size: 1.3rem; }
+      .controls { flex-direction: column; align-items: stretch; }
+      .control-group input { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="./" class="back-link" id="backLink">&larr; Voltar &agrave; Calculadora</a>
+    <h1 id="pageTitle">Tabela Completa &mdash; Lotaria Portugal</h1>
+    <p class="subtitle" id="subtitle">EV estimado com base na taxa de retorno oficial. Pr&eacute;mios vari&aacute;veis dependem do n&uacute;mero de apostas e vencedores por sorteio.</p>
+
+    <div class="controls">
+      <div class="control-group">
+        <label id="labelRate">Taxa Imposto (%)</label>
+        <input type="number" id="taxRate" value="20" min="0" max="100" step="1">
+      </div>
+      <div class="control-group">
+        <label id="labelThresh">Limiar (&euro;)</label>
+        <input type="number" id="taxThresh" value="5000" min="0" step="100">
+      </div>
+      <button class="btn" id="csvBtn">Exportar CSV</button>
+    </div>
+
+    <div id="loadingMsg" class="loading">A carregar dados...</div>
+    <div class="table-wrap" id="tableWrap" style="display:none">
+      <table>
+        <thead>
+          <tr id="headerRow"></tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+
+    <footer>
+      <span>Made by <a href="https://eeriegoesd.com" target="_blank" rel="noopener">EERIE</a></span>
+      <span class="separator">|</span>
+      <a href="https://buymeacoffee.com/eeriegoesd" target="_blank" rel="noopener">Buy Me a Coffee</a>
+    </footer>
+  </div>
+
+  <script>
+    /* ── Language detection ── */
+    function detectLang() {
+      const navLangs = [navigator.language, ...(navigator.languages || [])].map(l => (l || '').toLowerCase());
+      if (navLangs.some(l => l.startsWith('pt'))) return 'pt';
+      try { if (Intl.DateTimeFormat().resolvedOptions().timeZone === 'Europe/Lisbon') return 'pt'; } catch (e) {}
+      return 'en';
+    }
+
+    const LANG = detectLang();
+
+    const T = {
+      pageTitle: { pt: 'Tabela Completa — Lotaria Portugal', en: 'Full Table — Portugal Lottery' },
+      subtitle: {
+        pt: 'EV estimado com base na taxa de retorno oficial. Prémios variáveis dependem do número de apostas e vencedores por sorteio.',
+        en: 'EV estimated from official payout rate. Variable prizes depend on ticket sales and winners per draw.'
+      },
+      backLink: { pt: '\u2190 Voltar à Calculadora', en: '\u2190 Back to Calculator' },
+      loading: { pt: 'A carregar dados...', en: 'Loading data...' },
+      labelRate: { pt: 'Taxa Imposto (%)', en: 'Tax Rate (%)' },
+      labelThresh: { pt: 'Limiar (\u20ac)', en: 'Threshold (\u20ac)' },
+      csvBtn: { pt: 'Exportar CSV', en: 'Export CSV' },
+      cols: {
+        name: { pt: 'Nome', en: 'Name' },
+        cost: { pt: 'Aposta', en: 'Cost' },
+        topPrize: { pt: 'Prémio Máx.', en: 'Top Prize' },
+        topOdds: { pt: 'Odds 1º Prémio', en: '1st Prize Odds' },
+        evPre: { pt: 'EV Pré-Imposto', en: 'EV Pre-Tax' },
+        evPost: { pt: 'EV Pós-Imposto', en: 'EV Post-Tax' },
+        evNet: { pt: 'EV Líq.', en: 'Net EV' },
+        returnPct: { pt: 'Retorno %', en: 'Return %' },
+        probAny: { pt: 'Prob. (qualquer)', en: 'Odds (any)' }
+      }
+    };
+
+    function t(key) { return T[key] ? (T[key][LANG] || T[key].pt) : key; }
+    function tc(key) { return T.cols[key] ? (T.cols[key][LANG] || T.cols[key].pt) : key; }
+
+    /* ── Apply translations ── */
+    document.documentElement.lang = LANG;
+    if (LANG === 'en') {
+      document.title = 'Full Lottery Table | EV Calculator';
+      document.querySelector('meta[name="description"]').content = 'Full table with Expected Value (EV) for all Portuguese lottery games. Compare EuroMilhões, Totoloto, EuroDreams and more.';
+    }
+    document.getElementById('pageTitle').textContent = t('pageTitle');
+    document.getElementById('subtitle').textContent = t('subtitle');
+    document.getElementById('backLink').textContent = t('backLink');
+    document.getElementById('loadingMsg').textContent = t('loading');
+    document.getElementById('labelRate').textContent = t('labelRate');
+    document.getElementById('labelThresh').textContent = t('labelThresh');
+    document.getElementById('csvBtn').textContent = t('csvBtn');
+
+    /* ── Formatting ── */
+    function fmtEur(v) {
+      if (v == null || isNaN(v)) return '—';
+      const abs = Math.abs(v);
+      let s;
+      if (abs >= 1000000) {
+        s = (v / 1000000).toLocaleString(LANG === 'pt' ? 'pt-PT' : 'en-GB', { minimumFractionDigits: 1, maximumFractionDigits: 2 }) + 'M';
+      } else {
+        s = v.toLocaleString(LANG === 'pt' ? 'pt-PT' : 'en-GB', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      }
+      return s + ' \u20ac';
+    }
+
+    function fmtEurShort(v) {
+      if (v == null || isNaN(v)) return '—';
+      const abs = Math.abs(v);
+      let s;
+      if (abs >= 1000000) {
+        s = (v / 1000000).toLocaleString(LANG === 'pt' ? 'pt-PT' : 'en-GB', { minimumFractionDigits: 1, maximumFractionDigits: 2 }) + 'M \u20ac';
+      } else if (abs >= 1000) {
+        s = (v / 1000).toLocaleString(LANG === 'pt' ? 'pt-PT' : 'en-GB', { minimumFractionDigits: 0, maximumFractionDigits: 1 }) + 'k \u20ac';
+      } else {
+        s = v.toLocaleString(LANG === 'pt' ? 'pt-PT' : 'en-GB', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' \u20ac';
+      }
+      return s;
+    }
+
+    function fmtOdds(v) {
+      if (!v || !isFinite(v) || v <= 0) return '—';
+      const x = Math.round(1 / v);
+      if (x <= 1) return '1:1';
+      const label = LANG === 'pt' ? '1 em ' : '1 in ';
+      return label + x.toLocaleString(LANG === 'pt' ? 'pt-PT' : 'en-GB');
+    }
+
+    function fmtPct(v) {
+      if (v == null || isNaN(v)) return '—';
+      return v.toLocaleString(LANG === 'pt' ? 'pt-PT' : 'en-GB', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + '%';
+    }
+
+    /* ── State ── */
+    let games = [];
+    let rows = [];
+    let sortCol = 'topOdds';
+    let sortAsc = true;
+
+    const COL_KEYS = ['name', 'cost', 'topPrize', 'topOdds', 'evPre', 'evPost', 'evNet', 'returnPct', 'probAny'];
+
+    /* ── Data loading ── */
+    async function loadData() {
+      const idx = await fetch('games/index.json').then(r => r.json());
+      const country = idx.countries.find(c => c.code === 'PT');
+      if (!country || !country.lottery) return;
+
+      const promises = country.lottery.map(path =>
+        fetch('games/' + path).then(r => r.json()).catch(() => null)
+      );
+      games = (await Promise.all(promises)).filter(Boolean);
+      recalc();
+    }
+
+    /* ── Tax helper ── */
+    function applyTax(prize, rate, thresh) {
+      if (prize <= thresh) return prize;
+      return prize - (prize - thresh) * rate;
+    }
+
+    /* ── Calculation ── */
+    function recalc() {
+      const taxRate = parseFloat(document.getElementById('taxRate').value) / 100 || 0;
+      const taxThresh = parseFloat(document.getElementById('taxThresh').value) || 0;
+
+      rows = games.map(g => {
+        const r = { name: g.name, cost: g.cost, mode: g.mode };
+
+        if (g.mode === 'raffle') {
+          let evPre = 0, evPost = 0, probAny = 0, topPrize = 0;
+          g.tiers.forEach(ti => {
+            const prob = ti.qty / g.totalTickets;
+            evPre += ti.prize * prob;
+            evPost += applyTax(ti.prize, taxRate, taxThresh) * prob;
+            probAny += prob;
+            if (ti.prize > topPrize) topPrize = ti.prize;
+          });
+          r.topPrize = topPrize;
+          r.topOdds = g.tiers.length > 0 ? g.tiers[0].qty / g.totalTickets : 0;
+          r.evPre = evPre;
+          r.evPost = evPost;
+          r.evNet = evPost - g.cost;
+          r.returnPct = (evPost / g.cost) * 100;
+          r.probAny = probAny;
+        } else {
+          /* lottery mode */
+          const pRate = g.payoutRate || 0.50;
+          const evPre = g.cost * pRate;
+
+          let taxImpact = 0;
+          g.tiers.forEach(ti => {
+            if (ti.odds <= 0) return;
+            const prize = ti.totalPrize || ti.minimumPrize || 0;
+            if (prize > taxThresh) {
+              taxImpact += (prize - taxThresh) * taxRate / ti.odds;
+            }
+          });
+          const evPost = evPre - taxImpact;
+
+          r.topPrize = Math.max(...g.tiers.map(ti => ti.totalPrize || ti.minimumPrize || 0));
+          const firstTierOdds = g.tiers[0] && g.tiers[0].odds > 0 ? g.tiers[0].odds : 0;
+          r.topOdds = firstTierOdds > 0 ? 1 / firstTierOdds : 0;
+          r.evPre = evPre;
+          r.evPost = evPost;
+          r.evNet = evPost - g.cost;
+          r.returnPct = (evPost / g.cost) * 100;
+          r.probAny = g.tiers.reduce((s, ti) => ti.odds > 0 ? s + 1 / ti.odds : s, 0);
+        }
+
+        return r;
+      });
+
+      sortAndRender();
+    }
+
+    /* ── Sorting ── */
+    function doSort(col) {
+      if (sortCol === col) {
+        sortAsc = !sortAsc;
+      } else {
+        sortCol = col;
+        sortAsc = true;
+      }
+      sortAndRender();
+    }
+
+    function sortAndRender() {
+      rows.sort((a, b) => {
+        let va = a[sortCol], vb = b[sortCol];
+        if (sortCol === 'name') {
+          va = (va || '').toLowerCase();
+          vb = (vb || '').toLowerCase();
+          return sortAsc ? va.localeCompare(vb) : vb.localeCompare(va);
+        }
+        va = va || 0;
+        vb = vb || 0;
+        return sortAsc ? va - vb : vb - va;
+      });
+      render();
+    }
+
+    /* ── Render ── */
+    function render() {
+      /* Header */
+      const hr = document.getElementById('headerRow');
+      hr.innerHTML = '';
+      COL_KEYS.forEach(key => {
+        const th = document.createElement('th');
+        const isSorted = sortCol === key;
+        th.className = isSorted ? 'sorted' : '';
+        const arrow = isSorted ? (sortAsc ? ' \u25b2' : ' \u25bc') : '';
+        th.innerHTML = tc(key) + '<span class="arrow">' + arrow + '</span>';
+        th.addEventListener('click', () => doSort(key));
+        hr.appendChild(th);
+      });
+
+      /* Body */
+      const tbody = document.getElementById('tbody');
+      tbody.innerHTML = '';
+      rows.forEach(r => {
+        const tr = document.createElement('tr');
+
+        /* Name */
+        const tdName = document.createElement('td');
+        tdName.innerHTML = r.name + '<span class="mode-tag">' + r.mode + '</span>';
+        tr.appendChild(tdName);
+
+        /* Cost */
+        addTd(tr, fmtEur(r.cost));
+
+        /* Top Prize */
+        addTd(tr, fmtEurShort(r.topPrize));
+
+        /* 1st Prize Odds */
+        addTd(tr, fmtOdds(r.topOdds));
+
+        /* EV Pre */
+        addTd(tr, fmtEur(r.evPre));
+
+        /* EV Post */
+        addTd(tr, fmtEur(r.evPost));
+
+        /* EV Net */
+        const tdNet = addTd(tr, fmtEur(r.evNet));
+        tdNet.className = r.evNet >= 0 ? 'positive' : 'negative';
+
+        /* Return % */
+        const tdRet = addTd(tr, fmtPct(r.returnPct));
+        tdRet.className = r.returnPct >= 100 ? 'positive' : 'negative';
+
+        /* Prob Any */
+        addTd(tr, fmtOdds(r.probAny));
+
+        tbody.appendChild(tr);
+      });
+
+      document.getElementById('loadingMsg').style.display = 'none';
+      document.getElementById('tableWrap').style.display = '';
+    }
+
+    function addTd(tr, text) {
+      const td = document.createElement('td');
+      td.textContent = text;
+      tr.appendChild(td);
+      return td;
+    }
+
+    /* ── CSV Export ── */
+    function exportCSV() {
+      const sep = ';';
+      const header = COL_KEYS.map(k => tc(k)).join(sep);
+      const csvRows = rows.map(r => [
+        r.name,
+        r.cost.toFixed(2),
+        r.topPrize.toFixed(2),
+        r.topOdds > 0 ? (1 / r.topOdds).toFixed(0) : '—',
+        r.evPre.toFixed(4),
+        r.evPost.toFixed(4),
+        r.evNet.toFixed(4),
+        r.returnPct.toFixed(2),
+        r.probAny > 0 ? (1 / r.probAny).toFixed(2) : '—'
+      ].join(sep));
+
+      const bom = '\uFEFF';
+      const blob = new Blob([bom + header + '\n' + csvRows.join('\n')], { type: 'text/csv;charset=utf-8;' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'lotaria-ev.csv';
+      a.click();
+      URL.revokeObjectURL(a.href);
+    }
+
+    /* ── Events ── */
+    document.getElementById('taxRate').addEventListener('input', recalc);
+    document.getElementById('taxThresh').addEventListener('input', recalc);
+    document.getElementById('csvBtn').addEventListener('click', exportCSV);
+
+    /* ── Init ── */
+    loadData();
+  </script>
+</body>
+</html>

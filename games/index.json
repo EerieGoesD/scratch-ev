@@ -80,7 +80,13 @@
         "scratch-tickets/PT/vip-ultra.json"
       ],
       "lottery": [
-        "lottery/PT/eurodreams.json"
+        "lottery/PT/eurodreams.json",
+        "lottery/PT/euromilhoes.json",
+        "lottery/PT/lotaria-classica.json",
+        "lottery/PT/lotaria-popular.json",
+        "lottery/PT/milhao.json",
+        "lottery/PT/totobola.json",
+        "lottery/PT/totoloto.json"
       ]
     }
   ]
