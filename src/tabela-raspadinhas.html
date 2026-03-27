@@ -17,31 +17,31 @@
 <meta name="twitter:image" content="https://eeriegoesd.com/scratch-ev/og-image.png">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0a0a0f;--surface:#111118;--surface2:#1a1a24;--border:#2a2a3a;--accent:#ff6b2b;--accent2:#ff9a5c;--text:#e8e8f0;--muted:#6b6b88;--success:#3de68e;--danger:#ff5555;--mono:'JetBrains Mono',monospace;--sans:'Syne',sans-serif}
+:root{--bg:#0a0a0f;--surface:#111118;--surface2:#1a1a24;--border:#2a2a3a;--accent:#ff6b2b;--accent2:#ff9a5c;--text:#e8e8f0;--muted:#8e8eaa;--success:#3de68e;--danger:#ff5555;--mono:'JetBrains Mono',monospace;--sans:'Syne',sans-serif}
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--bg);color:var(--text);font-family:var(--sans);padding:32px 24px}
 body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.5;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E")}
 .wrap{max-width:1500px;margin:0 auto;position:relative;z-index:1}
 h1{font-size:24px;font-weight:800;color:#fff;margin-bottom:4px}
 h1 span{color:var(--accent)}
-.sub{font-family:var(--mono);font-size:12px;color:var(--muted);margin-bottom:16px}
+.sub{font-family:var(--mono);font-size:13px;color:var(--muted);margin-bottom:16px}
 .toolbar{display:flex;gap:8px;align-items:stretch;margin-bottom:16px;flex-wrap:wrap}
 .tool-box{display:flex;align-items:center;gap:6px;background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:6px 12px;position:relative}
-.tool-box label{font-family:var(--mono);font-size:10px;color:var(--muted);white-space:nowrap}
+.tool-box label{font-family:var(--mono);font-size:12px;color:var(--muted);white-space:nowrap}
 .tool-box input{background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:5px 8px;color:var(--text);font-family:var(--mono);font-size:12px;width:100px;outline:none}
 .tool-box input:focus{border-color:var(--accent)}
-.btn{font-family:var(--mono);font-size:11px;padding:6px 14px;border:1px solid var(--border);border-radius:6px;background:var(--surface);color:var(--accent);cursor:pointer;transition:all .15s}
+.btn{font-family:var(--mono);font-size:12px;padding:6px 14px;border:1px solid var(--border);border-radius:6px;background:var(--surface);color:var(--accent);cursor:pointer;transition:all .15s}
 .btn:hover{border-color:var(--accent)}
 .tip{display:inline-block;width:14px;height:14px;border-radius:50%;border:1px solid var(--border);font-family:var(--mono);font-size:9px;color:var(--muted);text-align:center;line-height:13px;cursor:help;position:relative;flex-shrink:0}
 .tip:hover{border-color:var(--accent);color:var(--accent)}
-.tip .tiptext{display:none;position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:8px 10px;font-family:var(--mono);font-size:10px;color:var(--text);white-space:normal;width:240px;line-height:1.5;z-index:10;pointer-events:none}
+.tip .tiptext{display:none;position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:8px 10px;font-family:var(--mono);font-size:12px;color:var(--text);white-space:normal;width:240px;line-height:1.5;z-index:10;pointer-events:none}
 .tip:hover .tiptext{display:block}
 table{width:100%;border-collapse:collapse;background:var(--surface);border:1px solid var(--border);border-radius:8px;overflow:hidden}
-th{padding:8px 10px;font-family:var(--mono);font-size:9px;color:var(--accent);letter-spacing:1px;text-transform:uppercase;text-align:left;background:rgba(255,107,43,.04);border-bottom:1px solid var(--border);vertical-align:bottom;cursor:pointer;user-select:none}
+th{padding:8px 10px;font-family:var(--mono);font-size:11px;color:var(--accent);letter-spacing:1px;text-transform:uppercase;text-align:left;background:rgba(255,107,43,.04);border-bottom:1px solid var(--border);vertical-align:bottom;cursor:pointer;user-select:none}
 th:hover{color:var(--accent2)}
-th small{display:block;font-size:7px;color:var(--muted);letter-spacing:0;text-transform:none;font-weight:400;margin-top:2px;white-space:normal}
-th .sa{font-size:7px;margin-left:3px;opacity:.5}
-td{padding:6px 10px;font-family:var(--mono);font-size:11px;border-bottom:1px solid var(--border);white-space:nowrap}
+th small{display:block;font-size:9px;color:var(--muted);letter-spacing:0;text-transform:none;font-weight:400;margin-top:2px;white-space:normal}
+th .sa{font-size:9px;margin-left:3px;opacity:.5}
+td{padding:7px 10px;font-family:var(--mono);font-size:13px;border-bottom:1px solid var(--border);white-space:nowrap}
 tr:last-child td{border-bottom:none}
 tr:hover td{background:rgba(255,255,255,.02)}
 .p{color:var(--success)}.n{color:var(--danger)}.hl{background:rgba(61,230,142,.06)}
@@ -60,11 +60,11 @@ tr:hover td{background:rgba(255,255,255,.02)}
     <button class="btn" onclick="recalc()" id="targetBtn"></button>
   </div>
 </div>
-<div style="font-family:var(--mono);font-size:10px;color:var(--muted);margin-bottom:12px;line-height:1.6;" id="helpText"></div>
+<div style="font-family:var(--mono);font-size:12px;color:var(--muted);margin-bottom:12px;line-height:1.6;" id="helpText"></div>
 <div style="overflow-x:auto">
 <table><thead><tr id="thead"></tr></thead><tbody id="tbody"></tbody></table>
 </div>
-<div style="margin-top:20px;font-family:var(--mono);font-size:10px;color:var(--muted);text-align:center">
+<div style="margin-top:20px;font-family:var(--mono);font-size:12px;color:var(--muted);text-align:center">
   Made by <a href="https://eeriegoesd.com" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:700">EERIE</a>
   &middot; <a href="https://buymeacoffee.com/eeriegoesd" target="_blank" style="color:var(--accent);text-decoration:none">Buy Me a Coffee</a>
   &middot; <a href="./" style="color:var(--accent);text-decoration:none" id="backLink"></a>
