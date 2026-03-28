@@ -461,9 +461,9 @@
       <a href="https://buymeacoffee.com/eeriegoesd" target="_blank" rel="noreferrer" style="color:var(--accent);text-decoration:none;">Buy Me a Coffee</a>
     </div>
     <div style="display:flex;align-items:center;gap:10px;">
-      <a href="#" onclick="event.preventDefault();openPrivacy('privacy')" style="color:var(--muted);text-decoration:none;" data-i18n-attr="privacy">Privacy Policy</a>
+      <a href="#" onclick="event.preventDefault();openPrivacy('privacy')" style="color:var(--muted);text-decoration:none;" data-i18n="privacyLink">Privacy Policy</a>
       <span style="color:var(--border)">|</span>
-      <a href="#" onclick="event.preventDefault();openPrivacy('cookies')" style="color:var(--muted);text-decoration:none;" data-i18n-attr="cookies">Cookie Policy</a>
+      <a href="#" onclick="event.preventDefault();openPrivacy('cookies')" style="color:var(--muted);text-decoration:none;" data-i18n="cookiesLink">Cookie Policy</a>
       <span style="color:var(--border)">|</span>
       <a href="#faqAddCountry" onclick="event.preventDefault();var el=document.getElementById('faqAddCountry');el.open=true;el.scrollIntoView({behavior:'smooth',block:'center'});" style="color:var(--muted);text-decoration:none;" data-i18n="addCountry">+ Add country</a>
       <span style="color:var(--border)">|</span>
@@ -575,7 +575,7 @@ const T = {
     colRetPre: 'Return % Pre', colRetPost: 'Return % Post',
     colTotalPre: 'Total Prizes Pre', colTotalPost: 'Total Prizes Post',
     colOdds: 'Odds (any win)', col1st: '% 1st Prize',
-    madeBy: 'Made by', addCountry: '+ Add country', feedback: 'Feedback', reportBug: 'Report bug',
+    madeBy: 'Made by', privacyLink: 'Privacy Policy', cookiesLink: 'Cookie Policy', addCountry: '+ Add country', feedback: 'Feedback', reportBug: 'Report bug',
     sbPopular: 'Scratch Tickets', sbSaved: 'Saved Games', sbSaveBtn: 'Save current game', sbCalcScratch: 'Full Table (Scratch Tickets)', sbCalcLottery: 'Full Table (Lottery)', exportCSV: 'Export CSV',
     faqTitle: 'FAQ',
     faq1q: 'What is Expected Value (EV)?',
@@ -625,7 +625,7 @@ const T = {
     colRetPre: 'Retorno % Pr\u00E9', colRetPost: 'Retorno % P\u00F3s',
     colTotalPre: 'Total Pr\u00E9mios Pr\u00E9', colTotalPost: 'Total Pr\u00E9mios P\u00F3s',
     colOdds: 'Prob. (qualquer)', col1st: '% 1\u00BA Pr\u00E9mio',
-    madeBy: 'Feito por', addCountry: '+ Adicionar país', feedback: 'Feedback', reportBug: 'Reportar erro',
+    madeBy: 'Feito por', privacyLink: 'Pol\u00EDtica de Privacidade', cookiesLink: 'Pol\u00EDtica de Cookies', addCountry: '+ Adicionar pa\u00EDs', feedback: 'Feedback', reportBug: 'Reportar erro',
     sbPopular: 'Raspadinhas', sbSaved: 'Jogos Guardados', sbSaveBtn: 'Guardar jogo atual', sbCalcScratch: 'Tabela Completa (Raspadinhas)', sbCalcLottery: 'Tabela Completa (Lotaria)', exportCSV: 'Exportar Tabela',
     faqTitle: 'Perguntas Frequentes',
     faq1q: 'O que \u00E9 o Valor Esperado (EV)?',
@@ -2197,18 +2197,18 @@ function closePrivacy() {
   document.getElementById('privacyOverlay').classList.remove('open');
 }
 
-// Update banner and footer link text on lang change
+// Update banner text on lang change
 function updatePolicyTexts() {
   const P = POLICY[lang] || POLICY.en;
   const banner = document.getElementById('cookieBanner');
   if (banner) {
     banner.querySelector('.cb-text').textContent = P.bannerText;
     banner.querySelector('.cb-more').textContent = P.bannerMore;
-    banner.querySelector('.cookie-accept').textContent = P.accept;
-    banner.querySelector('.cookie-reject').textContent = P.reject;
+    const acceptBtn = banner.querySelector('.cookie-accept');
+    const rejectBtn = banner.querySelector('.cookie-reject');
+    if (acceptBtn) acceptBtn.textContent = P.accept;
+    if (rejectBtn) rejectBtn.textContent = P.reject;
   }
-  document.querySelectorAll('[data-i18n-attr="privacy"]').forEach(el => el.textContent = P.privacyLink);
-  document.querySelectorAll('[data-i18n-attr="cookies"]').forEach(el => el.textContent = P.cookiesLink);
 }
 
 // Patch setLang to also update policy texts
@@ -2221,8 +2221,8 @@ updatePolicyTexts();
 <div id="cookieBanner" style="position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#111118;border-top:1px solid #2a2a3a;padding:14px 24px;display:none;flex-wrap:wrap;align-items:center;justify-content:center;gap:16px;font-family:'Inter',sans-serif;font-size:12px;color:#8e8eaa;">
   <span class="cb-text">Usamos cookies para análise de tráfego.</span>
   <a href="#" class="cb-more" onclick="event.preventDefault();openPrivacy('cookies')" style="color:#ff6b2b;text-decoration:none;">Saber mais</a>
-  <button onclick="acceptCookies()" style="font-family:'Inter',sans-serif;font-size:12px;padding:6px 16px;border-radius:5px;cursor:pointer;border:1px solid #ff6b2b;background:#ff6b2b;color:#fff;">Aceitar</button>
-  <button onclick="rejectCookies()" style="font-family:'Inter',sans-serif;font-size:12px;padding:6px 16px;border-radius:5px;cursor:pointer;border:1px solid #2a2a3a;background:transparent;color:#8e8eaa;">Recusar</button>
+  <button class="cookie-accept" onclick="acceptCookies()" style="font-family:'Inter',sans-serif;font-size:12px;padding:6px 16px;border-radius:5px;cursor:pointer;border:1px solid #ff6b2b;background:#ff6b2b;color:#fff;">Aceitar</button>
+  <button class="cookie-reject" onclick="rejectCookies()" style="font-family:'Inter',sans-serif;font-size:12px;padding:6px 16px;border-radius:5px;cursor:pointer;border:1px solid #2a2a3a;background:transparent;color:#8e8eaa;">Recusar</button>
 </div>
 <script>
 try {
