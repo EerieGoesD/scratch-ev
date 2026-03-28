@@ -141,13 +141,13 @@
   ]
 }
 </script>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg: #0a0a0f; --surface: #111118; --surface2: #1a1a24; --border: #2a2a3a;
     --accent: #ff6b2b; --accent2: #ff9a5c; --text: #e8e8f0; --muted: #8e8eaa;
     --success: #3de68e; --danger: #ff5555;
-    --mono: 'JetBrains Mono', monospace; --sans: 'Syne', sans-serif;
+    --mono: 'JetBrains Mono', monospace; --data: 'Inter', sans-serif; --sans: 'Syne', sans-serif;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { background: var(--bg); color: var(--text); font-family: var(--sans); min-height: 100vh; }
@@ -176,11 +176,11 @@
     background: radial-gradient(circle, rgba(255,107,43,0.08) 0%, transparent 70%);
   }
   .header-inner { max-width: 1140px; margin: 0 auto; position: relative; z-index: 1; }
-  .tag { font-family: var(--mono); font-size: 12px; color: var(--accent); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; opacity: 0.9; }
+  .tag { font-family: var(--data); font-size: 12px; color: var(--accent); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; opacity: 0.9; }
   h1, h2 { margin: 0; }
   h1 { font-size: clamp(24px, 4vw, 36px); font-weight: 800; line-height: 1.1; color: #fff; }
   h1 span { color: var(--accent); }
-  .value-prop { font-family: var(--mono); font-size: 13px; color: var(--muted); max-width: 560px; line-height: 1.7; margin: 12px 0 0; }
+  .value-prop { font-family: var(--data); font-size: 13px; color: var(--muted); max-width: 560px; line-height: 1.7; margin: 12px 0 0; }
 
   /* ── Layout: main + sidebar ── */
   .page-wrap { max-width: 1140px; margin: 0 auto; padding: 28px 24px 60px; position: relative; z-index: 1; display: flex; gap: 24px; }
@@ -189,7 +189,7 @@
 
   /* ── Sidebar ── */
   .sb-section { margin-bottom: 16px; }
-  .sb-title { font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+  .sb-title { font-family: var(--data); font-size: 11px; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
   .sb-flags { display: flex; gap: 6px; margin-bottom: 12px; flex-wrap: wrap; }
   .sb-flag {
     width: 36px; height: 26px; border: 1.5px solid var(--border); border-radius: 4px;
@@ -203,19 +203,19 @@
   .sb-game {
     background: var(--surface); border: 1px solid var(--border); border-radius: 6px;
     padding: 5px 8px; cursor: pointer; transition: all 0.15s;
-    font-family: var(--mono); font-size: 12px; color: var(--text);
+    font-family: var(--data); font-size: 12px; color: var(--text);
     display: flex; align-items: center; gap: 5px; white-space: nowrap; overflow: hidden;
   }
   .sb-game:hover { border-color: var(--accent); color: #fff; }
   .sb-game-name { overflow: hidden; text-overflow: ellipsis; }
   .sb-game-cost { font-size: 11px; color: var(--muted); flex-shrink: 0; }
   .sb-game-lottery { border-color: var(--accent); }
-  .sb-sublabel { font-family: var(--mono); font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin: 8px 0 4px; }
+  .sb-sublabel { font-family: var(--data); font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin: 8px 0 4px; }
 
   .sb-divider { height: 1px; background: var(--border); margin: 16px 0; }
 
   .sb-save-btn {
-    width: 100%; padding: 8px 12px; font-family: var(--mono); font-size: 12px;
+    width: 100%; padding: 8px 12px; font-family: var(--data); font-size: 12px;
     border: 1px solid var(--border); border-radius: 6px; background: var(--surface);
     color: var(--accent); cursor: pointer; transition: all 0.15s; text-align: left;
   }
@@ -225,7 +225,7 @@
   .sb-saved-item {
     background: var(--surface); border: 1px solid var(--border); border-radius: 6px;
     padding: 6px 8px; display: flex; align-items: center; gap: 6px;
-    font-family: var(--mono); font-size: 12px; color: var(--text);
+    font-family: var(--data); font-size: 12px; color: var(--text);
   }
   .sb-saved-item span { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .sb-saved-load, .sb-saved-del {
@@ -238,14 +238,14 @@
 
   /* ── Mode tabs ── */
   .mode-tabs { display: flex; gap: 2px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 3px; margin-bottom: 20px; width: fit-content; }
-  .mode-tab { font-family: var(--mono); font-size: 12px; padding: 7px 18px; border-radius: 6px; border: none; background: transparent; color: var(--muted); cursor: pointer; transition: all 0.15s; }
+  .mode-tab { font-family: var(--data); font-size: 12px; padding: 7px 18px; border-radius: 6px; border: none; background: transparent; color: var(--muted); cursor: pointer; transition: all 0.15s; }
   .mode-tab.active { background: var(--accent); color: #fff; }
   .mode-tab:hover:not(.active) { color: var(--text); }
 
   /* ── Form ── */
   .form-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; margin-bottom: 16px; }
   .field { display: flex; flex-direction: column; gap: 4px; }
-  .field label { font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; }
+  .field label { font-family: var(--data); font-size: 11px; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; }
   .field input {
     background: var(--surface); border: 1.5px solid var(--border); border-radius: 6px;
     padding: 9px 10px; color: var(--text); font-family: var(--mono); font-size: 13px;
@@ -256,20 +256,20 @@
 
   .tax-row { display: flex; gap: 10px; align-items: end; margin-bottom: 20px; flex-wrap: wrap; }
   .tax-row .field { flex: 0 0 130px; }
-  .tax-hint { font-family: var(--mono); font-size: 12px; color: var(--muted); padding-bottom: 10px; }
+  .tax-hint { font-family: var(--data); font-size: 12px; color: var(--muted); padding-bottom: 10px; }
 
   /* ── Tiers ── */
   .tiers { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin-bottom: 16px; max-width: 420px; }
   .tiers-bar { display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; background: var(--surface2); border-bottom: 1px solid var(--border); }
-  .tiers-bar span { font-family: var(--mono); font-size: 12px; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; }
-  .btn-add { font-family: var(--mono); font-size: 12px; padding: 4px 12px; border-radius: 4px; border: 1px solid var(--border); background: transparent; color: var(--accent); cursor: pointer; transition: all 0.15s; }
+  .tiers-bar span { font-family: var(--data); font-size: 12px; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; }
+  .btn-add { font-family: var(--data); font-size: 12px; padding: 4px 12px; border-radius: 4px; border: 1px solid var(--border); background: transparent; color: var(--accent); cursor: pointer; transition: all 0.15s; }
   .btn-add:hover { border-color: var(--accent); }
   .tier-grid-scratch { display: grid; grid-template-columns: 32px 1fr 1fr 30px; align-items: stretch; gap: 0; }
   .tier-grid-lottery { display: grid; grid-template-columns: 32px 1fr 1fr 30px; align-items: stretch; gap: 0; }
-  .tg-head { font-family: var(--mono); font-size: 11px; color: var(--accent); letter-spacing: 1px; text-transform: uppercase; padding: 8px 8px; background: rgba(255,107,43,0.04); border-bottom: 1px solid var(--border); display: flex; align-items: center; }
+  .tg-head { font-family: var(--data); font-size: 11px; color: var(--accent); letter-spacing: 1px; text-transform: uppercase; padding: 8px 8px; background: rgba(255,107,43,0.04); border-bottom: 1px solid var(--border); display: flex; align-items: center; }
   .tg-cell { padding: 4px 4px; border-bottom: 1px solid var(--border); display: flex; align-items: center; }
   .tg-cell:nth-child(4n+1) { padding-left: 10px; }
-  .tg-num { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+  .tg-num { font-family: var(--data); font-size: 12px; color: var(--muted); }
   .tg-cell input {
     background: var(--surface2); border: 1px solid var(--border); border-radius: 4px;
     padding: 7px 8px; color: var(--text); font-family: var(--mono); font-size: 12px;
@@ -289,23 +289,23 @@
   }
   .btn-calc:hover { background: var(--accent2); box-shadow: 0 6px 24px rgba(255,107,43,0.25); }
   .btn-clear-form {
-    padding: 12px 20px; background: transparent; color: var(--muted); font-family: var(--mono);
+    padding: 12px 20px; background: transparent; color: var(--muted); font-family: var(--data);
     font-size: 12px; border: 1px solid var(--border); border-radius: 8px; cursor: pointer; transition: all 0.15s;
   }
   .btn-clear-form:hover { border-color: var(--muted); color: var(--text); }
-  .error-msg { font-family: var(--mono); font-size: 12px; color: var(--danger); padding: 6px 0; min-height: 20px; }
+  .error-msg { font-family: var(--data); font-size: 12px; color: var(--danger); padding: 6px 0; min-height: 20px; }
 
   /* ── Results ── */
   .results { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin-top: 24px; }
   .results-bar { display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; background: var(--surface2); border-bottom: 1px solid var(--border); }
   .results-bar span { font-size: 13px; font-weight: 700; color: #fff; }
   .results-actions { display: flex; gap: 6px; }
-  .results-actions button { font-family: var(--mono); font-size: 12px; padding: 4px 10px; border: 1px solid var(--border); border-radius: 4px; background: transparent; color: var(--muted); cursor: pointer; transition: all 0.15s; }
+  .results-actions button { font-family: var(--data); font-size: 12px; padding: 4px 10px; border: 1px solid var(--border); border-radius: 4px; background: transparent; color: var(--muted); cursor: pointer; transition: all 0.15s; }
   .results-actions button:hover { border-color: var(--accent); color: var(--accent); }
   .rtable-wrap { overflow-x: auto; }
   .rtable { width: 100%; border-collapse: collapse; min-width: 1000px; }
-  .rtable th { padding: 8px 10px; font-family: var(--mono); font-size: 11px; color: var(--accent); letter-spacing: 1px; text-transform: uppercase; text-align: left; background: rgba(255,107,43,0.04); border-bottom: 1px solid var(--border); white-space: nowrap; }
-  .rtable td { padding: 8px 10px; font-family: var(--mono); font-size: 13px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+  .rtable th { padding: 8px 10px; font-family: var(--data); font-size: 11px; color: var(--accent); letter-spacing: 1px; text-transform: uppercase; text-align: left; background: rgba(255,107,43,0.04); border-bottom: 1px solid var(--border); white-space: nowrap; }
+  .rtable td { padding: 8px 10px; font-family: var(--data); font-size: 13px; border-bottom: 1px solid var(--border); white-space: nowrap; }
   .rtable tr:last-child td { border-bottom: none; }
   .rtable tr:hover td { background: rgba(255,255,255,0.02); }
   .pos { color: var(--success); } .neg { color: var(--danger); }
@@ -313,15 +313,15 @@
   .btn-del:hover { color: var(--danger); }
 
   .divider { height: 1px; background: var(--border); margin: 24px 0; }
-  .faq-title { font-family: var(--mono); font-size: 12px; color: var(--accent); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px; }
+  .faq-title { font-family: var(--data); font-size: 12px; color: var(--accent); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px; }
   details { margin-bottom: 6px; border: 1px solid var(--border); border-radius: 6px; background: var(--surface); transition: border-color 0.15s; }
   details[open] { border-color: var(--accent); }
   details summary { padding: 10px 14px; cursor: pointer; font-weight: 600; font-size: 13px; color: var(--text); list-style: none; display: flex; align-items: center; justify-content: space-between; }
   details summary::-webkit-details-marker { display: none; }
-  details summary::after { content: '+'; font-family: var(--mono); font-size: 14px; color: var(--muted); transition: transform 0.15s; }
+  details summary::after { content: '+'; font-family: var(--data); font-size: 14px; color: var(--muted); transition: transform 0.15s; }
   details[open] summary::after { content: '\2212'; color: var(--accent); }
   details summary:hover { color: var(--accent); }
-  details p { padding: 0 14px 12px; font-size: 12px; color: var(--muted); line-height: 1.8; font-family: var(--mono); }
+  details p { padding: 0 14px 12px; font-size: 12px; color: var(--muted); line-height: 1.8; font-family: var(--data); }
 
   /* ── Game table modal ── */
   .modal-overlay {
@@ -342,7 +342,7 @@
     flex-shrink: 0;
   }
   .modal-title { font-size: 14px; font-weight: 700; color: #fff; }
-  .modal-sub { font-family: var(--mono); font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .modal-sub { font-family: var(--data); font-size: 12px; color: var(--muted); margin-top: 2px; }
   .modal-close {
     background: transparent; border: 1px solid var(--border); color: var(--muted);
     width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 16px;
@@ -354,13 +354,13 @@
     display: flex; gap: 16px; flex-wrap: wrap; padding: 12px 18px;
     border-bottom: 1px solid var(--border); background: var(--surface);
   }
-  .modal-stat { font-family: var(--mono); font-size: 12px; }
+  .modal-stat { font-family: var(--data); font-size: 12px; }
   .modal-stat-label { color: var(--muted); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 2px; }
   .modal-stat-value { color: var(--text); font-weight: 600; }
 
   .gt { width: 100%; border-collapse: collapse; }
   .gt th {
-    padding: 8px 10px; font-family: var(--mono); font-size: 11px; color: var(--accent);
+    padding: 8px 10px; font-family: var(--data); font-size: 11px; color: var(--accent);
     letter-spacing: 1px; text-transform: uppercase; text-align: right;
     background: var(--surface2); border-bottom: 1px solid var(--border);
     position: sticky; top: 0; white-space: nowrap; z-index: 2;
@@ -370,7 +370,7 @@
   .gt th[data-sort]:hover { color: var(--accent2); }
   .gt th .sort-arrow { font-size: 9px; margin-left: 3px; opacity: 0.5; }
   .gt td {
-    padding: 5px 10px; font-family: var(--mono); font-size: 13px;
+    padding: 5px 10px; font-family: var(--data); font-size: 13px;
     border-bottom: 1px solid var(--border); text-align: right; white-space: nowrap;
   }
   .gt td:first-child, .gt td:nth-child(2) { text-align: left; }
@@ -379,7 +379,7 @@
   .gt tfoot td { background: var(--surface2); font-weight: 700; border-top: 1px solid var(--accent); }
 
   .sb-game-link {
-    font-family: var(--mono); font-size: 11px; color: var(--accent); cursor: pointer;
+    font-family: var(--data); font-size: 11px; color: var(--accent); cursor: pointer;
     background: none; border: none; padding: 0; transition: color 0.15s; flex-shrink: 0;
   }
   .sb-game-link:hover { color: var(--accent2); }
@@ -390,7 +390,7 @@
 
   /* ── Cookie banner ── */
   .cookie-btn {
-    font-family: var(--mono); font-size: 12px; padding: 6px 16px; border-radius: 5px;
+    font-family: var(--data); font-size: 12px; padding: 6px 16px; border-radius: 5px;
     cursor: pointer; transition: all 0.15s; border: 1px solid var(--border);
   }
   .cookie-accept { background: var(--accent); color: #fff; border-color: var(--accent); }
@@ -411,7 +411,7 @@
   }
   .privacy-modal h2 { font-size: 18px; font-weight: 800; color: #fff; margin-bottom: 16px; }
   .privacy-modal h3 { font-size: 13px; font-weight: 700; color: var(--accent); margin: 20px 0 8px; }
-  .privacy-modal p, .privacy-modal li { font-family: var(--mono); font-size: 12px; color: var(--muted); line-height: 1.8; }
+  .privacy-modal p, .privacy-modal li { font-family: var(--data); font-size: 12px; color: var(--muted); line-height: 1.8; }
   .privacy-modal ul { padding-left: 20px; margin: 8px 0; }
   .privacy-modal .close-priv {
     float: right; background: transparent; border: 1px solid var(--border); color: var(--muted);
@@ -553,7 +553,7 @@
   </div>
 
   <div class="divider"></div>
-  <div style="display:flex;flex-direction:column;align-items:center;gap:6px;font-family:var(--mono);font-size:12px;color:var(--muted);">
+  <div style="display:flex;flex-direction:column;align-items:center;gap:6px;font-family:var(--data);font-size:12px;color:var(--muted);">
     <div style="display:flex;align-items:center;gap:10px;">
       <span data-i18n="madeBy">Made by</span>
       <a href="https://eeriegoesd.com" target="_blank" rel="noreferrer" style="color:var(--accent);text-decoration:none;font-weight:700;">EERIE</a>
@@ -643,8 +643,8 @@
         <div class="modal-sub" id="modalSub"></div>
       </div>
       <div style="display:flex;gap:8px;align-items:center;">
-        <button onclick="editCurrentGame()" style="font-family:var(--mono);font-size:12px;padding:4px 10px;border:1px solid var(--border);border-radius:4px;background:transparent;color:var(--accent);cursor:pointer;" data-i18n="btnEdit">Edit</button>
-        <button onclick="exportGameCSV()" style="font-family:var(--mono);font-size:12px;padding:4px 10px;border:1px solid var(--border);border-radius:4px;background:transparent;color:var(--muted);cursor:pointer;" data-i18n="exportCSV">CSV</button>
+        <button onclick="editCurrentGame()" style="font-family:var(--data);font-size:12px;padding:4px 10px;border:1px solid var(--border);border-radius:4px;background:transparent;color:var(--accent);cursor:pointer;" data-i18n="btnEdit">Edit</button>
+        <button onclick="exportGameCSV()" style="font-family:var(--data);font-size:12px;padding:4px 10px;border:1px solid var(--border);border-radius:4px;background:transparent;color:var(--muted);cursor:pointer;" data-i18n="exportCSV">CSV</button>
         <button class="modal-close" onclick="closeModal()" aria-label="Close modal">&times;</button>
       </div>
     </div>
@@ -1542,33 +1542,33 @@ function calcAllGames(type) {
 
   const html = `<!DOCTYPE html><html lang="${lang}"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>${title}</title>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0a0a0f;--surface:#111118;--surface2:#1a1a24;--border:#2a2a3a;--accent:#ff6b2b;--accent2:#ff9a5c;--text:#e8e8f0;--muted:#8e8eaa;--success:#3de68e;--danger:#ff5555;--mono:'JetBrains Mono',monospace;--sans:'Syne',sans-serif}
+:root{--bg:#0a0a0f;--surface:#111118;--surface2:#1a1a24;--border:#2a2a3a;--accent:#ff6b2b;--accent2:#ff9a5c;--text:#e8e8f0;--muted:#8e8eaa;--success:#3de68e;--danger:#ff5555;--mono:'JetBrains Mono',monospace;--data:'Inter',sans-serif;--sans:'Syne',sans-serif}
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--bg);color:var(--text);font-family:var(--sans);padding:32px 24px}
 body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.5;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E")}
 .wrap{max-width:1500px;margin:0 auto;position:relative;z-index:1}
 h1{font-size:24px;font-weight:800;color:#fff;margin-bottom:4px}
 h1 span{color:var(--accent)}
-.sub{font-family:var(--mono);font-size:13px;color:var(--muted);margin-bottom:16px}
+.sub{font-family:var(--data);font-size:13px;color:var(--muted);margin-bottom:16px}
 .toolbar{display:flex;gap:8px;align-items:stretch;margin-bottom:16px;flex-wrap:wrap}
 .tool-box{display:flex;align-items:center;gap:6px;background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:6px 12px;position:relative}
-.tool-box label{font-family:var(--mono);font-size:12px;color:var(--muted);white-space:nowrap}
+.tool-box label{font-family:var(--data);font-size:12px;color:var(--muted);white-space:nowrap}
 .tool-box input{background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:5px 8px;color:var(--text);font-family:var(--mono);font-size:12px;width:100px;outline:none}
 .tool-box input:focus{border-color:var(--accent)}
-.btn{font-family:var(--mono);font-size:12px;padding:6px 14px;border:1px solid var(--border);border-radius:6px;background:var(--surface);color:var(--accent);cursor:pointer;transition:all .15s}
+.btn{font-family:var(--data);font-size:12px;padding:6px 14px;border:1px solid var(--border);border-radius:6px;background:var(--surface);color:var(--accent);cursor:pointer;transition:all .15s}
 .btn:hover{border-color:var(--accent)}
-.tip{display:inline-block;width:14px;height:14px;border-radius:50%;border:1px solid var(--border);font-family:var(--mono);font-size:9px;color:var(--muted);text-align:center;line-height:13px;cursor:help;position:relative;flex-shrink:0}
+.tip{display:inline-block;width:14px;height:14px;border-radius:50%;border:1px solid var(--border);font-family:var(--data);font-size:9px;color:var(--muted);text-align:center;line-height:13px;cursor:help;position:relative;flex-shrink:0}
 .tip:hover{border-color:var(--accent);color:var(--accent)}
-.tip .tiptext{display:none;position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:8px 10px;font-family:var(--mono);font-size:12px;color:var(--text);white-space:normal;width:240px;line-height:1.5;z-index:10;pointer-events:none}
+.tip .tiptext{display:none;position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:8px 10px;font-family:var(--data);font-size:12px;color:var(--text);white-space:normal;width:240px;line-height:1.5;z-index:10;pointer-events:none}
 .tip:hover .tiptext{display:block}
 table{width:100%;border-collapse:collapse;background:var(--surface);border:1px solid var(--border);border-radius:8px;overflow:hidden}
-th{padding:8px 10px;font-family:var(--mono);font-size:11px;color:var(--accent);letter-spacing:1px;text-transform:uppercase;text-align:left;background:rgba(255,107,43,.04);border-bottom:1px solid var(--border);vertical-align:bottom;cursor:pointer;user-select:none}
+th{padding:8px 10px;font-family:var(--data);font-size:11px;color:var(--accent);letter-spacing:1px;text-transform:uppercase;text-align:left;background:rgba(255,107,43,.04);border-bottom:1px solid var(--border);vertical-align:bottom;cursor:pointer;user-select:none}
 th:hover{color:var(--accent2)}
 th small{display:block;font-size:9px;color:var(--muted);letter-spacing:0;text-transform:none;font-weight:400;margin-top:2px;white-space:normal}
 th .sa{font-size:9px;margin-left:3px;opacity:.5}
-td{padding:7px 10px;font-family:var(--mono);font-size:13px;border-bottom:1px solid var(--border);white-space:nowrap}
+td{padding:7px 10px;font-family:var(--data);font-size:13px;border-bottom:1px solid var(--border);white-space:nowrap}
 tr:last-child td{border-bottom:none}
 tr:hover td{background:rgba(255,255,255,.02)}
 .p{color:var(--success)}.n{color:var(--danger)}.hl{background:rgba(61,230,142,.06)}
@@ -1587,12 +1587,12 @@ tr:hover td{background:rgba(255,255,255,.02)}
     <button class="btn" onclick="recalc()">${L.targetBtn}</button>
   </div>` : ''}
 </div>
-${!isLottery ? `<div style="font-family:var(--mono);font-size:12px;color:var(--muted);margin-bottom:12px;line-height:1.6;">
+${!isLottery ? `<div style="font-family:var(--data);font-size:12px;color:var(--muted);margin-bottom:12px;line-height:1.6;">
   ${isPt
     ? 'Introduza um valor no Pr\u00E9mio Alvo para ver qual o jogo com melhor probabilidade de ganhar pelo menos esse montante por euro gasto. O melhor jogo fica destacado a verde.'
     : 'Enter a Target Prize to see which game gives you the best probability of winning at least that amount per euro spent. The best game is highlighted in green.'
   }
-</div>` : `<div style="font-family:var(--mono);font-size:12px;color:var(--muted);margin-bottom:12px;line-height:1.6;">
+</div>` : `<div style="font-family:var(--data);font-size:12px;color:var(--muted);margin-bottom:12px;line-height:1.6;">
   ${isPt
     ? 'EV estimado com base na taxa de retorno oficial. Pr\u00E9mios vari\u00E1veis dependem do n\u00FAmero de apostas e vencedores por sorteio. Ordenado por odds do 1\u00BA pr\u00E9mio.'
     : 'EV estimated from official payout rate. Variable prizes depend on ticket sales and winners per draw. Sorted by 1st prize odds.'
@@ -1601,7 +1601,7 @@ ${!isLottery ? `<div style="font-family:var(--mono);font-size:12px;color:var(--m
 <div style="overflow-x:auto">
 <table><thead><tr id="thead"></tr></thead><tbody id="tbody"></tbody></table>
 </div>
-<div style="margin-top:20px;font-family:var(--mono);font-size:12px;color:var(--muted);text-align:center">
+<div style="margin-top:20px;font-family:var(--data);font-size:12px;color:var(--muted);text-align:center">
   Made by <a href="https://eeriegoesd.com" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:700">EERIE</a>
   &middot; <a href="https://buymeacoffee.com/eeriegoesd" target="_blank" style="color:var(--accent);text-decoration:none">Buy Me a Coffee</a>
 </div>
@@ -1846,29 +1846,29 @@ function calcMyGames() {
   };
   const html = `<!DOCTYPE html><html lang="${lang}"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>${title}</title>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0a0a0f;--surface:#111118;--surface2:#1a1a24;--border:#2a2a3a;--accent:#ff6b2b;--accent2:#ff9a5c;--text:#e8e8f0;--muted:#8e8eaa;--success:#3de68e;--danger:#ff5555;--mono:'JetBrains Mono',monospace;--sans:'Syne',sans-serif}
+:root{--bg:#0a0a0f;--surface:#111118;--surface2:#1a1a24;--border:#2a2a3a;--accent:#ff6b2b;--accent2:#ff9a5c;--text:#e8e8f0;--muted:#8e8eaa;--success:#3de68e;--danger:#ff5555;--mono:'JetBrains Mono',monospace;--data:'Inter',sans-serif;--sans:'Syne',sans-serif}
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--bg);color:var(--text);font-family:var(--sans);padding:32px 24px}
 body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.5;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E")}
 .wrap{max-width:1500px;margin:0 auto;position:relative;z-index:1}
 h1{font-size:24px;font-weight:800;color:#fff;margin-bottom:4px}
 h1 span{color:var(--accent)}
-.sub{font-family:var(--mono);font-size:13px;color:var(--muted);margin-bottom:16px}
+.sub{font-family:var(--data);font-size:13px;color:var(--muted);margin-bottom:16px}
 .toolbar{display:flex;gap:8px;align-items:stretch;margin-bottom:16px;flex-wrap:wrap}
 .tool-box{display:flex;align-items:center;gap:6px;background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:6px 12px;position:relative}
-.tool-box label{font-family:var(--mono);font-size:12px;color:var(--muted);white-space:nowrap}
+.tool-box label{font-family:var(--data);font-size:12px;color:var(--muted);white-space:nowrap}
 .tool-box input{background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:5px 8px;color:var(--text);font-family:var(--mono);font-size:12px;width:100px;outline:none}
 .tool-box input:focus{border-color:var(--accent)}
-.btn{font-family:var(--mono);font-size:12px;padding:6px 14px;border:1px solid var(--border);border-radius:6px;background:var(--surface);color:var(--accent);cursor:pointer;transition:all .15s}
+.btn{font-family:var(--data);font-size:12px;padding:6px 14px;border:1px solid var(--border);border-radius:6px;background:var(--surface);color:var(--accent);cursor:pointer;transition:all .15s}
 .btn:hover{border-color:var(--accent)}
 table{width:100%;border-collapse:collapse;background:var(--surface);border:1px solid var(--border);border-radius:8px;overflow:hidden}
-th{padding:8px 10px;font-family:var(--mono);font-size:11px;color:var(--accent);letter-spacing:1px;text-transform:uppercase;text-align:left;background:rgba(255,107,43,.04);border-bottom:1px solid var(--border);vertical-align:bottom;cursor:pointer;user-select:none}
+th{padding:8px 10px;font-family:var(--data);font-size:11px;color:var(--accent);letter-spacing:1px;text-transform:uppercase;text-align:left;background:rgba(255,107,43,.04);border-bottom:1px solid var(--border);vertical-align:bottom;cursor:pointer;user-select:none}
 th:hover{color:var(--accent2)}
 th small{display:block;font-size:9px;color:var(--muted);letter-spacing:0;text-transform:none;font-weight:400;margin-top:2px;white-space:normal}
 th .sa{font-size:9px;margin-left:3px;opacity:.5}
-td{padding:7px 10px;font-family:var(--mono);font-size:13px;border-bottom:1px solid var(--border);white-space:nowrap}
+td{padding:7px 10px;font-family:var(--data);font-size:13px;border-bottom:1px solid var(--border);white-space:nowrap}
 tr:last-child td{border-bottom:none}
 tr:hover td{background:rgba(255,255,255,.02)}
 .p{color:var(--success)}.n{color:var(--danger)}.hl{background:rgba(61,230,142,.06)}
@@ -1889,7 +1889,7 @@ tr:hover td{background:rgba(255,255,255,.02)}
     <button class="btn" onclick="recalc()">${L.targetBtn}</button>
   </div>
 </div>
-<div style="font-family:var(--mono);font-size:12px;color:var(--muted);margin-bottom:12px;line-height:1.6;">
+<div style="font-family:var(--data);font-size:12px;color:var(--muted);margin-bottom:12px;line-height:1.6;">
   ${isPt
     ? 'Introduza um valor no Pr\u00E9mio Alvo para ver qual o jogo com melhor probabilidade de ganhar pelo menos esse montante por euro gasto. O melhor jogo fica destacado a verde.'
     : 'Enter a Target Prize to see which game gives you the best probability of winning at least that amount per euro spent. The best game is highlighted in green.'
@@ -1898,7 +1898,7 @@ tr:hover td{background:rgba(255,255,255,.02)}
 <div style="overflow-x:auto">
 <table><thead><tr id="thead"></tr></thead><tbody id="tbody"></tbody></table>
 </div>
-<div style="margin-top:20px;font-family:var(--mono);font-size:12px;color:var(--muted);text-align:center">
+<div style="margin-top:20px;font-family:var(--data);font-size:12px;color:var(--muted);text-align:center">
   Made by <a href="https://eeriegoesd.com" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:700">EERIE</a>
   \u00B7 <a href="https://buymeacoffee.com/eeriegoesd" target="_blank" style="color:var(--accent);text-decoration:none">Buy Me a Coffee</a>
 </div>
@@ -2318,11 +2318,11 @@ updatePolicyTexts();
 </script>
 
 <!-- Cookie banner -->
-<div id="cookieBanner" style="position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#111118;border-top:1px solid #2a2a3a;padding:14px 24px;display:none;flex-wrap:wrap;align-items:center;justify-content:center;gap:16px;font-family:'JetBrains Mono',monospace;font-size:12px;color:#8e8eaa;">
+<div id="cookieBanner" style="position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#111118;border-top:1px solid #2a2a3a;padding:14px 24px;display:none;flex-wrap:wrap;align-items:center;justify-content:center;gap:16px;font-family:'Inter',sans-serif;font-size:12px;color:#8e8eaa;">
   <span class="cb-text">Usamos cookies para análise de tráfego.</span>
   <a href="#" class="cb-more" onclick="event.preventDefault();openPrivacy('cookies')" style="color:#ff6b2b;text-decoration:none;">Saber mais</a>
-  <button onclick="acceptCookies()" style="font-family:'JetBrains Mono',monospace;font-size:12px;padding:6px 16px;border-radius:5px;cursor:pointer;border:1px solid #ff6b2b;background:#ff6b2b;color:#fff;">Aceitar</button>
-  <button onclick="rejectCookies()" style="font-family:'JetBrains Mono',monospace;font-size:12px;padding:6px 16px;border-radius:5px;cursor:pointer;border:1px solid #2a2a3a;background:transparent;color:#8e8eaa;">Recusar</button>
+  <button onclick="acceptCookies()" style="font-family:'Inter',sans-serif;font-size:12px;padding:6px 16px;border-radius:5px;cursor:pointer;border:1px solid #ff6b2b;background:#ff6b2b;color:#fff;">Aceitar</button>
+  <button onclick="rejectCookies()" style="font-family:'Inter',sans-serif;font-size:12px;padding:6px 16px;border-radius:5px;cursor:pointer;border:1px solid #2a2a3a;background:transparent;color:#8e8eaa;">Recusar</button>
 </div>
 <script>
 try {
